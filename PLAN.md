@@ -1,6 +1,6 @@
 # Plan: v2 — modern embeddings, a vector index and an LLM reader
 
-Status: **approved Nov 19, 2026; Steps 1–4 done, Step 5 committed locally — push waiting for Pallav's README review.**
+Status: **complete Nov 19, 2026 — all 5 steps done; v2 pushed as `1cabea7`.**
 
 ## Why
 
@@ -111,7 +111,7 @@ in code, not just planned (see Step 3).
 - **You do:** approve the cost before the full run (I'll show the pilot-based number first).
 - **Done when:** a table of recall vs EM/F1 per config, with cost and latency.
 
-### Step 5 — Write-up — ◐ README, charts, diagram done and committed; push after Pallav's review
+### Step 5 — Write-up — ✅ done Nov 19 (reviewed by Pallav, pushed `1cabea7`)
 - **Do:** update README (architecture diagram, new results, honest reading, limitations), add the
   project to the source of truth if you want it tracked, commit and push.
 - **Files:** `README.md`, `docs/architecture.png`, `../ai-engineer-source-of-truth.md` (if wanted).
