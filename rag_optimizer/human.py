@@ -1,6 +1,6 @@
 """Human-in-the-loop gate. Every escalation is recorded; how it is resolved depends on mode:
 
-- interactive: ask on the terminal
+- interactive: the LangGraph controller pauses with interrupt(); `prompt` asks on the terminal
 - auto:        apply the documented default policy (used for batch evaluation) and record it
 """
 from __future__ import annotations
@@ -37,6 +37,15 @@ class HumanGate:
             decision = default
         self.log.append(Escalation(kind, reason, options, decision, blocking))
         return decision
+
+    def prompt(self, payload: dict) -> str:
+        """Answer a LangGraph interrupt on the terminal (interactive mode)."""
+        print(f"\n[HUMAN REVIEW: {payload['kind']}] {payload['reason']}")
+        options = payload["options"]
+        for i, o in enumerate(options, 1):
+            print(f"  {i}. {o}")
+        raw = input(f"Choose 1-{len(options)} (Enter = {payload['default']}): ").strip()
+        return options[int(raw) - 1] if raw.isdigit() and 0 < int(raw) <= len(options) else payload["default"]
 
     def notify(self, kind: str, reason: str) -> None:
         self.log.append(Escalation(kind, reason, [], "noted", False))

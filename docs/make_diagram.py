@@ -37,11 +37,11 @@ for i, p in enumerate(phases):
         arrow(x + 21.3, 61.2, x + 23.4, 61.2)
 
 box(2, 40, 17, 12, "Engineer", "token cap +\nlatency cap", NAVY)
-box(38, 41, 44, 11, "Orchestrator (controller)", "beam search, budget (30 runs), pruning,\nescalation rules; only writer of node status", NAVY)
+box(38, 41, 44, 11, "Orchestrator: LangGraph StateGraph", "clarify > evidence > expand > test > evaluate (loop) >\nvalidate > report; budget, pruning; interrupt() for humans", NAVY)
 arrow(19.3, 46, 37.7, 46.5, style="<|-|>")
 
-ag = [("Researcher", "searches research KB\n+ experiment log"), ("Planner", "3 options per choice;\nfills untested choices"),
-      ("Experimenter", "runs BM25 / TF-IDF / BGE+FAISS;\ntime limit + retry"), ("Evaluator (critic)", "rubric score, prune,\nconfidence, verification")]
+ag = [("Researcher (CrewAI)", "judges research evidence\nvia MCP search_research"), ("Planner (CrewAI)", "writes Thoughts, picks fills;\nwrites the summary"),
+      ("Experimenter (tool)", "no LLM: runs BM25 / TF-IDF /\nBGE+FAISS; time limit + retry"), ("Evaluator (CrewAI)", "code: rubric, prune, confidence;\nLLM critic via MCP get_tree")]
 xs = [2, 32, 62, 92]
 for x, (t, s) in zip(xs, ag):
     box(x, 21, 26, 12.5, t, s, GREEN)
@@ -52,8 +52,8 @@ arrow(88.3, 28.5, 91.7, 28.5, color=GOLD)
 arrow(102, 20.7, 48, 20.7, color=GOLD, rad=-0.12)
 ax.text(80, 13.2, "scores + prune decisions -> Planner", fontsize=8, color=GOLD, ha="center")
 
-box(2, 1.5, 116, 9, "Shared state and long-term memory",
-    "search tree + scores   |   experiment log (JSONL, every run has an ID)   |   research knowledge base (11 notes, TF-IDF retrieval, injection filter)",
+box(2, 1.5, 116, 9, "Shared state: MCP server (search_research, search_experiments, get_tree)",
+    "search tree + scores   |   experiment log (JSONL, every run has an ID)   |   research knowledge base (11 notes, injection filter)   |   agents: Claude Haiku 5.5",
     GOLD)
 for x in xs:
     arrow(x + 3, 20.7, x + 3, 11.0, color="#C9A35B", style="<|-|>", ls=(0, (2, 2)))

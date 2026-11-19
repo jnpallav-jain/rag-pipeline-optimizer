@@ -2,6 +2,8 @@
 
     python -m rag_optimizer.cli --max-context-tokens 400 --max-p95-ms 5
     python -m rag_optimizer.cli --max-context-tokens 400 --max-p95-ms 5 --interactive
+    python -m rag_optimizer.cli --max-context-tokens 400 --max-p95-ms 5 --agents llm
+        (CrewAI agents on Claude Haiku 5.5 inside the LangGraph controller; needs ANTHROPIC_API_KEY)
     python -m rag_optimizer.cli --max-context-tokens 400 --max-p95-ms 5 --generate 3
         (also answers 3 validation questions with Claude Haiku 5.5 using the recommended config;
          needs ANTHROPIC_API_KEY, counts toward the $1 project cap)
@@ -31,6 +33,9 @@ def main(argv=None) -> int:
     ap.add_argument("--log", default=str(ROOT / "results" / "experiment_log.jsonl"),
                     help="experiment log (long-term memory); reused across runs")
     ap.add_argument("--out", default=str(ROOT / "results" / "report.md"))
+    ap.add_argument("--agents", choices=["rule", "llm"], default="rule",
+                    help="rule: deterministic agents (free); llm: CrewAI agents on Claude Haiku 5.5 "
+                         "(needs ANTHROPIC_API_KEY, counts toward the $1 cap)")
     ap.add_argument("--generate", type=int, default=0, metavar="N",
                     help="answer N validation questions with the LLM reader (off by default)")
     args = ap.parse_args(argv)
@@ -39,7 +44,12 @@ def main(argv=None) -> int:
     kb = KnowledgeBase()
     log = ExperimentLog(Path(args.log))
     human = HumanGate(mode="interactive" if args.interactive else "auto")
-    res = Orchestrator(lab, log, kb, human).run(args.max_context_tokens, args.max_p95_ms, args.dataset)
+    agents = None
+    if args.agents == "llm":
+        from .crew import CrewAgents
+        agents = CrewAgents(log_path=Path(args.log))
+    res = Orchestrator(lab, log, kb, human, agents=agents).run(args.max_context_tokens, args.max_p95_ms, args.dataset,
+                                                 prompt=human.prompt)
     md = render(res, kb)
     check = verify_report(md, log)
     md += (f"\nSource verification: {check['cited_numbers']} cited numbers checked against the "

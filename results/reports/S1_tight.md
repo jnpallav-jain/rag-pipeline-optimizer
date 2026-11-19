@@ -6,9 +6,9 @@
 - Max p95 retrieval latency: 5.0 ms
 
 ## Recommendation (validation split, 1,000 questions)
-**`c128-bm25-k1-none`**: answer recall 0.773 [r0013.accuracy], context tokens 166.0 [r0013.tokens], p95 latency 0.59 [r0013.p95_ms] ms.
+**`c64-bm25-k1-none`**: answer recall 0.689 [r0014.accuracy], context tokens 83.0 [r0014.tokens], p95 latency 0.69 [r0014.p95_ms] ms.
 
-Runner-up `c128-bm25-k1-overlap`: answer recall 0.755 [r0014.accuracy], context tokens 166.1 [r0014.tokens], p95 latency 0.59 [r0014.p95_ms] ms.
+Runner-up `c128-bm25-k1-overlap`: answer recall 0.755 [r0013.accuracy], context tokens 166.1 [r0013.tokens], p95 latency 0.52 [r0013.p95_ms] ms.
 
 Confidence that the recommendation beats the runner-up: 1.00.
 This recommendation is advisory: an engineer must approve it before production use.
@@ -27,37 +27,37 @@ This recommendation is advisory: an engineer must approve it before production u
 
 | depth | configuration tested | score | status | note |
 |---|---|---|---|---|
-| 1 | `c64-bm25-k1-rrf` (r0002) | 0.520 | pruned | p95 latency 10.82 ms > cap 5.00 |
-| 1 | `c128-bm25-k1-rrf` (r0001) | 0.494 | pruned | p95 latency 9.02 ms > cap 5.00 |
+| 1 | `c64-bm25-k1-rrf` (r0002) | 0.520 | pruned | p95 latency 9.29 ms > cap 5.00 |
+| 1 | `c128-bm25-k1-rrf` (r0001) | 0.494 | pruned | p95 latency 9.73 ms > cap 5.00 |
 | 1 | `{'chunk_size': 256}` | - | pruned | heuristic: even the smallest remaining choice needs 333 tokens > cap |
-| 1 | `c64-bm25-k1-none` (r0003) | 0.669 | kept |  |
-| 1 | `c128-bm25-k1-none` (r0004) | 0.675 | kept |  |
-| 2 | `c128-bm25-k1-none` (r0004, cached) | 0.693 | kept |  |
-| 2 | `c128-tfidf-k1-none` (r0006) | 0.653 | pruned | outside beam |
-| 2 | `c128-bge-k1-none` (r0005) | 0.411 | pruned | p95 latency 8.37 ms > cap 5.00 |
-| 2 | `c64-bm25-k1-none` (r0003, cached) | 0.694 | kept |  |
-| 2 | `c64-tfidf-k1-none` (r0008) | 0.671 | kept |  |
-| 2 | `c64-bge-k1-none` (r0007) | 0.499 | pruned | p95 latency 9.93 ms > cap 5.00 |
-| 3 | `c128-bm25-k1-none` (r0004, cached) | 0.683 | kept |  |
+| 1 | `c64-bm25-k1-none` (r0003) | 0.680 | kept |  |
+| 1 | `c128-bm25-k1-none` (r0004) | 0.679 | kept |  |
+| 2 | `c128-bm25-k1-none` (r0004, cached) | 0.698 | kept |  |
+| 2 | `c128-tfidf-k1-none` (r0006) | 0.656 | pruned | outside beam |
+| 2 | `c128-bge-k1-none` (r0005) | 0.411 | pruned | p95 latency 9.18 ms > cap 5.00 |
+| 2 | `c64-bm25-k1-none` (r0003, cached) | 0.704 | kept |  |
+| 2 | `c64-tfidf-k1-none` (r0008) | 0.672 | kept |  |
+| 2 | `c64-bge-k1-none` (r0007) | 0.499 | pruned | p95 latency 8.59 ms > cap 5.00 |
+| 3 | `c128-bm25-k1-none` (r0004, cached) | 0.688 | kept |  |
 | 3 | `{'chunk_size': 128, 'retriever': 'bm25', 'top_k': 3}` | - | pruned | heuristic: even the smallest remaining choice needs 499 tokens > cap |
 | 3 | `{'chunk_size': 128, 'retriever': 'bm25', 'top_k': 5}` | - | pruned | heuristic: even the smallest remaining choice needs 832 tokens > cap |
-| 3 | `c64-bm25-k1-none` (r0003, cached) | 0.686 | kept |  |
+| 3 | `c64-bm25-k1-none` (r0003, cached) | 0.696 | kept |  |
 | 3 | `{'chunk_size': 64, 'retriever': 'bm25', 'top_k': 3}` | - | pruned | heuristic: even the smallest remaining choice needs 250 tokens > cap |
 | 3 | `{'chunk_size': 64, 'retriever': 'bm25', 'top_k': 5}` | - | pruned | heuristic: even the smallest remaining choice needs 416 tokens > cap |
-| 3 | `c64-tfidf-k1-none` (r0008, cached) | 0.668 | kept |  |
+| 3 | `c64-tfidf-k1-none` (r0008, cached) | 0.670 | kept |  |
 | 3 | `{'chunk_size': 64, 'retriever': 'tfidf', 'top_k': 3}` | - | pruned | heuristic: even the smallest remaining choice needs 250 tokens > cap |
 | 3 | `{'chunk_size': 64, 'retriever': 'tfidf', 'top_k': 5}` | - | pruned | heuristic: even the smallest remaining choice needs 416 tokens > cap |
-| 4 | `c128-bm25-k1-none` (r0004, cached) | 0.678 | kept |  |
-| 4 | `c128-bm25-k1-rrf` (r0001, cached) | 0.503 | pruned | p95 latency 9.02 ms > cap 5.00 |
-| 4 | `c128-bm25-k1-overlap` (r0009) | 0.686 | kept |  |
-| 4 | `c64-bm25-k1-none` (r0003, cached) | 0.681 | pruned | outside beam |
-| 4 | `c64-bm25-k1-rrf` (r0002, cached) | 0.537 | pruned | p95 latency 10.82 ms > cap 5.00 |
-| 4 | `c64-bm25-k1-overlap` (r0010) | 0.684 | pruned | outside beam |
-| 4 | `c64-tfidf-k1-none` (r0008, cached) | 0.667 | pruned | outside beam |
-| 4 | `c64-tfidf-k1-rrf` (r0011) | 0.522 | pruned | p95 latency 10.53 ms > cap 5.00 |
-| 4 | `c64-tfidf-k1-overlap` (r0012) | 0.679 | kept |  |
+| 4 | `c64-bm25-k1-none` (r0003, cached) | 0.692 | kept |  |
+| 4 | `c64-bm25-k1-rrf` (r0002, cached) | 0.537 | pruned | p95 latency 9.29 ms > cap 5.00 |
+| 4 | `c64-bm25-k1-overlap` (r0010) | 0.692 | kept |  |
+| 4 | `c128-bm25-k1-none` (r0004, cached) | 0.683 | pruned | outside beam |
+| 4 | `c128-bm25-k1-rrf` (r0001, cached) | 0.503 | pruned | p95 latency 9.73 ms > cap 5.00 |
+| 4 | `c128-bm25-k1-overlap` (r0009) | 0.692 | kept |  |
+| 4 | `c64-tfidf-k1-none` (r0008, cached) | 0.668 | pruned | outside beam |
+| 4 | `c64-tfidf-k1-rrf` (r0011) | 0.522 | pruned | p95 latency 9.08 ms > cap 5.00 |
+| 4 | `c64-tfidf-k1-overlap` (r0012) | 0.682 | pruned | outside beam |
 
-Budget: 12/30 sample experiments, 2/2 validations, 10 reused from memory. Wall time 7.6 s.
+Agents: rule. Budget: 12/30 sample experiments, 2/2 validations, 10 reused from memory. Wall time 7.7 s.
 
 ## Human checkpoints and notices
 - [notice] **replan**: all 2 branches at depth 1 broke a hard constraint; retesting with alternative fills [('bm25', 'none'), ('bge', 'none'), ('tfidf', 'none'), ('bm25', 'overlap'), ('bge', 'overlap'), ('tfidf', 'overlap'), ('bge', 'rrf'), ('tfidf', 'rrf')] -> noted

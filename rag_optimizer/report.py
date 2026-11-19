@@ -37,6 +37,10 @@ def render(res: Result, kb=None) -> str:
     else:
         lines += [f"**No recommendation.** {res.stopped_reason}", ""]
 
+    if getattr(res, "summary", ""):
+        lines += ["## Summary (Planner agent, CrewAI + Claude Haiku 5.5)",
+                  "Numbers here are only those cited from the experiment log; sentences with any other "
+                  "number are removed before the report is written.", "", res.summary, ""]
     lines += ["## Evidence used (retrieved from the knowledge base)"]
     used = sorted({nid for dim in res.evidence.values() for v in dim.values() for nid in v["notes"]})
     notes = {n.id: n for n in (kb.notes if kb else [])}
@@ -56,8 +60,16 @@ def render(res: Result, kb=None) -> str:
         sc = f"{n.score:.3f}" if n.metrics else "-"
         src = f" ({n.run_id}{', cached' if n.cached else ''})" if n.run_id else ""
         lines.append(f"| {n.depth} | `{key}`{src} | {sc} | {n.status} | {n.reason} |")
+    notes = getattr(res, "agent_notes", [])
+    if notes:
+        lines += ["", "## Agent reasoning (CrewAI agents; scores and pruning stay in code)", ""]
+        for n in notes:
+            lines.append(f"- **{n['agent']}** ({n['step']}): {n['text']}")
+        thoughts = [n for n in res.tree if n.thought.startswith("[Planner agent]") and n.status == "kept"]
+        for n in thoughts:
+            lines.append(f"- Thought for kept branch `{n.config.key()}`: {n.thought[len('[Planner agent] '):]}")
     b = res.budget
-    lines += ["", f"Budget: {b.used_evaluations}/{b.max_evaluations} sample experiments, "
+    lines += ["", f"Agents: {getattr(res, 'agents', 'rule')}. Budget: {b.used_evaluations}/{b.max_evaluations} sample experiments, "
               f"{b.used_validations}/{b.max_validations} validations, {b.cache_hits} reused from memory. "
               f"Wall time {res.seconds:.1f} s.", ""]
     return "\n".join(lines + _escalations(res))

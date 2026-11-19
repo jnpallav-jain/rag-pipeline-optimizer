@@ -151,3 +151,75 @@ than the minimum cacheable length and the context differs per question.
 - `bge` latency on CPU may push it out of tight-latency scenarios.
 - SQuAD favours lexical matching, so BM25 may still win retrieval. That's a finding, not a failure;
   a second dataset is out of scope for v2.
+
+---
+
+# Plan v3: build the agents with LangGraph, CrewAI and MCP (draft, Nov 19)
+
+Status: **approved Nov 19 ("go for v3, don't stop until you need my input"); Steps 1–5 done Nov 19.**
+
+## Why
+
+The capstone must use the frameworks taught in the course, and Checkpoints 4–5 committed to
+them (CP4 §2d: CrewAI Planner and Evaluator, a framework controller, an MCP server for shared
+state). v2 implements the CP4 *algorithm* faithfully (beam 3, depth 4, 30-node budget, rubric
+50/20/15/15, 0.60 floor, 15% gap, 0.02 ties, backtracking) but in plain Python with rule-based
+agents. v3 keeps that algorithm and moves it onto the frameworks.
+
+## Design
+
+| piece | framework | what it does |
+|---|---|---|
+| Controller (orchestrator) | **LangGraph** `StateGraph` | Nodes: clarify → gather evidence → expand → test → evaluate/prune → (loop until depth 4) → validate finalists → report. Conditional edges for backtracking, re-planning and stopping. Human checkpoints with LangGraph `interrupt()` and a checkpointer, so an interactive run pauses and resumes |
+| Researcher, Planner, Evaluator (critic) | **CrewAI** agents on Claude Haiku 5.5 | Researcher gathers cited evidence; Planner writes each Thought (why each of the 3 options, which untested choices to fill) and the final report; Evaluator reviews the measured scores, flags evidence that conflicts with experiments and checks citations |
+| Experimenter | CrewAI tool, no LLM | Runs the pipeline; an LLM adds nothing to running code, so it stays a tool (keeps cost down) |
+| Shared state | **MCP server** (`mcp` Python SDK, FastMCP) | Exposes `search_research`, `search_experiments`, `run_experiment`, `get_tree` to the CrewAI agents (read-only except the Experimenter's log write) |
+
+Rules kept from CP4/CP6: **numbers come only from measured experiments.** LLM agents reason and
+write, but scores, pruning and constraint checks stay in code, and every number in a report is
+still verified against the experiment log. If an LLM answer is invalid, refused or over budget,
+the run falls back to the rule-based policy for that step and records it (CP6 fallback logic).
+
+Two modes: `--agents llm` (CrewAI, the capstone system) and `--agents rule` (v2 policy, now
+running inside the same LangGraph graph). Rule mode is the free, repeatable baseline and the
+ablation; tests use it plus a fake LLM.
+
+## Steps (each a separate go/no-go)
+
+1. ✅ **LangGraph controller, rule mode.** Done: `graph.py`; identical decisions to the v2 loop on
+   13 deterministic scenarios incl. low-confidence and denied steps (`tests/test_graph.py`).
+   Original plan: Rewrite `orchestrator.run` as a graph that calls the
+   existing agent code. Check it picks the same configurations as v2 on all five scenarios.
+   Files: new `rag_optimizer/graph.py`, `orchestrator.py`, `human.py`, `cli.py`, tests,
+   `requirements.txt` (`langgraph`). $0.
+2. ✅ **MCP server.** Done: 3 read-only tools (`run_experiment` left out: the Experimenter is
+   a tool the graph calls directly), stdio test incl. injection filter. Original plan: New `rag_optimizer/mcp_server.py` with the four tools; test it with an MCP
+   client. $0.
+3. ✅ **CrewAI agents.** Done: Researcher, Planner, Evaluator critic; fake-LLM tests. CrewAI 1.15
+   sends `budget_tokens: null` with disabled thinking (API 400): worked around. Original plan: New `rag_optimizer/crew.py`: the three LLM agents, structured (Pydantic)
+   outputs, fallback, and their token usage added to the existing $1 spend ledger. One smoke
+   run (~$0.005, estimate). Files: `crew.py`, `graph.py`, `reader.py` (shared ledger), tests,
+   `requirements.txt` (`crewai`, `mcp`).
+4. ✅ **Evaluate LLM mode vs rule mode.** Done (`results/llm_agents_eval.json`): CrewAI regret
+   S1 0.0131 / S2 0.0673 / S3 0.0000 / S4 0.0129 / S5 no pick (finalists over the 0.5 ms cap on
+   validation) vs rules 0.0074 / 0.0084 / 0.0031 / 0.0061 / 0.0025; 0 fallbacks; ~$0.006 and
+   ~45 s per run vs $0 and ~4 s. Rule suite re-run through LangGraph: regret 0.0055, within 0.01
+   92% (v2 0.0101 / 64%; same decisions given same measurements, so the change is timing noise).
+   Safety in LLM mode passed. Project LLM spend $0.161 of $1. Original plan: 5 scenarios × 2 repeats + the prompt-injection and
+   human-checkpoint tests in LLM mode; the full 100-run suite stays in rule mode. Compare regret,
+   experiments, time and cost. Estimate ~$0.05–0.10.
+5. ◐ **Write-up.** README, diagram, push done Nov 19; the 7.1 report template is next.
+
+## Cost (estimate)
+
+~9 Haiku calls per LLM-mode run (Planner and Evaluator once per depth, Researcher, report) at
+~3K input / ~300 output tokens (CrewAI prompts are verbose) ≈ $0.004 per run. ~12 evaluation runs
+plus development ≈ $0.10. Already spent $0.0725, so the project stays under the **$1 cap**, which
+the code enforces.
+
+## Risks
+
+- CrewAI is a large dependency; Python 3.13 support must be checked in Step 3.
+- Haiku 5.5 rejects non-default `temperature`; CrewAI/LiteLLM must not send it.
+- LLM mode varies between runs, so its results are reported as ranges over repeats.
+- Estimated effort ~8–10 h.
