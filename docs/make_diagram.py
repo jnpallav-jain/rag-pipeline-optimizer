@@ -41,7 +41,7 @@ box(38, 41, 44, 11, "Orchestrator (controller)", "beam search, budget (30 runs),
 arrow(19.3, 46, 37.7, 46.5, style="<|-|>")
 
 ag = [("Researcher", "searches research KB\n+ experiment log"), ("Planner", "3 options per choice;\nfills untested choices"),
-      ("Experimenter", "only role that runs code;\ntime limit + retry"), ("Evaluator (critic)", "rubric score, prune,\nconfidence, verification")]
+      ("Experimenter", "runs BM25 / TF-IDF / BGE+FAISS;\ntime limit + retry"), ("Evaluator (critic)", "rubric score, prune,\nconfidence, verification")]
 xs = [2, 32, 62, 92]
 for x, (t, s) in zip(xs, ag):
     box(x, 21, 26, 12.5, t, s, GREEN)
@@ -53,7 +53,7 @@ arrow(102, 20.7, 48, 20.7, color=GOLD, rad=-0.12)
 ax.text(80, 13.2, "scores + prune decisions -> Planner", fontsize=8, color=GOLD, ha="center")
 
 box(2, 1.5, 116, 9, "Shared state and long-term memory",
-    "search tree + scores   |   experiment log (JSONL, every run has an ID)   |   research knowledge base (10 notes, TF-IDF retrieval, injection filter)",
+    "search tree + scores   |   experiment log (JSONL, every run has an ID)   |   research knowledge base (11 notes, TF-IDF retrieval, injection filter)",
     GOLD)
 for x in xs:
     arrow(x + 3, 20.7, x + 3, 11.0, color="#C9A35B", style="<|-|>", ls=(0, (2, 2)))

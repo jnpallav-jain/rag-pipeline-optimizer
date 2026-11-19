@@ -8,49 +8,48 @@
       "agent": {
         "runs": 5,
         "recommended": 5,
-        "feasible_on_test": 18,
+        "feasible_on_test": 8,
         "best_config": "c64-tfidf-k1-overlap",
         "best_accuracy": 0.696,
-        "mean_regret": 0.0264,
-        "max_regret": 0.0337,
+        "mean_regret": 0.0227,
+        "max_regret": 0.0332,
         "median_rank": 7,
-        "top3_rate": 0.2,
+        "top3_rate": 0.4,
         "pick_feasible_rate": 1.0,
-        "mean_test_accuracy": 0.7434,
-        "mean_experiments": 11.6,
-        "mean_seconds": 6.5,
+        "mean_test_accuracy": 0.7293,
+        "mean_experiments": 12,
+        "mean_seconds": 3.8,
         "picks": {
           "c128-bm25-k1-none": 3,
-          "c128-bm25-k1-overlap": 1,
-          "c64-bm25-k1-overlap": 1
+          "c64-bm25-k1-overlap": 1,
+          "c64-bm25-k1-none": 1
         },
         "escalations": {
           "replan": 5,
-          "evidence_conflict": 5,
-          "low_confidence": 1
+          "evidence_conflict": 5
         },
-        "low_confidence_rate": 0.2,
+        "low_confidence_rate": 0.0,
         "all_grounded": true,
         "cited_numbers": 30,
         "per_run": [
           {
-            "feasible_on_test": 18,
+            "feasible_on_test": 8,
             "best_config": "c64-tfidf-k1-overlap",
-            "best_utility": 0.6615,
+            "best_utility": 0.7115,
             "best_accuracy": 0.696,
             "pick": "c128-bm25-k1-none",
             "pick_test_accuracy": 0.755,
             "pick_test_tokens": 165.8,
-            "pick_test_p95_ms": 1.739,
+            "pick_test_p95_ms": 0.666,
             "pick_feasible_on_test": true,
             "pick_rank": 7,
-            "pick_utility": 0.6278,
-            "regret": 0.0337,
+            "pick_utility": 0.6782,
+            "regret": 0.0332,
             "experiments": 12,
             "validations": 2,
             "cache_hits": 10,
-            "seconds": 6.6,
-            "confidence": 1.0,
+            "seconds": 7.6,
+            "confidence": 0.996,
             "escalations": [
               [
                 "replan",
@@ -66,123 +65,119 @@
             "stopped": "search complete"
           },
           {
-            "feasible_on_test": 18,
+            "feasible_on_test": 8,
             "best_config": "c64-tfidf-k1-overlap",
-            "best_utility": 0.6615,
-            "best_accuracy": 0.696,
-            "pick": "c128-bm25-k1-overlap",
-            "pick_test_accuracy": 0.754,
-            "pick_test_tokens": 165.8,
-            "pick_test_p95_ms": 1.641,
-            "pick_feasible_on_test": true,
-            "pick_rank": 6,
-            "pick_utility": 0.6318,
-            "regret": 0.0297,
-            "experiments": 12,
-            "validations": 2,
-            "cache_hits": 10,
-            "seconds": 6.7,
-            "confidence": 0.876,
-            "escalations": [
-              [
-                "replan",
-                false
-              ],
-              [
-                "evidence_conflict",
-                false
-              ]
-            ],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 18,
-            "best_config": "c64-tfidf-k1-overlap",
-            "best_utility": 0.6615,
-            "best_accuracy": 0.696,
-            "pick": "c128-bm25-k1-none",
-            "pick_test_accuracy": 0.755,
-            "pick_test_tokens": 165.8,
-            "pick_test_p95_ms": 1.739,
-            "pick_feasible_on_test": true,
-            "pick_rank": 7,
-            "pick_utility": 0.6278,
-            "regret": 0.0337,
-            "experiments": 12,
-            "validations": 2,
-            "cache_hits": 10,
-            "seconds": 7.0,
-            "confidence": 0.706,
-            "escalations": [
-              [
-                "replan",
-                false
-              ],
-              [
-                "evidence_conflict",
-                false
-              ],
-              [
-                "low_confidence",
-                true
-              ]
-            ],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 18,
-            "best_config": "c64-tfidf-k1-overlap",
-            "best_utility": 0.6615,
-            "best_accuracy": 0.696,
-            "pick": "c128-bm25-k1-none",
-            "pick_test_accuracy": 0.755,
-            "pick_test_tokens": 165.8,
-            "pick_test_p95_ms": 1.739,
-            "pick_feasible_on_test": true,
-            "pick_rank": 7,
-            "pick_utility": 0.6278,
-            "regret": 0.0337,
-            "experiments": 10,
-            "validations": 2,
-            "cache_hits": 9,
-            "seconds": 5.8,
-            "confidence": 1.0,
-            "escalations": [
-              [
-                "replan",
-                false
-              ],
-              [
-                "evidence_conflict",
-                false
-              ]
-            ],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 18,
-            "best_config": "c64-tfidf-k1-overlap",
-            "best_utility": 0.6615,
+            "best_utility": 0.7115,
             "best_accuracy": 0.696,
             "pick": "c64-bm25-k1-overlap",
-            "pick_test_accuracy": 0.698,
+            "pick_test_accuracy": 0.697,
             "pick_test_tokens": 83.0,
-            "pick_test_p95_ms": 1.89,
+            "pick_test_p95_ms": 0.885,
             "pick_feasible_on_test": true,
-            "pick_rank": 3,
-            "pick_utility": 0.6602,
-            "regret": 0.0013,
+            "pick_rank": 2,
+            "pick_utility": 0.7069,
+            "regret": 0.0046,
             "experiments": 12,
             "validations": 2,
             "cache_hits": 10,
-            "seconds": 6.6,
+            "seconds": 2.9,
             "confidence": 1.0,
+            "escalations": [
+              [
+                "replan",
+                false
+              ],
+              [
+                "evidence_conflict",
+                false
+              ]
+            ],
+            "cited_numbers": 6,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 8,
+            "best_config": "c64-tfidf-k1-overlap",
+            "best_utility": 0.7115,
+            "best_accuracy": 0.696,
+            "pick": "c128-bm25-k1-none",
+            "pick_test_accuracy": 0.755,
+            "pick_test_tokens": 165.8,
+            "pick_test_p95_ms": 0.666,
+            "pick_feasible_on_test": true,
+            "pick_rank": 7,
+            "pick_utility": 0.6782,
+            "regret": 0.0332,
+            "experiments": 12,
+            "validations": 2,
+            "cache_hits": 10,
+            "seconds": 2.9,
+            "confidence": 0.997,
+            "escalations": [
+              [
+                "replan",
+                false
+              ],
+              [
+                "evidence_conflict",
+                false
+              ]
+            ],
+            "cited_numbers": 6,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 8,
+            "best_config": "c64-tfidf-k1-overlap",
+            "best_utility": 0.7115,
+            "best_accuracy": 0.696,
+            "pick": "c128-bm25-k1-none",
+            "pick_test_accuracy": 0.755,
+            "pick_test_tokens": 165.8,
+            "pick_test_p95_ms": 0.666,
+            "pick_feasible_on_test": true,
+            "pick_rank": 7,
+            "pick_utility": 0.6782,
+            "regret": 0.0332,
+            "experiments": 12,
+            "validations": 2,
+            "cache_hits": 10,
+            "seconds": 2.8,
+            "confidence": 0.852,
+            "escalations": [
+              [
+                "replan",
+                false
+              ],
+              [
+                "evidence_conflict",
+                false
+              ]
+            ],
+            "cited_numbers": 6,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 8,
+            "best_config": "c64-tfidf-k1-overlap",
+            "best_utility": 0.7115,
+            "best_accuracy": 0.696,
+            "pick": "c64-bm25-k1-none",
+            "pick_test_accuracy": 0.6845,
+            "pick_test_tokens": 83.0,
+            "pick_test_p95_ms": 0.827,
+            "pick_feasible_on_test": true,
+            "pick_rank": 3,
+            "pick_utility": 0.7023,
+            "regret": 0.0092,
+            "experiments": 12,
+            "validations": 2,
+            "cache_hits": 10,
+            "seconds": 3.0,
+            "confidence": 0.841,
             "escalations": [
               [
                 "replan",
@@ -202,21 +197,19 @@
       "greedy": {
         "runs": 5,
         "recommended": 5,
-        "feasible_on_test": 18,
+        "feasible_on_test": 8,
         "best_config": "c64-tfidf-k1-overlap",
         "best_accuracy": 0.696,
-        "mean_regret": 0.0278,
-        "max_regret": 0.0337,
+        "mean_regret": 0.0303,
+        "max_regret": 0.0303,
         "median_rank": 6,
         "top3_rate": 0.0,
         "pick_feasible_rate": 1.0,
-        "mean_test_accuracy": 0.7407,
+        "mean_test_accuracy": 0.754,
         "mean_experiments": 7,
-        "mean_seconds": 3.9,
+        "mean_seconds": 1.5,
         "picks": {
-          "c128-bm25-k1-none": 2,
-          "c64-bm25-k1-none": 1,
-          "c128-bm25-k1-overlap": 2
+          "c128-bm25-k1-overlap": 5
         },
         "escalations": {
           "replan": 5,
@@ -227,118 +220,22 @@
         "cited_numbers": 15,
         "per_run": [
           {
-            "feasible_on_test": 18,
+            "feasible_on_test": 8,
             "best_config": "c64-tfidf-k1-overlap",
-            "best_utility": 0.6615,
-            "best_accuracy": 0.696,
-            "pick": "c128-bm25-k1-none",
-            "pick_test_accuracy": 0.755,
-            "pick_test_tokens": 165.8,
-            "pick_test_p95_ms": 1.739,
-            "pick_feasible_on_test": true,
-            "pick_rank": 7,
-            "pick_utility": 0.6278,
-            "regret": 0.0337,
-            "experiments": 7,
-            "validations": 1,
-            "cache_hits": 4,
-            "seconds": 3.7,
-            "confidence": 1.0,
-            "escalations": [
-              [
-                "replan",
-                false
-              ],
-              [
-                "evidence_conflict",
-                false
-              ]
-            ],
-            "cited_numbers": 3,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 18,
-            "best_config": "c64-tfidf-k1-overlap",
-            "best_utility": 0.6615,
-            "best_accuracy": 0.696,
-            "pick": "c128-bm25-k1-none",
-            "pick_test_accuracy": 0.755,
-            "pick_test_tokens": 165.8,
-            "pick_test_p95_ms": 1.739,
-            "pick_feasible_on_test": true,
-            "pick_rank": 7,
-            "pick_utility": 0.6278,
-            "regret": 0.0337,
-            "experiments": 7,
-            "validations": 1,
-            "cache_hits": 4,
-            "seconds": 3.6,
-            "confidence": 1.0,
-            "escalations": [
-              [
-                "replan",
-                false
-              ],
-              [
-                "evidence_conflict",
-                false
-              ]
-            ],
-            "cited_numbers": 3,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 18,
-            "best_config": "c64-tfidf-k1-overlap",
-            "best_utility": 0.6615,
-            "best_accuracy": 0.696,
-            "pick": "c64-bm25-k1-none",
-            "pick_test_accuracy": 0.6855,
-            "pick_test_tokens": 83.0,
-            "pick_test_p95_ms": 1.965,
-            "pick_feasible_on_test": true,
-            "pick_rank": 4,
-            "pick_utility": 0.6493,
-            "regret": 0.0122,
-            "experiments": 7,
-            "validations": 1,
-            "cache_hits": 4,
-            "seconds": 4.4,
-            "confidence": 1.0,
-            "escalations": [
-              [
-                "replan",
-                false
-              ],
-              [
-                "evidence_conflict",
-                false
-              ]
-            ],
-            "cited_numbers": 3,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 18,
-            "best_config": "c64-tfidf-k1-overlap",
-            "best_utility": 0.6615,
+            "best_utility": 0.7115,
             "best_accuracy": 0.696,
             "pick": "c128-bm25-k1-overlap",
             "pick_test_accuracy": 0.754,
             "pick_test_tokens": 165.8,
-            "pick_test_p95_ms": 1.641,
+            "pick_test_p95_ms": 0.592,
             "pick_feasible_on_test": true,
             "pick_rank": 6,
-            "pick_utility": 0.6318,
-            "regret": 0.0297,
+            "pick_utility": 0.6811,
+            "regret": 0.0303,
             "experiments": 7,
             "validations": 1,
             "cache_hits": 4,
-            "seconds": 4.0,
+            "seconds": 1.5,
             "confidence": 1.0,
             "escalations": [
               [
@@ -355,22 +252,118 @@
             "stopped": "search complete"
           },
           {
-            "feasible_on_test": 18,
+            "feasible_on_test": 8,
             "best_config": "c64-tfidf-k1-overlap",
-            "best_utility": 0.6615,
+            "best_utility": 0.7115,
             "best_accuracy": 0.696,
             "pick": "c128-bm25-k1-overlap",
             "pick_test_accuracy": 0.754,
             "pick_test_tokens": 165.8,
-            "pick_test_p95_ms": 1.641,
+            "pick_test_p95_ms": 0.592,
             "pick_feasible_on_test": true,
             "pick_rank": 6,
-            "pick_utility": 0.6318,
-            "regret": 0.0297,
+            "pick_utility": 0.6811,
+            "regret": 0.0303,
             "experiments": 7,
             "validations": 1,
             "cache_hits": 4,
-            "seconds": 3.6,
+            "seconds": 1.5,
+            "confidence": 1.0,
+            "escalations": [
+              [
+                "replan",
+                false
+              ],
+              [
+                "evidence_conflict",
+                false
+              ]
+            ],
+            "cited_numbers": 3,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 8,
+            "best_config": "c64-tfidf-k1-overlap",
+            "best_utility": 0.7115,
+            "best_accuracy": 0.696,
+            "pick": "c128-bm25-k1-overlap",
+            "pick_test_accuracy": 0.754,
+            "pick_test_tokens": 165.8,
+            "pick_test_p95_ms": 0.592,
+            "pick_feasible_on_test": true,
+            "pick_rank": 6,
+            "pick_utility": 0.6811,
+            "regret": 0.0303,
+            "experiments": 7,
+            "validations": 1,
+            "cache_hits": 4,
+            "seconds": 1.5,
+            "confidence": 1.0,
+            "escalations": [
+              [
+                "replan",
+                false
+              ],
+              [
+                "evidence_conflict",
+                false
+              ]
+            ],
+            "cited_numbers": 3,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 8,
+            "best_config": "c64-tfidf-k1-overlap",
+            "best_utility": 0.7115,
+            "best_accuracy": 0.696,
+            "pick": "c128-bm25-k1-overlap",
+            "pick_test_accuracy": 0.754,
+            "pick_test_tokens": 165.8,
+            "pick_test_p95_ms": 0.592,
+            "pick_feasible_on_test": true,
+            "pick_rank": 6,
+            "pick_utility": 0.6811,
+            "regret": 0.0303,
+            "experiments": 7,
+            "validations": 1,
+            "cache_hits": 4,
+            "seconds": 1.5,
+            "confidence": 1.0,
+            "escalations": [
+              [
+                "replan",
+                false
+              ],
+              [
+                "evidence_conflict",
+                false
+              ]
+            ],
+            "cited_numbers": 3,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 8,
+            "best_config": "c64-tfidf-k1-overlap",
+            "best_utility": 0.7115,
+            "best_accuracy": 0.696,
+            "pick": "c128-bm25-k1-overlap",
+            "pick_test_accuracy": 0.754,
+            "pick_test_tokens": 165.8,
+            "pick_test_p95_ms": 0.592,
+            "pick_feasible_on_test": true,
+            "pick_rank": 6,
+            "pick_utility": 0.6811,
+            "regret": 0.0303,
+            "experiments": 7,
+            "validations": 1,
+            "cache_hits": 4,
+            "seconds": 1.5,
             "confidence": 1.0,
             "escalations": [
               [
@@ -391,125 +384,43 @@
       "no_kb": {
         "runs": 5,
         "recommended": 5,
-        "feasible_on_test": 18,
+        "feasible_on_test": 8,
         "best_config": "c64-tfidf-k1-overlap",
         "best_accuracy": 0.696,
-        "mean_regret": 0.0243,
-        "max_regret": 0.0337,
-        "median_rank": 6,
-        "top3_rate": 0.0,
+        "mean_regret": 0.0018,
+        "max_regret": 0.0092,
+        "median_rank": 1,
+        "top3_rate": 1.0,
         "pick_feasible_rate": 1.0,
-        "mean_test_accuracy": 0.727,
-        "mean_experiments": 11.6,
-        "mean_seconds": 6.9,
+        "mean_test_accuracy": 0.6937,
+        "mean_experiments": 12,
+        "mean_seconds": 2.9,
         "picks": {
-          "c128-bm25-k1-none": 2,
-          "c64-bm25-k1-none": 2,
-          "c128-bm25-k1-overlap": 1
+          "c64-tfidf-k1-overlap": 4,
+          "c64-bm25-k1-none": 1
         },
-        "escalations": {
-          "low_confidence": 2
-        },
-        "low_confidence_rate": 0.4,
+        "escalations": {},
+        "low_confidence_rate": 0.0,
         "all_grounded": true,
         "cited_numbers": 30,
         "per_run": [
           {
-            "feasible_on_test": 18,
+            "feasible_on_test": 8,
             "best_config": "c64-tfidf-k1-overlap",
-            "best_utility": 0.6615,
+            "best_utility": 0.7115,
             "best_accuracy": 0.696,
-            "pick": "c128-bm25-k1-none",
-            "pick_test_accuracy": 0.755,
-            "pick_test_tokens": 165.8,
-            "pick_test_p95_ms": 1.739,
-            "pick_feasible_on_test": true,
-            "pick_rank": 7,
-            "pick_utility": 0.6278,
-            "regret": 0.0337,
-            "experiments": 10,
-            "validations": 2,
-            "cache_hits": 6,
-            "seconds": 5.7,
-            "confidence": 0.758,
-            "escalations": [
-              [
-                "low_confidence",
-                true
-              ]
-            ],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 18,
-            "best_config": "c64-tfidf-k1-overlap",
-            "best_utility": 0.6615,
-            "best_accuracy": 0.696,
-            "pick": "c64-bm25-k1-none",
-            "pick_test_accuracy": 0.6855,
+            "pick": "c64-tfidf-k1-overlap",
+            "pick_test_accuracy": 0.696,
             "pick_test_tokens": 83.0,
-            "pick_test_p95_ms": 1.965,
+            "pick_test_p95_ms": 0.775,
             "pick_feasible_on_test": true,
-            "pick_rank": 4,
-            "pick_utility": 0.6493,
-            "regret": 0.0122,
+            "pick_rank": 1,
+            "pick_utility": 0.7115,
+            "regret": 0.0,
             "experiments": 12,
             "validations": 2,
             "cache_hits": 8,
-            "seconds": 7.4,
-            "confidence": 0.859,
-            "escalations": [],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 18,
-            "best_config": "c64-tfidf-k1-overlap",
-            "best_utility": 0.6615,
-            "best_accuracy": 0.696,
-            "pick": "c64-bm25-k1-none",
-            "pick_test_accuracy": 0.6855,
-            "pick_test_tokens": 83.0,
-            "pick_test_p95_ms": 1.965,
-            "pick_feasible_on_test": true,
-            "pick_rank": 4,
-            "pick_utility": 0.6493,
-            "regret": 0.0122,
-            "experiments": 12,
-            "validations": 2,
-            "cache_hits": 8,
-            "seconds": 7.3,
-            "confidence": 0.637,
-            "escalations": [
-              [
-                "low_confidence",
-                true
-              ]
-            ],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 18,
-            "best_config": "c64-tfidf-k1-overlap",
-            "best_utility": 0.6615,
-            "best_accuracy": 0.696,
-            "pick": "c128-bm25-k1-none",
-            "pick_test_accuracy": 0.755,
-            "pick_test_tokens": 165.8,
-            "pick_test_p95_ms": 1.739,
-            "pick_feasible_on_test": true,
-            "pick_rank": 7,
-            "pick_utility": 0.6278,
-            "regret": 0.0337,
-            "experiments": 12,
-            "validations": 2,
-            "cache_hits": 8,
-            "seconds": 7.1,
+            "seconds": 2.8,
             "confidence": 1.0,
             "escalations": [],
             "cited_numbers": 6,
@@ -517,23 +428,92 @@
             "stopped": "search complete"
           },
           {
-            "feasible_on_test": 18,
+            "feasible_on_test": 8,
             "best_config": "c64-tfidf-k1-overlap",
-            "best_utility": 0.6615,
+            "best_utility": 0.7115,
             "best_accuracy": 0.696,
-            "pick": "c128-bm25-k1-overlap",
-            "pick_test_accuracy": 0.754,
-            "pick_test_tokens": 165.8,
-            "pick_test_p95_ms": 1.641,
+            "pick": "c64-tfidf-k1-overlap",
+            "pick_test_accuracy": 0.696,
+            "pick_test_tokens": 83.0,
+            "pick_test_p95_ms": 0.775,
             "pick_feasible_on_test": true,
-            "pick_rank": 6,
-            "pick_utility": 0.6318,
-            "regret": 0.0297,
+            "pick_rank": 1,
+            "pick_utility": 0.7115,
+            "regret": 0.0,
             "experiments": 12,
             "validations": 2,
             "cache_hits": 8,
-            "seconds": 7.1,
-            "confidence": 0.838,
+            "seconds": 2.8,
+            "confidence": 1.0,
+            "escalations": [],
+            "cited_numbers": 6,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 8,
+            "best_config": "c64-tfidf-k1-overlap",
+            "best_utility": 0.7115,
+            "best_accuracy": 0.696,
+            "pick": "c64-bm25-k1-none",
+            "pick_test_accuracy": 0.6845,
+            "pick_test_tokens": 83.0,
+            "pick_test_p95_ms": 0.827,
+            "pick_feasible_on_test": true,
+            "pick_rank": 3,
+            "pick_utility": 0.7023,
+            "regret": 0.0092,
+            "experiments": 12,
+            "validations": 2,
+            "cache_hits": 8,
+            "seconds": 3.0,
+            "confidence": 1.0,
+            "escalations": [],
+            "cited_numbers": 6,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 8,
+            "best_config": "c64-tfidf-k1-overlap",
+            "best_utility": 0.7115,
+            "best_accuracy": 0.696,
+            "pick": "c64-tfidf-k1-overlap",
+            "pick_test_accuracy": 0.696,
+            "pick_test_tokens": 83.0,
+            "pick_test_p95_ms": 0.775,
+            "pick_feasible_on_test": true,
+            "pick_rank": 1,
+            "pick_utility": 0.7115,
+            "regret": 0.0,
+            "experiments": 12,
+            "validations": 2,
+            "cache_hits": 8,
+            "seconds": 2.9,
+            "confidence": 1.0,
+            "escalations": [],
+            "cited_numbers": 6,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 8,
+            "best_config": "c64-tfidf-k1-overlap",
+            "best_utility": 0.7115,
+            "best_accuracy": 0.696,
+            "pick": "c64-tfidf-k1-overlap",
+            "pick_test_accuracy": 0.696,
+            "pick_test_tokens": 83.0,
+            "pick_test_p95_ms": 0.775,
+            "pick_feasible_on_test": true,
+            "pick_rank": 1,
+            "pick_utility": 0.7115,
+            "regret": 0.0,
+            "experiments": 12,
+            "validations": 2,
+            "cache_hits": 8,
+            "seconds": 2.9,
+            "confidence": 1.0,
             "escalations": [],
             "cited_numbers": 6,
             "grounded": true,
@@ -544,22 +524,24 @@
       "no_score_floor": {
         "runs": 5,
         "recommended": 5,
-        "feasible_on_test": 18,
+        "feasible_on_test": 8,
         "best_config": "c64-tfidf-k1-overlap",
         "best_accuracy": 0.696,
-        "mean_regret": 0.0294,
-        "max_regret": 0.0337,
-        "median_rank": 7,
-        "top3_rate": 0.0,
+        "mean_regret": 0.0122,
+        "max_regret": 0.0332,
+        "median_rank": 3,
+        "top3_rate": 0.8,
         "pick_feasible_rate": 1.0,
-        "mean_test_accuracy": 0.7411,
+        "mean_test_accuracy": 0.7036,
         "mean_experiments": 12,
-        "mean_seconds": 8.3,
+        "mean_seconds": 3.0,
         "picks": {
-          "c128-bm25-k1-none": 4,
-          "c64-bm25-k1-none": 1
+          "c64-bm25-k1-overlap": 2,
+          "c64-bm25-k1-none": 2,
+          "c128-bm25-k1-none": 1
         },
         "escalations": {
+          "replan": 5,
           "evidence_conflict": 5
         },
         "low_confidence_rate": 0.0,
@@ -567,24 +549,28 @@
         "cited_numbers": 30,
         "per_run": [
           {
-            "feasible_on_test": 18,
+            "feasible_on_test": 8,
             "best_config": "c64-tfidf-k1-overlap",
-            "best_utility": 0.6615,
+            "best_utility": 0.7115,
             "best_accuracy": 0.696,
-            "pick": "c128-bm25-k1-none",
-            "pick_test_accuracy": 0.755,
-            "pick_test_tokens": 165.8,
-            "pick_test_p95_ms": 1.739,
+            "pick": "c64-bm25-k1-overlap",
+            "pick_test_accuracy": 0.697,
+            "pick_test_tokens": 83.0,
+            "pick_test_p95_ms": 0.885,
             "pick_feasible_on_test": true,
-            "pick_rank": 7,
-            "pick_utility": 0.6278,
-            "regret": 0.0337,
+            "pick_rank": 2,
+            "pick_utility": 0.7069,
+            "regret": 0.0046,
             "experiments": 12,
             "validations": 2,
-            "cache_hits": 8,
-            "seconds": 8.6,
-            "confidence": 0.981,
+            "cache_hits": 10,
+            "seconds": 3.1,
+            "confidence": 0.994,
             "escalations": [
+              [
+                "replan",
+                false
+              ],
               [
                 "evidence_conflict",
                 false
@@ -595,24 +581,60 @@
             "stopped": "search complete"
           },
           {
-            "feasible_on_test": 18,
+            "feasible_on_test": 8,
             "best_config": "c64-tfidf-k1-overlap",
-            "best_utility": 0.6615,
+            "best_utility": 0.7115,
+            "best_accuracy": 0.696,
+            "pick": "c64-bm25-k1-overlap",
+            "pick_test_accuracy": 0.697,
+            "pick_test_tokens": 83.0,
+            "pick_test_p95_ms": 0.885,
+            "pick_feasible_on_test": true,
+            "pick_rank": 2,
+            "pick_utility": 0.7069,
+            "regret": 0.0046,
+            "experiments": 12,
+            "validations": 2,
+            "cache_hits": 10,
+            "seconds": 2.9,
+            "confidence": 1.0,
+            "escalations": [
+              [
+                "replan",
+                false
+              ],
+              [
+                "evidence_conflict",
+                false
+              ]
+            ],
+            "cited_numbers": 6,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 8,
+            "best_config": "c64-tfidf-k1-overlap",
+            "best_utility": 0.7115,
             "best_accuracy": 0.696,
             "pick": "c64-bm25-k1-none",
-            "pick_test_accuracy": 0.6855,
+            "pick_test_accuracy": 0.6845,
             "pick_test_tokens": 83.0,
-            "pick_test_p95_ms": 1.965,
+            "pick_test_p95_ms": 0.827,
             "pick_feasible_on_test": true,
-            "pick_rank": 4,
-            "pick_utility": 0.6493,
-            "regret": 0.0122,
+            "pick_rank": 3,
+            "pick_utility": 0.7023,
+            "regret": 0.0092,
             "experiments": 12,
             "validations": 2,
-            "cache_hits": 8,
-            "seconds": 8.2,
-            "confidence": 0.907,
+            "cache_hits": 10,
+            "seconds": 2.9,
+            "confidence": 1.0,
             "escalations": [
+              [
+                "replan",
+                false
+              ],
               [
                 "evidence_conflict",
                 false
@@ -623,24 +645,28 @@
             "stopped": "search complete"
           },
           {
-            "feasible_on_test": 18,
+            "feasible_on_test": 8,
             "best_config": "c64-tfidf-k1-overlap",
-            "best_utility": 0.6615,
+            "best_utility": 0.7115,
             "best_accuracy": 0.696,
             "pick": "c128-bm25-k1-none",
             "pick_test_accuracy": 0.755,
             "pick_test_tokens": 165.8,
-            "pick_test_p95_ms": 1.739,
+            "pick_test_p95_ms": 0.666,
             "pick_feasible_on_test": true,
             "pick_rank": 7,
-            "pick_utility": 0.6278,
-            "regret": 0.0337,
+            "pick_utility": 0.6782,
+            "regret": 0.0332,
             "experiments": 12,
             "validations": 2,
-            "cache_hits": 8,
-            "seconds": 7.9,
-            "confidence": 1.0,
+            "cache_hits": 10,
+            "seconds": 2.9,
+            "confidence": 0.918,
             "escalations": [
+              [
+                "replan",
+                false
+              ],
               [
                 "evidence_conflict",
                 false
@@ -651,52 +677,28 @@
             "stopped": "search complete"
           },
           {
-            "feasible_on_test": 18,
+            "feasible_on_test": 8,
             "best_config": "c64-tfidf-k1-overlap",
-            "best_utility": 0.6615,
+            "best_utility": 0.7115,
             "best_accuracy": 0.696,
-            "pick": "c128-bm25-k1-none",
-            "pick_test_accuracy": 0.755,
-            "pick_test_tokens": 165.8,
-            "pick_test_p95_ms": 1.739,
+            "pick": "c64-bm25-k1-none",
+            "pick_test_accuracy": 0.6845,
+            "pick_test_tokens": 83.0,
+            "pick_test_p95_ms": 0.827,
             "pick_feasible_on_test": true,
-            "pick_rank": 7,
-            "pick_utility": 0.6278,
-            "regret": 0.0337,
+            "pick_rank": 3,
+            "pick_utility": 0.7023,
+            "regret": 0.0092,
             "experiments": 12,
             "validations": 2,
-            "cache_hits": 8,
-            "seconds": 8.6,
+            "cache_hits": 10,
+            "seconds": 3.0,
             "confidence": 1.0,
             "escalations": [
               [
-                "evidence_conflict",
+                "replan",
                 false
-              ]
-            ],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 18,
-            "best_config": "c64-tfidf-k1-overlap",
-            "best_utility": 0.6615,
-            "best_accuracy": 0.696,
-            "pick": "c128-bm25-k1-none",
-            "pick_test_accuracy": 0.755,
-            "pick_test_tokens": 165.8,
-            "pick_test_p95_ms": 1.739,
-            "pick_feasible_on_test": true,
-            "pick_rank": 7,
-            "pick_utility": 0.6278,
-            "regret": 0.0337,
-            "experiments": 12,
-            "validations": 2,
-            "cache_hits": 8,
-            "seconds": 8.1,
-            "confidence": 1.0,
-            "escalations": [
+              ],
               [
                 "evidence_conflict",
                 false
@@ -717,58 +719,52 @@
       "agent": {
         "runs": 5,
         "recommended": 5,
-        "feasible_on_test": 36,
+        "feasible_on_test": 16,
         "best_config": "c64-tfidf-k3-overlap",
         "best_accuracy": 0.8465,
-        "mean_regret": 0.0139,
-        "max_regret": 0.0277,
-        "median_rank": 5,
+        "mean_regret": 0.0108,
+        "max_regret": 0.0127,
+        "median_rank": 7,
         "top3_rate": 0.2,
         "pick_feasible_rate": 1.0,
-        "mean_test_accuracy": 0.7933,
-        "mean_experiments": 12,
-        "mean_seconds": 7.9,
+        "mean_test_accuracy": 0.7694,
+        "mean_experiments": 18,
+        "mean_seconds": 3.9,
         "picks": {
-          "c64-bm25-k1-none": 1,
-          "c128-bm25-k1-none": 1,
-          "c64-bm25-k3-overlap": 1,
-          "c64-bm25-k3-none": 2
+          "c128-bm25-k1-none": 3,
+          "c64-tfidf-k3-none": 1,
+          "c128-bm25-k1-overlap": 1
         },
         "escalations": {
-          "evidence_conflict": 5,
-          "low_confidence": 1,
-          "replan": 1
+          "replan": 5,
+          "low_confidence": 1
         },
         "low_confidence_rate": 0.2,
         "all_grounded": true,
         "cited_numbers": 30,
         "per_run": [
           {
-            "feasible_on_test": 36,
+            "feasible_on_test": 16,
             "best_config": "c64-tfidf-k3-overlap",
-            "best_utility": 0.7136,
+            "best_utility": 0.7641,
             "best_accuracy": 0.8465,
-            "pick": "c64-bm25-k1-none",
-            "pick_test_accuracy": 0.6855,
-            "pick_test_tokens": 83.0,
-            "pick_test_p95_ms": 1.965,
+            "pick": "c128-bm25-k1-none",
+            "pick_test_accuracy": 0.755,
+            "pick_test_tokens": 165.8,
+            "pick_test_p95_ms": 0.666,
             "pick_feasible_on_test": true,
-            "pick_rank": 12,
-            "pick_utility": 0.6859,
-            "regret": 0.0277,
-            "experiments": 10,
+            "pick_rank": 7,
+            "pick_utility": 0.7514,
+            "regret": 0.0127,
+            "experiments": 18,
             "validations": 2,
-            "cache_hits": 4,
-            "seconds": 7.4,
-            "confidence": 0.587,
+            "cache_hits": 11,
+            "seconds": 5.6,
+            "confidence": 0.997,
             "escalations": [
               [
-                "evidence_conflict",
+                "replan",
                 false
-              ],
-              [
-                "low_confidence",
-                true
               ]
             ],
             "cited_numbers": 6,
@@ -776,115 +772,115 @@
             "stopped": "search complete"
           },
           {
-            "feasible_on_test": 36,
+            "feasible_on_test": 16,
             "best_config": "c64-tfidf-k3-overlap",
-            "best_utility": 0.7136,
+            "best_utility": 0.7641,
             "best_accuracy": 0.8465,
             "pick": "c128-bm25-k1-none",
             "pick_test_accuracy": 0.755,
             "pick_test_tokens": 165.8,
-            "pick_test_p95_ms": 1.739,
+            "pick_test_p95_ms": 0.666,
+            "pick_feasible_on_test": true,
+            "pick_rank": 7,
+            "pick_utility": 0.7514,
+            "regret": 0.0127,
+            "experiments": 18,
+            "validations": 2,
+            "cache_hits": 11,
+            "seconds": 3.4,
+            "confidence": 0.997,
+            "escalations": [
+              [
+                "replan",
+                false
+              ]
+            ],
+            "cited_numbers": 6,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 16,
+            "best_config": "c64-tfidf-k3-overlap",
+            "best_utility": 0.7641,
+            "best_accuracy": 0.8465,
+            "pick": "c64-tfidf-k3-none",
+            "pick_test_accuracy": 0.828,
+            "pick_test_tokens": 248.2,
+            "pick_test_p95_ms": 0.669,
+            "pick_feasible_on_test": true,
+            "pick_rank": 3,
+            "pick_utility": 0.7578,
+            "regret": 0.0062,
+            "experiments": 18,
+            "validations": 2,
+            "cache_hits": 11,
+            "seconds": 3.7,
+            "confidence": 0.811,
+            "escalations": [
+              [
+                "replan",
+                false
+              ]
+            ],
+            "cited_numbers": 6,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 16,
+            "best_config": "c64-tfidf-k3-overlap",
+            "best_utility": 0.7641,
+            "best_accuracy": 0.8465,
+            "pick": "c128-bm25-k1-none",
+            "pick_test_accuracy": 0.755,
+            "pick_test_tokens": 165.8,
+            "pick_test_p95_ms": 0.666,
+            "pick_feasible_on_test": true,
+            "pick_rank": 7,
+            "pick_utility": 0.7514,
+            "regret": 0.0127,
+            "experiments": 18,
+            "validations": 2,
+            "cache_hits": 11,
+            "seconds": 3.4,
+            "confidence": 0.997,
+            "escalations": [
+              [
+                "replan",
+                false
+              ]
+            ],
+            "cited_numbers": 6,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 16,
+            "best_config": "c64-tfidf-k3-overlap",
+            "best_utility": 0.7641,
+            "best_accuracy": 0.8465,
+            "pick": "c128-bm25-k1-overlap",
+            "pick_test_accuracy": 0.754,
+            "pick_test_tokens": 165.8,
+            "pick_test_p95_ms": 0.592,
             "pick_feasible_on_test": true,
             "pick_rank": 6,
-            "pick_utility": 0.7009,
-            "regret": 0.0127,
-            "experiments": 16,
+            "pick_utility": 0.7543,
+            "regret": 0.0098,
+            "experiments": 18,
             "validations": 2,
-            "cache_hits": 12,
-            "seconds": 7.8,
-            "confidence": 0.996,
+            "cache_hits": 11,
+            "seconds": 3.6,
+            "confidence": 0.678,
             "escalations": [
               [
                 "replan",
                 false
               ],
               [
-                "evidence_conflict",
-                false
-              ]
-            ],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 36,
-            "best_config": "c64-tfidf-k3-overlap",
-            "best_utility": 0.7136,
-            "best_accuracy": 0.8465,
-            "pick": "c64-bm25-k3-overlap",
-            "pick_test_accuracy": 0.847,
-            "pick_test_tokens": 249.1,
-            "pick_test_p95_ms": 1.933,
-            "pick_feasible_on_test": true,
-            "pick_rank": 2,
-            "pick_utility": 0.7091,
-            "regret": 0.0045,
-            "experiments": 11,
-            "validations": 2,
-            "cache_hits": 5,
-            "seconds": 8.1,
-            "confidence": 0.842,
-            "escalations": [
-              [
-                "evidence_conflict",
-                false
-              ]
-            ],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 36,
-            "best_config": "c64-tfidf-k3-overlap",
-            "best_utility": 0.7136,
-            "best_accuracy": 0.8465,
-            "pick": "c64-bm25-k3-none",
-            "pick_test_accuracy": 0.8395,
-            "pick_test_tokens": 249.1,
-            "pick_test_p95_ms": 2.005,
-            "pick_feasible_on_test": true,
-            "pick_rank": 5,
-            "pick_utility": 0.7013,
-            "regret": 0.0123,
-            "experiments": 10,
-            "validations": 2,
-            "cache_hits": 4,
-            "seconds": 7.5,
-            "confidence": 0.93,
-            "escalations": [
-              [
-                "evidence_conflict",
-                false
-              ]
-            ],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 36,
-            "best_config": "c64-tfidf-k3-overlap",
-            "best_utility": 0.7136,
-            "best_accuracy": 0.8465,
-            "pick": "c64-bm25-k3-none",
-            "pick_test_accuracy": 0.8395,
-            "pick_test_tokens": 249.1,
-            "pick_test_p95_ms": 2.005,
-            "pick_feasible_on_test": true,
-            "pick_rank": 5,
-            "pick_utility": 0.7013,
-            "regret": 0.0123,
-            "experiments": 13,
-            "validations": 2,
-            "cache_hits": 6,
-            "seconds": 8.7,
-            "confidence": 1.0,
-            "escalations": [
-              [
-                "evidence_conflict",
-                false
+                "low_confidence",
+                true
               ]
             ],
             "cited_numbers": 6,
@@ -896,22 +892,23 @@
       "greedy": {
         "runs": 5,
         "recommended": 5,
-        "feasible_on_test": 36,
+        "feasible_on_test": 16,
         "best_config": "c64-tfidf-k3-overlap",
         "best_accuracy": 0.8465,
-        "mean_regret": 0.0107,
-        "max_regret": 0.0123,
-        "median_rank": 5,
-        "top3_rate": 0.2,
+        "mean_regret": 0.011,
+        "max_regret": 0.0127,
+        "median_rank": 6,
+        "top3_rate": 0.0,
         "pick_feasible_rate": 1.0,
-        "mean_test_accuracy": 0.841,
-        "mean_experiments": 8,
-        "mean_seconds": 5.2,
+        "mean_test_accuracy": 0.7544,
+        "mean_experiments": 9,
+        "mean_seconds": 1.8,
         "picks": {
-          "c64-bm25-k3-none": 4,
-          "c64-bm25-k3-overlap": 1
+          "c128-bm25-k1-overlap": 3,
+          "c128-bm25-k1-none": 2
         },
         "escalations": {
+          "replan": 5,
           "evidence_conflict": 5
         },
         "low_confidence_rate": 0.0,
@@ -919,24 +916,28 @@
         "cited_numbers": 15,
         "per_run": [
           {
-            "feasible_on_test": 36,
+            "feasible_on_test": 16,
             "best_config": "c64-tfidf-k3-overlap",
-            "best_utility": 0.7136,
+            "best_utility": 0.7641,
             "best_accuracy": 0.8465,
-            "pick": "c64-bm25-k3-none",
-            "pick_test_accuracy": 0.8395,
-            "pick_test_tokens": 249.1,
-            "pick_test_p95_ms": 2.005,
+            "pick": "c128-bm25-k1-overlap",
+            "pick_test_accuracy": 0.754,
+            "pick_test_tokens": 165.8,
+            "pick_test_p95_ms": 0.592,
             "pick_feasible_on_test": true,
-            "pick_rank": 5,
-            "pick_utility": 0.7013,
-            "regret": 0.0123,
-            "experiments": 8,
+            "pick_rank": 6,
+            "pick_utility": 0.7543,
+            "regret": 0.0098,
+            "experiments": 9,
             "validations": 1,
-            "cache_hits": 3,
-            "seconds": 4.8,
+            "cache_hits": 4,
+            "seconds": 1.7,
             "confidence": 1.0,
             "escalations": [
+              [
+                "replan",
+                false
+              ],
               [
                 "evidence_conflict",
                 false
@@ -947,24 +948,28 @@
             "stopped": "search complete"
           },
           {
-            "feasible_on_test": 36,
+            "feasible_on_test": 16,
             "best_config": "c64-tfidf-k3-overlap",
-            "best_utility": 0.7136,
+            "best_utility": 0.7641,
             "best_accuracy": 0.8465,
-            "pick": "c64-bm25-k3-none",
-            "pick_test_accuracy": 0.8395,
-            "pick_test_tokens": 249.1,
-            "pick_test_p95_ms": 2.005,
+            "pick": "c128-bm25-k1-overlap",
+            "pick_test_accuracy": 0.754,
+            "pick_test_tokens": 165.8,
+            "pick_test_p95_ms": 0.592,
             "pick_feasible_on_test": true,
-            "pick_rank": 5,
-            "pick_utility": 0.7013,
-            "regret": 0.0123,
-            "experiments": 8,
+            "pick_rank": 6,
+            "pick_utility": 0.7543,
+            "regret": 0.0098,
+            "experiments": 9,
             "validations": 1,
-            "cache_hits": 3,
-            "seconds": 5.0,
+            "cache_hits": 4,
+            "seconds": 1.7,
             "confidence": 1.0,
             "escalations": [
+              [
+                "replan",
+                false
+              ],
               [
                 "evidence_conflict",
                 false
@@ -975,24 +980,28 @@
             "stopped": "search complete"
           },
           {
-            "feasible_on_test": 36,
+            "feasible_on_test": 16,
             "best_config": "c64-tfidf-k3-overlap",
-            "best_utility": 0.7136,
+            "best_utility": 0.7641,
             "best_accuracy": 0.8465,
-            "pick": "c64-bm25-k3-none",
-            "pick_test_accuracy": 0.8395,
-            "pick_test_tokens": 249.1,
-            "pick_test_p95_ms": 2.005,
+            "pick": "c128-bm25-k1-none",
+            "pick_test_accuracy": 0.755,
+            "pick_test_tokens": 165.8,
+            "pick_test_p95_ms": 0.666,
             "pick_feasible_on_test": true,
-            "pick_rank": 5,
-            "pick_utility": 0.7013,
-            "regret": 0.0123,
-            "experiments": 8,
+            "pick_rank": 7,
+            "pick_utility": 0.7514,
+            "regret": 0.0127,
+            "experiments": 9,
             "validations": 1,
-            "cache_hits": 3,
-            "seconds": 5.3,
+            "cache_hits": 4,
+            "seconds": 1.8,
             "confidence": 1.0,
             "escalations": [
+              [
+                "replan",
+                false
+              ],
               [
                 "evidence_conflict",
                 false
@@ -1003,24 +1012,28 @@
             "stopped": "search complete"
           },
           {
-            "feasible_on_test": 36,
+            "feasible_on_test": 16,
             "best_config": "c64-tfidf-k3-overlap",
-            "best_utility": 0.7136,
+            "best_utility": 0.7641,
             "best_accuracy": 0.8465,
-            "pick": "c64-bm25-k3-none",
-            "pick_test_accuracy": 0.8395,
-            "pick_test_tokens": 249.1,
-            "pick_test_p95_ms": 2.005,
+            "pick": "c128-bm25-k1-none",
+            "pick_test_accuracy": 0.755,
+            "pick_test_tokens": 165.8,
+            "pick_test_p95_ms": 0.666,
             "pick_feasible_on_test": true,
-            "pick_rank": 5,
-            "pick_utility": 0.7013,
-            "regret": 0.0123,
-            "experiments": 8,
+            "pick_rank": 7,
+            "pick_utility": 0.7514,
+            "regret": 0.0127,
+            "experiments": 9,
             "validations": 1,
-            "cache_hits": 3,
-            "seconds": 5.3,
+            "cache_hits": 4,
+            "seconds": 1.9,
             "confidence": 1.0,
             "escalations": [
+              [
+                "replan",
+                false
+              ],
               [
                 "evidence_conflict",
                 false
@@ -1031,24 +1044,28 @@
             "stopped": "search complete"
           },
           {
-            "feasible_on_test": 36,
+            "feasible_on_test": 16,
             "best_config": "c64-tfidf-k3-overlap",
-            "best_utility": 0.7136,
+            "best_utility": 0.7641,
             "best_accuracy": 0.8465,
-            "pick": "c64-bm25-k3-overlap",
-            "pick_test_accuracy": 0.847,
-            "pick_test_tokens": 249.1,
-            "pick_test_p95_ms": 1.933,
+            "pick": "c128-bm25-k1-overlap",
+            "pick_test_accuracy": 0.754,
+            "pick_test_tokens": 165.8,
+            "pick_test_p95_ms": 0.592,
             "pick_feasible_on_test": true,
-            "pick_rank": 2,
-            "pick_utility": 0.7091,
-            "regret": 0.0045,
-            "experiments": 8,
+            "pick_rank": 6,
+            "pick_utility": 0.7543,
+            "regret": 0.0098,
+            "experiments": 9,
             "validations": 1,
-            "cache_hits": 3,
-            "seconds": 5.6,
+            "cache_hits": 4,
+            "seconds": 1.8,
             "confidence": 1.0,
             "escalations": [
+              [
+                "replan",
+                false
+              ],
               [
                 "evidence_conflict",
                 false
@@ -1063,19 +1080,19 @@
       "no_kb": {
         "runs": 5,
         "recommended": 5,
-        "feasible_on_test": 36,
+        "feasible_on_test": 16,
         "best_config": "c64-tfidf-k3-overlap",
         "best_accuracy": 0.8465,
-        "mean_regret": 0.0127,
-        "max_regret": 0.0127,
-        "median_rank": 6,
-        "top3_rate": 0.0,
+        "mean_regret": 0.0,
+        "max_regret": 0.0,
+        "median_rank": 1,
+        "top3_rate": 1.0,
         "pick_feasible_rate": 1.0,
-        "mean_test_accuracy": 0.755,
-        "mean_experiments": 16.6,
-        "mean_seconds": 8.3,
+        "mean_test_accuracy": 0.8465,
+        "mean_experiments": 17,
+        "mean_seconds": 3.4,
         "picks": {
-          "c128-bm25-k1-none": 5
+          "c64-tfidf-k3-overlap": 5
         },
         "escalations": {},
         "low_confidence_rate": 0.0,
@@ -1083,115 +1100,115 @@
         "cited_numbers": 30,
         "per_run": [
           {
-            "feasible_on_test": 36,
+            "feasible_on_test": 16,
             "best_config": "c64-tfidf-k3-overlap",
-            "best_utility": 0.7136,
+            "best_utility": 0.7641,
             "best_accuracy": 0.8465,
-            "pick": "c128-bm25-k1-none",
-            "pick_test_accuracy": 0.755,
-            "pick_test_tokens": 165.8,
-            "pick_test_p95_ms": 1.739,
+            "pick": "c64-tfidf-k3-overlap",
+            "pick_test_accuracy": 0.8465,
+            "pick_test_tokens": 248.9,
+            "pick_test_p95_ms": 0.761,
             "pick_feasible_on_test": true,
-            "pick_rank": 6,
-            "pick_utility": 0.7009,
-            "regret": 0.0127,
+            "pick_rank": 1,
+            "pick_utility": 0.7641,
+            "regret": 0.0,
             "experiments": 17,
             "validations": 2,
             "cache_hits": 9,
-            "seconds": 8.7,
-            "confidence": 0.893,
+            "seconds": 3.5,
+            "confidence": 0.968,
             "escalations": [],
             "cited_numbers": 6,
             "grounded": true,
             "stopped": "search complete"
           },
           {
-            "feasible_on_test": 36,
+            "feasible_on_test": 16,
             "best_config": "c64-tfidf-k3-overlap",
-            "best_utility": 0.7136,
+            "best_utility": 0.7641,
             "best_accuracy": 0.8465,
-            "pick": "c128-bm25-k1-none",
-            "pick_test_accuracy": 0.755,
-            "pick_test_tokens": 165.8,
-            "pick_test_p95_ms": 1.739,
+            "pick": "c64-tfidf-k3-overlap",
+            "pick_test_accuracy": 0.8465,
+            "pick_test_tokens": 248.9,
+            "pick_test_p95_ms": 0.761,
             "pick_feasible_on_test": true,
-            "pick_rank": 6,
-            "pick_utility": 0.7009,
-            "regret": 0.0127,
+            "pick_rank": 1,
+            "pick_utility": 0.7641,
+            "regret": 0.0,
             "experiments": 17,
             "validations": 2,
             "cache_hits": 9,
-            "seconds": 8.3,
-            "confidence": 1.0,
+            "seconds": 3.4,
+            "confidence": 0.985,
             "escalations": [],
             "cited_numbers": 6,
             "grounded": true,
             "stopped": "search complete"
           },
           {
-            "feasible_on_test": 36,
+            "feasible_on_test": 16,
             "best_config": "c64-tfidf-k3-overlap",
-            "best_utility": 0.7136,
+            "best_utility": 0.7641,
             "best_accuracy": 0.8465,
-            "pick": "c128-bm25-k1-none",
-            "pick_test_accuracy": 0.755,
-            "pick_test_tokens": 165.8,
-            "pick_test_p95_ms": 1.739,
+            "pick": "c64-tfidf-k3-overlap",
+            "pick_test_accuracy": 0.8465,
+            "pick_test_tokens": 248.9,
+            "pick_test_p95_ms": 0.761,
             "pick_feasible_on_test": true,
-            "pick_rank": 6,
-            "pick_utility": 0.7009,
-            "regret": 0.0127,
+            "pick_rank": 1,
+            "pick_utility": 0.7641,
+            "regret": 0.0,
             "experiments": 17,
             "validations": 2,
             "cache_hits": 9,
-            "seconds": 8.5,
-            "confidence": 1.0,
+            "seconds": 3.4,
+            "confidence": 0.985,
             "escalations": [],
             "cited_numbers": 6,
             "grounded": true,
             "stopped": "search complete"
           },
           {
-            "feasible_on_test": 36,
+            "feasible_on_test": 16,
             "best_config": "c64-tfidf-k3-overlap",
-            "best_utility": 0.7136,
+            "best_utility": 0.7641,
             "best_accuracy": 0.8465,
-            "pick": "c128-bm25-k1-none",
-            "pick_test_accuracy": 0.755,
-            "pick_test_tokens": 165.8,
-            "pick_test_p95_ms": 1.739,
+            "pick": "c64-tfidf-k3-overlap",
+            "pick_test_accuracy": 0.8465,
+            "pick_test_tokens": 248.9,
+            "pick_test_p95_ms": 0.761,
             "pick_feasible_on_test": true,
-            "pick_rank": 6,
-            "pick_utility": 0.7009,
-            "regret": 0.0127,
-            "experiments": 16,
+            "pick_rank": 1,
+            "pick_utility": 0.7641,
+            "regret": 0.0,
+            "experiments": 17,
             "validations": 2,
             "cache_hits": 9,
-            "seconds": 8.0,
-            "confidence": 1.0,
+            "seconds": 3.4,
+            "confidence": 0.976,
             "escalations": [],
             "cited_numbers": 6,
             "grounded": true,
             "stopped": "search complete"
           },
           {
-            "feasible_on_test": 36,
+            "feasible_on_test": 16,
             "best_config": "c64-tfidf-k3-overlap",
-            "best_utility": 0.7136,
+            "best_utility": 0.7641,
             "best_accuracy": 0.8465,
-            "pick": "c128-bm25-k1-none",
-            "pick_test_accuracy": 0.755,
-            "pick_test_tokens": 165.8,
-            "pick_test_p95_ms": 1.739,
+            "pick": "c64-tfidf-k3-overlap",
+            "pick_test_accuracy": 0.8465,
+            "pick_test_tokens": 248.9,
+            "pick_test_p95_ms": 0.761,
             "pick_feasible_on_test": true,
-            "pick_rank": 6,
-            "pick_utility": 0.7009,
-            "regret": 0.0127,
-            "experiments": 16,
+            "pick_rank": 1,
+            "pick_utility": 0.7641,
+            "regret": 0.0,
+            "experiments": 17,
             "validations": 2,
             "cache_hits": 9,
-            "seconds": 7.8,
-            "confidence": 1.0,
+            "seconds": 3.5,
+            "confidence": 0.976,
             "escalations": [],
             "cited_numbers": 6,
             "grounded": true,
@@ -1202,56 +1219,50 @@
       "no_score_floor": {
         "runs": 5,
         "recommended": 5,
-        "feasible_on_test": 36,
+        "feasible_on_test": 16,
         "best_config": "c64-tfidf-k3-overlap",
         "best_accuracy": 0.8465,
-        "mean_regret": 0.0118,
+        "mean_regret": 0.0113,
         "max_regret": 0.0127,
-        "median_rank": 6,
-        "top3_rate": 0.0,
+        "median_rank": 7,
+        "top3_rate": 0.2,
         "pick_feasible_rate": 1.0,
-        "mean_test_accuracy": 0.7717,
-        "mean_experiments": 16.8,
-        "mean_seconds": 9.9,
+        "mean_test_accuracy": 0.755,
+        "mean_experiments": 17.8,
+        "mean_seconds": 3.4,
         "picks": {
-          "c64-bm25-k3-none": 1,
-          "c128-bm25-k1-none": 3,
-          "c128-bm25-k1-overlap": 1
+          "c128-tfidf-k1-overlap": 1,
+          "c128-bm25-k1-none": 4
         },
         "escalations": {
-          "evidence_conflict": 5,
-          "low_confidence": 3
+          "replan": 5
         },
-        "low_confidence_rate": 0.6,
+        "low_confidence_rate": 0.0,
         "all_grounded": true,
         "cited_numbers": 30,
         "per_run": [
           {
-            "feasible_on_test": 36,
+            "feasible_on_test": 16,
             "best_config": "c64-tfidf-k3-overlap",
-            "best_utility": 0.7136,
+            "best_utility": 0.7641,
             "best_accuracy": 0.8465,
-            "pick": "c64-bm25-k3-none",
-            "pick_test_accuracy": 0.8395,
-            "pick_test_tokens": 249.1,
-            "pick_test_p95_ms": 2.005,
+            "pick": "c128-tfidf-k1-overlap",
+            "pick_test_accuracy": 0.755,
+            "pick_test_tokens": 165.8,
+            "pick_test_p95_ms": 0.515,
             "pick_feasible_on_test": true,
-            "pick_rank": 5,
-            "pick_utility": 0.7013,
-            "regret": 0.0123,
+            "pick_rank": 2,
+            "pick_utility": 0.7585,
+            "regret": 0.0056,
             "experiments": 17,
             "validations": 2,
-            "cache_hits": 9,
-            "seconds": 10.2,
-            "confidence": 0.782,
+            "cache_hits": 11,
+            "seconds": 3.2,
+            "confidence": 0.858,
             "escalations": [
               [
-                "evidence_conflict",
+                "replan",
                 false
-              ],
-              [
-                "low_confidence",
-                true
               ]
             ],
             "cited_numbers": 6,
@@ -1259,26 +1270,26 @@
             "stopped": "search complete"
           },
           {
-            "feasible_on_test": 36,
+            "feasible_on_test": 16,
             "best_config": "c64-tfidf-k3-overlap",
-            "best_utility": 0.7136,
+            "best_utility": 0.7641,
             "best_accuracy": 0.8465,
             "pick": "c128-bm25-k1-none",
             "pick_test_accuracy": 0.755,
             "pick_test_tokens": 165.8,
-            "pick_test_p95_ms": 1.739,
+            "pick_test_p95_ms": 0.666,
             "pick_feasible_on_test": true,
-            "pick_rank": 6,
-            "pick_utility": 0.7009,
+            "pick_rank": 7,
+            "pick_utility": 0.7514,
             "regret": 0.0127,
-            "experiments": 17,
+            "experiments": 18,
             "validations": 2,
-            "cache_hits": 9,
-            "seconds": 9.7,
-            "confidence": 1.0,
+            "cache_hits": 11,
+            "seconds": 3.6,
+            "confidence": 0.897,
             "escalations": [
               [
-                "evidence_conflict",
+                "replan",
                 false
               ]
             ],
@@ -1287,26 +1298,26 @@
             "stopped": "search complete"
           },
           {
-            "feasible_on_test": 36,
+            "feasible_on_test": 16,
             "best_config": "c64-tfidf-k3-overlap",
-            "best_utility": 0.7136,
+            "best_utility": 0.7641,
             "best_accuracy": 0.8465,
             "pick": "c128-bm25-k1-none",
             "pick_test_accuracy": 0.755,
             "pick_test_tokens": 165.8,
-            "pick_test_p95_ms": 1.739,
+            "pick_test_p95_ms": 0.666,
             "pick_feasible_on_test": true,
-            "pick_rank": 6,
-            "pick_utility": 0.7009,
+            "pick_rank": 7,
+            "pick_utility": 0.7514,
             "regret": 0.0127,
-            "experiments": 17,
+            "experiments": 18,
             "validations": 2,
-            "cache_hits": 9,
-            "seconds": 10.3,
-            "confidence": 1.0,
+            "cache_hits": 11,
+            "seconds": 3.4,
+            "confidence": 0.997,
             "escalations": [
               [
-                "evidence_conflict",
+                "replan",
                 false
               ]
             ],
@@ -1315,63 +1326,55 @@
             "stopped": "search complete"
           },
           {
-            "feasible_on_test": 36,
+            "feasible_on_test": 16,
             "best_config": "c64-tfidf-k3-overlap",
-            "best_utility": 0.7136,
-            "best_accuracy": 0.8465,
-            "pick": "c128-bm25-k1-overlap",
-            "pick_test_accuracy": 0.754,
-            "pick_test_tokens": 165.8,
-            "pick_test_p95_ms": 1.641,
-            "pick_feasible_on_test": true,
-            "pick_rank": 4,
-            "pick_utility": 0.7049,
-            "regret": 0.0087,
-            "experiments": 17,
-            "validations": 2,
-            "cache_hits": 9,
-            "seconds": 10.1,
-            "confidence": 0.797,
-            "escalations": [
-              [
-                "evidence_conflict",
-                false
-              ],
-              [
-                "low_confidence",
-                true
-              ]
-            ],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 36,
-            "best_config": "c64-tfidf-k3-overlap",
-            "best_utility": 0.7136,
+            "best_utility": 0.7641,
             "best_accuracy": 0.8465,
             "pick": "c128-bm25-k1-none",
             "pick_test_accuracy": 0.755,
             "pick_test_tokens": 165.8,
-            "pick_test_p95_ms": 1.739,
+            "pick_test_p95_ms": 0.666,
             "pick_feasible_on_test": true,
-            "pick_rank": 6,
-            "pick_utility": 0.7009,
+            "pick_rank": 7,
+            "pick_utility": 0.7514,
             "regret": 0.0127,
-            "experiments": 16,
+            "experiments": 18,
             "validations": 2,
-            "cache_hits": 9,
-            "seconds": 9.2,
-            "confidence": 0.758,
+            "cache_hits": 11,
+            "seconds": 3.4,
+            "confidence": 0.997,
             "escalations": [
               [
-                "evidence_conflict",
+                "replan",
                 false
-              ],
+              ]
+            ],
+            "cited_numbers": 6,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 16,
+            "best_config": "c64-tfidf-k3-overlap",
+            "best_utility": 0.7641,
+            "best_accuracy": 0.8465,
+            "pick": "c128-bm25-k1-none",
+            "pick_test_accuracy": 0.755,
+            "pick_test_tokens": 165.8,
+            "pick_test_p95_ms": 0.666,
+            "pick_feasible_on_test": true,
+            "pick_rank": 7,
+            "pick_utility": 0.7514,
+            "regret": 0.0127,
+            "experiments": 18,
+            "validations": 2,
+            "cache_hits": 11,
+            "seconds": 3.4,
+            "confidence": 0.997,
+            "escalations": [
               [
-                "low_confidence",
-                true
+                "replan",
+                false
               ]
             ],
             "cited_numbers": 6,
@@ -1389,24 +1392,23 @@
       "agent": {
         "runs": 5,
         "recommended": 5,
-        "feasible_on_test": 72,
-        "best_config": "c128-bm25-k3-overlap",
-        "best_accuracy": 0.881,
-        "mean_regret": 0.0058,
-        "max_regret": 0.0126,
-        "median_rank": 5,
-        "top3_rate": 0.2,
+        "feasible_on_test": 32,
+        "best_config": "c64-tfidf-k3-overlap",
+        "best_accuracy": 0.8465,
+        "mean_regret": 0.0047,
+        "max_regret": 0.0117,
+        "median_rank": 1,
+        "top3_rate": 0.6,
         "pick_feasible_rate": 1.0,
-        "mean_test_accuracy": 0.8528,
-        "mean_experiments": 20.8,
-        "mean_seconds": 11.5,
+        "mean_test_accuracy": 0.8613,
+        "mean_experiments": 23.2,
+        "mean_seconds": 4.5,
         "picks": {
-          "c64-bm25-k3-overlap": 3,
-          "c128-bm25-k3-none": 1,
-          "c64-bm25-k3-none": 1
+          "c64-tfidf-k3-overlap": 3,
+          "c128-bm25-k3-none": 2
         },
         "escalations": {
-          "evidence_conflict": 5,
+          "replan": 5,
           "low_confidence": 1
         },
         "low_confidence_rate": 0.2,
@@ -1414,54 +1416,26 @@
         "cited_numbers": 30,
         "per_run": [
           {
-            "feasible_on_test": 72,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.7799,
-            "best_accuracy": 0.881,
-            "pick": "c64-bm25-k3-overlap",
-            "pick_test_accuracy": 0.847,
-            "pick_test_tokens": 249.1,
-            "pick_test_p95_ms": 1.933,
+            "feasible_on_test": 32,
+            "best_config": "c64-tfidf-k3-overlap",
+            "best_utility": 0.83,
+            "best_accuracy": 0.8465,
+            "pick": "c64-tfidf-k3-overlap",
+            "pick_test_accuracy": 0.8465,
+            "pick_test_tokens": 248.9,
+            "pick_test_p95_ms": 0.761,
             "pick_feasible_on_test": true,
-            "pick_rank": 5,
-            "pick_utility": 0.7751,
-            "regret": 0.0048,
-            "experiments": 20,
+            "pick_rank": 1,
+            "pick_utility": 0.83,
+            "regret": 0.0,
+            "experiments": 23,
             "validations": 2,
-            "cache_hits": 9,
-            "seconds": 10.7,
-            "confidence": 0.993,
-            "escalations": [
-              [
-                "evidence_conflict",
-                false
-              ]
-            ],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 72,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.7799,
-            "best_accuracy": 0.881,
-            "pick": "c64-bm25-k3-overlap",
-            "pick_test_accuracy": 0.847,
-            "pick_test_tokens": 249.1,
-            "pick_test_p95_ms": 1.933,
-            "pick_feasible_on_test": true,
-            "pick_rank": 5,
-            "pick_utility": 0.7751,
-            "regret": 0.0048,
-            "experiments": 21,
-            "validations": 2,
-            "cache_hits": 9,
-            "seconds": 11.7,
+            "cache_hits": 10,
+            "seconds": 4.6,
             "confidence": 1.0,
             "escalations": [
               [
-                "evidence_conflict",
+                "replan",
                 false
               ]
             ],
@@ -1470,26 +1444,54 @@
             "stopped": "search complete"
           },
           {
-            "feasible_on_test": 72,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.7799,
-            "best_accuracy": 0.881,
+            "feasible_on_test": 32,
+            "best_config": "c64-tfidf-k3-overlap",
+            "best_utility": 0.83,
+            "best_accuracy": 0.8465,
+            "pick": "c64-tfidf-k3-overlap",
+            "pick_test_accuracy": 0.8465,
+            "pick_test_tokens": 248.9,
+            "pick_test_p95_ms": 0.761,
+            "pick_feasible_on_test": true,
+            "pick_rank": 1,
+            "pick_utility": 0.83,
+            "regret": 0.0,
+            "experiments": 23,
+            "validations": 2,
+            "cache_hits": 10,
+            "seconds": 4.7,
+            "confidence": 1.0,
+            "escalations": [
+              [
+                "replan",
+                false
+              ]
+            ],
+            "cited_numbers": 6,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 32,
+            "best_config": "c64-tfidf-k3-overlap",
+            "best_utility": 0.83,
+            "best_accuracy": 0.8465,
             "pick": "c128-bm25-k3-none",
             "pick_test_accuracy": 0.8835,
             "pick_test_tokens": 498.0,
-            "pick_test_p95_ms": 1.393,
+            "pick_test_p95_ms": 0.539,
             "pick_feasible_on_test": true,
-            "pick_rank": 3,
-            "pick_utility": 0.778,
-            "regret": 0.0019,
-            "experiments": 21,
+            "pick_rank": 7,
+            "pick_utility": 0.8182,
+            "regret": 0.0117,
+            "experiments": 23,
             "validations": 2,
-            "cache_hits": 9,
-            "seconds": 11.9,
-            "confidence": 1.0,
+            "cache_hits": 10,
+            "seconds": 4.2,
+            "confidence": 0.907,
             "escalations": [
               [
-                "evidence_conflict",
+                "replan",
                 false
               ]
             ],
@@ -1498,59 +1500,59 @@
             "stopped": "search complete"
           },
           {
-            "feasible_on_test": 72,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.7799,
-            "best_accuracy": 0.881,
-            "pick": "c64-bm25-k3-overlap",
-            "pick_test_accuracy": 0.847,
-            "pick_test_tokens": 249.1,
-            "pick_test_p95_ms": 1.933,
+            "feasible_on_test": 32,
+            "best_config": "c64-tfidf-k3-overlap",
+            "best_utility": 0.83,
+            "best_accuracy": 0.8465,
+            "pick": "c128-bm25-k3-none",
+            "pick_test_accuracy": 0.8835,
+            "pick_test_tokens": 498.0,
+            "pick_test_p95_ms": 0.539,
             "pick_feasible_on_test": true,
-            "pick_rank": 5,
-            "pick_utility": 0.7751,
-            "regret": 0.0048,
-            "experiments": 21,
+            "pick_rank": 7,
+            "pick_utility": 0.8182,
+            "regret": 0.0117,
+            "experiments": 24,
             "validations": 2,
             "cache_hits": 9,
-            "seconds": 12.0,
-            "confidence": 0.848,
+            "seconds": 4.5,
+            "confidence": 0.661,
             "escalations": [
               [
-                "evidence_conflict",
-                false
-              ]
-            ],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 72,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.7799,
-            "best_accuracy": 0.881,
-            "pick": "c64-bm25-k3-none",
-            "pick_test_accuracy": 0.8395,
-            "pick_test_tokens": 249.1,
-            "pick_test_p95_ms": 2.005,
-            "pick_feasible_on_test": true,
-            "pick_rank": 9,
-            "pick_utility": 0.7673,
-            "regret": 0.0126,
-            "experiments": 21,
-            "validations": 2,
-            "cache_hits": 9,
-            "seconds": 11.3,
-            "confidence": 0.78,
-            "escalations": [
-              [
-                "evidence_conflict",
+                "replan",
                 false
               ],
               [
                 "low_confidence",
                 true
+              ]
+            ],
+            "cited_numbers": 6,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 32,
+            "best_config": "c64-tfidf-k3-overlap",
+            "best_utility": 0.83,
+            "best_accuracy": 0.8465,
+            "pick": "c64-tfidf-k3-overlap",
+            "pick_test_accuracy": 0.8465,
+            "pick_test_tokens": 248.9,
+            "pick_test_p95_ms": 0.761,
+            "pick_feasible_on_test": true,
+            "pick_rank": 1,
+            "pick_utility": 0.83,
+            "regret": 0.0,
+            "experiments": 23,
+            "validations": 2,
+            "cache_hits": 10,
+            "seconds": 4.6,
+            "confidence": 1.0,
+            "escalations": [
+              [
+                "replan",
+                false
               ]
             ],
             "cited_numbers": 6,
@@ -1562,50 +1564,49 @@
       "greedy": {
         "runs": 5,
         "recommended": 5,
-        "feasible_on_test": 72,
-        "best_config": "c128-bm25-k3-overlap",
-        "best_accuracy": 0.881,
-        "mean_regret": 0.0171,
-        "max_regret": 0.0816,
-        "median_rank": 3,
-        "top3_rate": 0.8,
+        "feasible_on_test": 32,
+        "best_config": "c64-tfidf-k3-overlap",
+        "best_accuracy": 0.8465,
+        "mean_regret": 0.0107,
+        "max_regret": 0.0134,
+        "median_rank": 9,
+        "top3_rate": 0.0,
         "pick_feasible_rate": 1.0,
-        "mean_test_accuracy": 0.8801,
-        "mean_experiments": 9,
-        "mean_seconds": 4.6,
+        "mean_test_accuracy": 0.8653,
+        "mean_experiments": 11.4,
+        "mean_seconds": 2.3,
         "picks": {
-          "c128-bm25-k3-overlap": 2,
-          "c128-bm25-k5-rrf": 1,
-          "c128-bm25-k3-none": 2
+          "c64-bm25-k5-none": 3,
+          "c64-bm25-k3-none": 2
         },
         "escalations": {
-          "evidence_conflict": 5
+          "replan": 5
         },
         "low_confidence_rate": 0.0,
         "all_grounded": true,
         "cited_numbers": 15,
         "per_run": [
           {
-            "feasible_on_test": 72,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.7799,
-            "best_accuracy": 0.881,
-            "pick": "c128-bm25-k3-overlap",
-            "pick_test_accuracy": 0.881,
-            "pick_test_tokens": 498.1,
-            "pick_test_p95_ms": 1.322,
+            "feasible_on_test": 32,
+            "best_config": "c64-tfidf-k3-overlap",
+            "best_utility": 0.83,
+            "best_accuracy": 0.8465,
+            "pick": "c64-bm25-k5-none",
+            "pick_test_accuracy": 0.8825,
+            "pick_test_tokens": 415.1,
+            "pick_test_p95_ms": 0.872,
             "pick_feasible_on_test": true,
-            "pick_rank": 1,
-            "pick_utility": 0.7799,
-            "regret": 0.0,
-            "experiments": 9,
+            "pick_rank": 9,
+            "pick_utility": 0.8166,
+            "regret": 0.0134,
+            "experiments": 11,
             "validations": 1,
-            "cache_hits": 3,
-            "seconds": 4.5,
+            "cache_hits": 4,
+            "seconds": 2.2,
             "confidence": 1.0,
             "escalations": [
               [
-                "evidence_conflict",
+                "replan",
                 false
               ]
             ],
@@ -1614,26 +1615,26 @@
             "stopped": "search complete"
           },
           {
-            "feasible_on_test": 72,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.7799,
-            "best_accuracy": 0.881,
-            "pick": "c128-bm25-k5-rrf",
-            "pick_test_accuracy": 0.8715,
-            "pick_test_tokens": 829.6,
-            "pick_test_p95_ms": 1.695,
+            "feasible_on_test": 32,
+            "best_config": "c64-tfidf-k3-overlap",
+            "best_utility": 0.83,
+            "best_accuracy": 0.8465,
+            "pick": "c64-bm25-k3-none",
+            "pick_test_accuracy": 0.8395,
+            "pick_test_tokens": 249.1,
+            "pick_test_p95_ms": 0.813,
             "pick_feasible_on_test": true,
-            "pick_rank": 43,
-            "pick_utility": 0.6982,
-            "regret": 0.0816,
-            "experiments": 9,
+            "pick_rank": 4,
+            "pick_utility": 0.8234,
+            "regret": 0.0066,
+            "experiments": 12,
             "validations": 1,
             "cache_hits": 3,
-            "seconds": 4.8,
+            "seconds": 2.4,
             "confidence": 1.0,
             "escalations": [
               [
-                "evidence_conflict",
+                "replan",
                 false
               ]
             ],
@@ -1642,26 +1643,26 @@
             "stopped": "search complete"
           },
           {
-            "feasible_on_test": 72,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.7799,
-            "best_accuracy": 0.881,
-            "pick": "c128-bm25-k3-overlap",
-            "pick_test_accuracy": 0.881,
-            "pick_test_tokens": 498.1,
-            "pick_test_p95_ms": 1.322,
+            "feasible_on_test": 32,
+            "best_config": "c64-tfidf-k3-overlap",
+            "best_utility": 0.83,
+            "best_accuracy": 0.8465,
+            "pick": "c64-bm25-k5-none",
+            "pick_test_accuracy": 0.8825,
+            "pick_test_tokens": 415.1,
+            "pick_test_p95_ms": 0.872,
             "pick_feasible_on_test": true,
-            "pick_rank": 1,
-            "pick_utility": 0.7799,
-            "regret": 0.0,
-            "experiments": 9,
+            "pick_rank": 9,
+            "pick_utility": 0.8166,
+            "regret": 0.0134,
+            "experiments": 11,
             "validations": 1,
-            "cache_hits": 3,
-            "seconds": 4.7,
+            "cache_hits": 4,
+            "seconds": 2.2,
             "confidence": 1.0,
             "escalations": [
               [
-                "evidence_conflict",
+                "replan",
                 false
               ]
             ],
@@ -1670,26 +1671,26 @@
             "stopped": "search complete"
           },
           {
-            "feasible_on_test": 72,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.7799,
-            "best_accuracy": 0.881,
-            "pick": "c128-bm25-k3-none",
-            "pick_test_accuracy": 0.8835,
-            "pick_test_tokens": 498.0,
-            "pick_test_p95_ms": 1.393,
+            "feasible_on_test": 32,
+            "best_config": "c64-tfidf-k3-overlap",
+            "best_utility": 0.83,
+            "best_accuracy": 0.8465,
+            "pick": "c64-bm25-k5-none",
+            "pick_test_accuracy": 0.8825,
+            "pick_test_tokens": 415.1,
+            "pick_test_p95_ms": 0.872,
             "pick_feasible_on_test": true,
-            "pick_rank": 3,
-            "pick_utility": 0.778,
-            "regret": 0.0019,
-            "experiments": 9,
+            "pick_rank": 9,
+            "pick_utility": 0.8166,
+            "regret": 0.0134,
+            "experiments": 11,
             "validations": 1,
-            "cache_hits": 3,
-            "seconds": 4.6,
+            "cache_hits": 4,
+            "seconds": 2.2,
             "confidence": 1.0,
             "escalations": [
               [
-                "evidence_conflict",
+                "replan",
                 false
               ]
             ],
@@ -1698,26 +1699,26 @@
             "stopped": "search complete"
           },
           {
-            "feasible_on_test": 72,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.7799,
-            "best_accuracy": 0.881,
-            "pick": "c128-bm25-k3-none",
-            "pick_test_accuracy": 0.8835,
-            "pick_test_tokens": 498.0,
-            "pick_test_p95_ms": 1.393,
+            "feasible_on_test": 32,
+            "best_config": "c64-tfidf-k3-overlap",
+            "best_utility": 0.83,
+            "best_accuracy": 0.8465,
+            "pick": "c64-bm25-k3-none",
+            "pick_test_accuracy": 0.8395,
+            "pick_test_tokens": 249.1,
+            "pick_test_p95_ms": 0.813,
             "pick_feasible_on_test": true,
-            "pick_rank": 3,
-            "pick_utility": 0.778,
-            "regret": 0.0019,
-            "experiments": 9,
+            "pick_rank": 4,
+            "pick_utility": 0.8234,
+            "regret": 0.0066,
+            "experiments": 12,
             "validations": 1,
             "cache_hits": 3,
-            "seconds": 4.6,
+            "seconds": 2.4,
             "confidence": 1.0,
             "escalations": [
               [
-                "evidence_conflict",
+                "replan",
                 false
               ]
             ],
@@ -1730,150 +1731,143 @@
       "no_kb": {
         "runs": 5,
         "recommended": 5,
-        "feasible_on_test": 72,
-        "best_config": "c128-bm25-k3-overlap",
-        "best_accuracy": 0.881,
-        "mean_regret": 0.0068,
-        "max_regret": 0.0126,
-        "median_rank": 5,
-        "top3_rate": 0.4,
+        "feasible_on_test": 32,
+        "best_config": "c64-tfidf-k3-overlap",
+        "best_accuracy": 0.8465,
+        "mean_regret": 0.0064,
+        "max_regret": 0.0064,
+        "median_rank": 3,
+        "top3_rate": 1.0,
         "pick_feasible_rate": 1.0,
-        "mean_test_accuracy": 0.8586,
-        "mean_experiments": 20.8,
-        "mean_seconds": 9.5,
+        "mean_test_accuracy": 0.828,
+        "mean_experiments": 21,
+        "mean_seconds": 4.1,
         "picks": {
-          "c64-bm25-k3-overlap": 1,
-          "c128-bm25-k3-none": 2,
-          "c64-bm25-k3-none": 2
+          "c64-tfidf-k3-none": 5
         },
         "escalations": {
-          "low_confidence": 2
+          "low_confidence": 1
         },
-        "low_confidence_rate": 0.4,
+        "low_confidence_rate": 0.2,
         "all_grounded": true,
         "cited_numbers": 30,
         "per_run": [
           {
-            "feasible_on_test": 72,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.7799,
-            "best_accuracy": 0.881,
-            "pick": "c64-bm25-k3-overlap",
-            "pick_test_accuracy": 0.847,
-            "pick_test_tokens": 249.1,
-            "pick_test_p95_ms": 1.933,
+            "feasible_on_test": 32,
+            "best_config": "c64-tfidf-k3-overlap",
+            "best_utility": 0.83,
+            "best_accuracy": 0.8465,
+            "pick": "c64-tfidf-k3-none",
+            "pick_test_accuracy": 0.828,
+            "pick_test_tokens": 248.2,
+            "pick_test_p95_ms": 0.669,
             "pick_feasible_on_test": true,
-            "pick_rank": 5,
-            "pick_utility": 0.7751,
-            "regret": 0.0048,
+            "pick_rank": 3,
+            "pick_utility": 0.8235,
+            "regret": 0.0064,
             "experiments": 21,
             "validations": 2,
             "cache_hits": 9,
-            "seconds": 10.2,
-            "confidence": 0.784,
+            "seconds": 4.0,
+            "confidence": 0.979,
+            "escalations": [],
+            "cited_numbers": 6,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 32,
+            "best_config": "c64-tfidf-k3-overlap",
+            "best_utility": 0.83,
+            "best_accuracy": 0.8465,
+            "pick": "c64-tfidf-k3-none",
+            "pick_test_accuracy": 0.828,
+            "pick_test_tokens": 248.2,
+            "pick_test_p95_ms": 0.669,
+            "pick_feasible_on_test": true,
+            "pick_rank": 3,
+            "pick_utility": 0.8235,
+            "regret": 0.0064,
+            "experiments": 21,
+            "validations": 2,
+            "cache_hits": 9,
+            "seconds": 4.1,
+            "confidence": 0.979,
+            "escalations": [],
+            "cited_numbers": 6,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 32,
+            "best_config": "c64-tfidf-k3-overlap",
+            "best_utility": 0.83,
+            "best_accuracy": 0.8465,
+            "pick": "c64-tfidf-k3-none",
+            "pick_test_accuracy": 0.828,
+            "pick_test_tokens": 248.2,
+            "pick_test_p95_ms": 0.669,
+            "pick_feasible_on_test": true,
+            "pick_rank": 3,
+            "pick_utility": 0.8235,
+            "regret": 0.0064,
+            "experiments": 21,
+            "validations": 2,
+            "cache_hits": 9,
+            "seconds": 4.1,
+            "confidence": 0.979,
+            "escalations": [],
+            "cited_numbers": 6,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 32,
+            "best_config": "c64-tfidf-k3-overlap",
+            "best_utility": 0.83,
+            "best_accuracy": 0.8465,
+            "pick": "c64-tfidf-k3-none",
+            "pick_test_accuracy": 0.828,
+            "pick_test_tokens": 248.2,
+            "pick_test_p95_ms": 0.669,
+            "pick_feasible_on_test": true,
+            "pick_rank": 3,
+            "pick_utility": 0.8235,
+            "regret": 0.0064,
+            "experiments": 21,
+            "validations": 2,
+            "cache_hits": 9,
+            "seconds": 4.1,
+            "confidence": 0.979,
+            "escalations": [],
+            "cited_numbers": 6,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 32,
+            "best_config": "c64-tfidf-k3-overlap",
+            "best_utility": 0.83,
+            "best_accuracy": 0.8465,
+            "pick": "c64-tfidf-k3-none",
+            "pick_test_accuracy": 0.828,
+            "pick_test_tokens": 248.2,
+            "pick_test_p95_ms": 0.669,
+            "pick_feasible_on_test": true,
+            "pick_rank": 3,
+            "pick_utility": 0.8235,
+            "regret": 0.0064,
+            "experiments": 21,
+            "validations": 2,
+            "cache_hits": 9,
+            "seconds": 4.1,
+            "confidence": 0.612,
             "escalations": [
               [
                 "low_confidence",
                 true
               ]
             ],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 72,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.7799,
-            "best_accuracy": 0.881,
-            "pick": "c128-bm25-k3-none",
-            "pick_test_accuracy": 0.8835,
-            "pick_test_tokens": 498.0,
-            "pick_test_p95_ms": 1.393,
-            "pick_feasible_on_test": true,
-            "pick_rank": 3,
-            "pick_utility": 0.778,
-            "regret": 0.0019,
-            "experiments": 21,
-            "validations": 2,
-            "cache_hits": 9,
-            "seconds": 9.0,
-            "confidence": 0.999,
-            "escalations": [],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 72,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.7799,
-            "best_accuracy": 0.881,
-            "pick": "c128-bm25-k3-none",
-            "pick_test_accuracy": 0.8835,
-            "pick_test_tokens": 498.0,
-            "pick_test_p95_ms": 1.393,
-            "pick_feasible_on_test": true,
-            "pick_rank": 3,
-            "pick_utility": 0.778,
-            "regret": 0.0019,
-            "experiments": 21,
-            "validations": 2,
-            "cache_hits": 9,
-            "seconds": 9.3,
-            "confidence": 0.918,
-            "escalations": [],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 72,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.7799,
-            "best_accuracy": 0.881,
-            "pick": "c64-bm25-k3-none",
-            "pick_test_accuracy": 0.8395,
-            "pick_test_tokens": 249.1,
-            "pick_test_p95_ms": 2.005,
-            "pick_feasible_on_test": true,
-            "pick_rank": 9,
-            "pick_utility": 0.7673,
-            "regret": 0.0126,
-            "experiments": 20,
-            "validations": 2,
-            "cache_hits": 9,
-            "seconds": 9.0,
-            "confidence": 0.76,
-            "escalations": [
-              [
-                "low_confidence",
-                true
-              ]
-            ],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 72,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.7799,
-            "best_accuracy": 0.881,
-            "pick": "c64-bm25-k3-none",
-            "pick_test_accuracy": 0.8395,
-            "pick_test_tokens": 249.1,
-            "pick_test_p95_ms": 2.005,
-            "pick_feasible_on_test": true,
-            "pick_rank": 9,
-            "pick_utility": 0.7673,
-            "regret": 0.0126,
-            "experiments": 21,
-            "validations": 2,
-            "cache_hits": 9,
-            "seconds": 9.8,
-            "confidence": 1.0,
-            "escalations": [],
             "cited_numbers": 6,
             "grounded": true,
             "stopped": "search complete"
@@ -1883,172 +1877,168 @@
       "no_score_floor": {
         "runs": 5,
         "recommended": 5,
-        "feasible_on_test": 72,
-        "best_config": "c128-bm25-k3-overlap",
-        "best_accuracy": 0.881,
-        "mean_regret": 0.0027,
-        "max_regret": 0.0048,
-        "median_rank": 3,
-        "top3_rate": 0.6,
+        "feasible_on_test": 32,
+        "best_config": "c64-tfidf-k3-overlap",
+        "best_accuracy": 0.8465,
+        "mean_regret": 0.0078,
+        "max_regret": 0.0154,
+        "median_rank": 7,
+        "top3_rate": 0.4,
         "pick_feasible_rate": 1.0,
-        "mean_test_accuracy": 0.8684,
-        "mean_experiments": 21,
-        "mean_seconds": 11.1,
+        "mean_test_accuracy": 0.8682,
+        "mean_experiments": 23.4,
+        "mean_seconds": 4.4,
         "picks": {
-          "c128-bm25-k3-overlap": 1,
-          "c64-bm25-k3-overlap": 2,
-          "c128-bm25-k3-none": 2
+          "c128-bm25-k3-none": 2,
+          "c64-tfidf-k3-overlap": 2,
+          "c128-bm25-k3-overlap": 1
         },
         "escalations": {
-          "evidence_conflict": 5,
-          "low_confidence": 2
+          "replan": 5,
+          "low_confidence": 1
         },
-        "low_confidence_rate": 0.4,
+        "low_confidence_rate": 0.2,
         "all_grounded": true,
         "cited_numbers": 30,
         "per_run": [
           {
-            "feasible_on_test": 72,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.7799,
-            "best_accuracy": 0.881,
+            "feasible_on_test": 32,
+            "best_config": "c64-tfidf-k3-overlap",
+            "best_utility": 0.83,
+            "best_accuracy": 0.8465,
+            "pick": "c128-bm25-k3-none",
+            "pick_test_accuracy": 0.8835,
+            "pick_test_tokens": 498.0,
+            "pick_test_p95_ms": 0.539,
+            "pick_feasible_on_test": true,
+            "pick_rank": 7,
+            "pick_utility": 0.8182,
+            "regret": 0.0117,
+            "experiments": 23,
+            "validations": 2,
+            "cache_hits": 10,
+            "seconds": 4.1,
+            "confidence": 0.661,
+            "escalations": [
+              [
+                "replan",
+                false
+              ],
+              [
+                "low_confidence",
+                true
+              ]
+            ],
+            "cited_numbers": 6,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 32,
+            "best_config": "c64-tfidf-k3-overlap",
+            "best_utility": 0.83,
+            "best_accuracy": 0.8465,
+            "pick": "c128-bm25-k3-none",
+            "pick_test_accuracy": 0.8835,
+            "pick_test_tokens": 498.0,
+            "pick_test_p95_ms": 0.539,
+            "pick_feasible_on_test": true,
+            "pick_rank": 7,
+            "pick_utility": 0.8182,
+            "regret": 0.0117,
+            "experiments": 24,
+            "validations": 2,
+            "cache_hits": 9,
+            "seconds": 4.4,
+            "confidence": 0.982,
+            "escalations": [
+              [
+                "replan",
+                false
+              ]
+            ],
+            "cited_numbers": 6,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 32,
+            "best_config": "c64-tfidf-k3-overlap",
+            "best_utility": 0.83,
+            "best_accuracy": 0.8465,
+            "pick": "c64-tfidf-k3-overlap",
+            "pick_test_accuracy": 0.8465,
+            "pick_test_tokens": 248.9,
+            "pick_test_p95_ms": 0.761,
+            "pick_feasible_on_test": true,
+            "pick_rank": 1,
+            "pick_utility": 0.83,
+            "regret": 0.0,
+            "experiments": 24,
+            "validations": 2,
+            "cache_hits": 9,
+            "seconds": 4.8,
+            "confidence": 1.0,
+            "escalations": [
+              [
+                "replan",
+                false
+              ]
+            ],
+            "cited_numbers": 6,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 32,
+            "best_config": "c64-tfidf-k3-overlap",
+            "best_utility": 0.83,
+            "best_accuracy": 0.8465,
+            "pick": "c64-tfidf-k3-overlap",
+            "pick_test_accuracy": 0.8465,
+            "pick_test_tokens": 248.9,
+            "pick_test_p95_ms": 0.761,
+            "pick_feasible_on_test": true,
+            "pick_rank": 1,
+            "pick_utility": 0.83,
+            "regret": 0.0,
+            "experiments": 23,
+            "validations": 2,
+            "cache_hits": 10,
+            "seconds": 4.4,
+            "confidence": 1.0,
+            "escalations": [
+              [
+                "replan",
+                false
+              ]
+            ],
+            "cited_numbers": 6,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 32,
+            "best_config": "c64-tfidf-k3-overlap",
+            "best_utility": 0.83,
+            "best_accuracy": 0.8465,
             "pick": "c128-bm25-k3-overlap",
             "pick_test_accuracy": 0.881,
             "pick_test_tokens": 498.1,
-            "pick_test_p95_ms": 1.322,
+            "pick_test_p95_ms": 0.584,
             "pick_feasible_on_test": true,
-            "pick_rank": 1,
-            "pick_utility": 0.7799,
-            "regret": 0.0,
-            "experiments": 21,
+            "pick_rank": 11,
+            "pick_utility": 0.8146,
+            "regret": 0.0154,
+            "experiments": 23,
             "validations": 2,
-            "cache_hits": 9,
-            "seconds": 11.5,
-            "confidence": 0.839,
-            "escalations": [
-              [
-                "evidence_conflict",
-                false
-              ]
-            ],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 72,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.7799,
-            "best_accuracy": 0.881,
-            "pick": "c64-bm25-k3-overlap",
-            "pick_test_accuracy": 0.847,
-            "pick_test_tokens": 249.1,
-            "pick_test_p95_ms": 1.933,
-            "pick_feasible_on_test": true,
-            "pick_rank": 5,
-            "pick_utility": 0.7751,
-            "regret": 0.0048,
-            "experiments": 21,
-            "validations": 2,
-            "cache_hits": 9,
-            "seconds": 11.6,
-            "confidence": 0.989,
-            "escalations": [
-              [
-                "evidence_conflict",
-                false
-              ]
-            ],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 72,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.7799,
-            "best_accuracy": 0.881,
-            "pick": "c64-bm25-k3-overlap",
-            "pick_test_accuracy": 0.847,
-            "pick_test_tokens": 249.1,
-            "pick_test_p95_ms": 1.933,
-            "pick_feasible_on_test": true,
-            "pick_rank": 5,
-            "pick_utility": 0.7751,
-            "regret": 0.0048,
-            "experiments": 21,
-            "validations": 2,
-            "cache_hits": 9,
-            "seconds": 11.3,
+            "cache_hits": 10,
+            "seconds": 4.3,
             "confidence": 0.931,
             "escalations": [
               [
-                "evidence_conflict",
+                "replan",
                 false
-              ]
-            ],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 72,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.7799,
-            "best_accuracy": 0.881,
-            "pick": "c128-bm25-k3-none",
-            "pick_test_accuracy": 0.8835,
-            "pick_test_tokens": 498.0,
-            "pick_test_p95_ms": 1.393,
-            "pick_feasible_on_test": true,
-            "pick_rank": 3,
-            "pick_utility": 0.778,
-            "regret": 0.0019,
-            "experiments": 21,
-            "validations": 2,
-            "cache_hits": 9,
-            "seconds": 10.6,
-            "confidence": 0.734,
-            "escalations": [
-              [
-                "evidence_conflict",
-                false
-              ],
-              [
-                "low_confidence",
-                true
-              ]
-            ],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 72,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.7799,
-            "best_accuracy": 0.881,
-            "pick": "c128-bm25-k3-none",
-            "pick_test_accuracy": 0.8835,
-            "pick_test_tokens": 498.0,
-            "pick_test_p95_ms": 1.393,
-            "pick_feasible_on_test": true,
-            "pick_rank": 3,
-            "pick_utility": 0.778,
-            "regret": 0.0019,
-            "experiments": 21,
-            "validations": 2,
-            "cache_hits": 9,
-            "seconds": 10.6,
-            "confidence": 0.621,
-            "escalations": [
-              [
-                "evidence_conflict",
-                false
-              ],
-              [
-                "low_confidence",
-                true
               ]
             ],
             "cited_numbers": 6,
@@ -2061,167 +2051,162 @@
     "S4_accuracy_first": {
       "constraints": {
         "max_context_tokens": 2000,
-        "max_p95_ms": 5.0
+        "max_p95_ms": 20.0
       },
       "agent": {
         "runs": 5,
         "recommended": 5,
         "feasible_on_test": 81,
-        "best_config": "c128-bm25-k3-overlap",
-        "best_accuracy": 0.881,
-        "mean_regret": 0.0011,
-        "max_regret": 0.0019,
-        "median_rank": 2,
-        "top3_rate": 1.0,
+        "best_config": "c64-tfidf-k5-overlap",
+        "best_accuracy": 0.891,
+        "mean_regret": 0.0098,
+        "max_regret": 0.0114,
+        "median_rank": 5,
+        "top3_rate": 0.0,
         "pick_feasible_rate": 1.0,
-        "mean_test_accuracy": 0.8825,
+        "mean_test_accuracy": 0.883,
         "mean_experiments": 21,
-        "mean_seconds": 11.0,
+        "mean_seconds": 4.1,
         "picks": {
-          "c128-bm25-k3-overlap": 2,
-          "c128-bm25-k3-none": 3
+          "c128-bm25-k3-none": 4,
+          "c128-bm25-k3-overlap": 1
         },
         "escalations": {
-          "evidence_conflict": 5
+          "low_confidence": 4
         },
-        "low_confidence_rate": 0.0,
+        "low_confidence_rate": 0.8,
         "all_grounded": true,
         "cited_numbers": 30,
         "per_run": [
           {
             "feasible_on_test": 81,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.8238,
-            "best_accuracy": 0.881,
+            "best_config": "c64-tfidf-k5-overlap",
+            "best_utility": 0.8905,
+            "best_accuracy": 0.891,
+            "pick": "c128-bm25-k3-none",
+            "pick_test_accuracy": 0.8835,
+            "pick_test_tokens": 498.0,
+            "pick_test_p95_ms": 0.539,
+            "pick_feasible_on_test": true,
+            "pick_rank": 5,
+            "pick_utility": 0.8812,
+            "regret": 0.0094,
+            "experiments": 21,
+            "validations": 2,
+            "cache_hits": 9,
+            "seconds": 4.1,
+            "confidence": 0.661,
+            "escalations": [
+              [
+                "low_confidence",
+                true
+              ]
+            ],
+            "cited_numbers": 6,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 81,
+            "best_config": "c64-tfidf-k5-overlap",
+            "best_utility": 0.8905,
+            "best_accuracy": 0.891,
+            "pick": "c128-bm25-k3-none",
+            "pick_test_accuracy": 0.8835,
+            "pick_test_tokens": 498.0,
+            "pick_test_p95_ms": 0.539,
+            "pick_feasible_on_test": true,
+            "pick_rank": 5,
+            "pick_utility": 0.8812,
+            "regret": 0.0094,
+            "experiments": 21,
+            "validations": 2,
+            "cache_hits": 9,
+            "seconds": 4.3,
+            "confidence": 0.661,
+            "escalations": [
+              [
+                "low_confidence",
+                true
+              ]
+            ],
+            "cited_numbers": 6,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 81,
+            "best_config": "c64-tfidf-k5-overlap",
+            "best_utility": 0.8905,
+            "best_accuracy": 0.891,
             "pick": "c128-bm25-k3-overlap",
             "pick_test_accuracy": 0.881,
             "pick_test_tokens": 498.1,
-            "pick_test_p95_ms": 1.322,
+            "pick_test_p95_ms": 0.584,
             "pick_feasible_on_test": true,
-            "pick_rank": 1,
-            "pick_utility": 0.8238,
-            "regret": 0.0,
+            "pick_rank": 7,
+            "pick_utility": 0.8792,
+            "regret": 0.0114,
             "experiments": 21,
             "validations": 2,
             "cache_hits": 9,
-            "seconds": 10.9,
-            "confidence": 1.0,
-            "escalations": [
-              [
-                "evidence_conflict",
-                false
-              ]
-            ],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 81,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.8238,
-            "best_accuracy": 0.881,
-            "pick": "c128-bm25-k3-none",
-            "pick_test_accuracy": 0.8835,
-            "pick_test_tokens": 498.0,
-            "pick_test_p95_ms": 1.393,
-            "pick_feasible_on_test": true,
-            "pick_rank": 2,
-            "pick_utility": 0.822,
-            "regret": 0.0019,
-            "experiments": 21,
-            "validations": 2,
-            "cache_hits": 9,
-            "seconds": 11.1,
-            "confidence": 0.885,
-            "escalations": [
-              [
-                "evidence_conflict",
-                false
-              ]
-            ],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 81,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.8238,
-            "best_accuracy": 0.881,
-            "pick": "c128-bm25-k3-overlap",
-            "pick_test_accuracy": 0.881,
-            "pick_test_tokens": 498.1,
-            "pick_test_p95_ms": 1.322,
-            "pick_feasible_on_test": true,
-            "pick_rank": 1,
-            "pick_utility": 0.8238,
-            "regret": 0.0,
-            "experiments": 21,
-            "validations": 2,
-            "cache_hits": 9,
-            "seconds": 10.6,
-            "confidence": 0.879,
-            "escalations": [
-              [
-                "evidence_conflict",
-                false
-              ]
-            ],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 81,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.8238,
-            "best_accuracy": 0.881,
-            "pick": "c128-bm25-k3-none",
-            "pick_test_accuracy": 0.8835,
-            "pick_test_tokens": 498.0,
-            "pick_test_p95_ms": 1.393,
-            "pick_feasible_on_test": true,
-            "pick_rank": 2,
-            "pick_utility": 0.822,
-            "regret": 0.0019,
-            "experiments": 21,
-            "validations": 2,
-            "cache_hits": 9,
-            "seconds": 11.2,
-            "confidence": 0.997,
-            "escalations": [
-              [
-                "evidence_conflict",
-                false
-              ]
-            ],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 81,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.8238,
-            "best_accuracy": 0.881,
-            "pick": "c128-bm25-k3-none",
-            "pick_test_accuracy": 0.8835,
-            "pick_test_tokens": 498.0,
-            "pick_test_p95_ms": 1.393,
-            "pick_feasible_on_test": true,
-            "pick_rank": 2,
-            "pick_utility": 0.822,
-            "regret": 0.0019,
-            "experiments": 21,
-            "validations": 2,
-            "cache_hits": 9,
-            "seconds": 11.3,
+            "seconds": 4.1,
             "confidence": 0.999,
+            "escalations": [],
+            "cited_numbers": 6,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 81,
+            "best_config": "c64-tfidf-k5-overlap",
+            "best_utility": 0.8905,
+            "best_accuracy": 0.891,
+            "pick": "c128-bm25-k3-none",
+            "pick_test_accuracy": 0.8835,
+            "pick_test_tokens": 498.0,
+            "pick_test_p95_ms": 0.539,
+            "pick_feasible_on_test": true,
+            "pick_rank": 5,
+            "pick_utility": 0.8812,
+            "regret": 0.0094,
+            "experiments": 21,
+            "validations": 2,
+            "cache_hits": 9,
+            "seconds": 4.1,
+            "confidence": 0.59,
             "escalations": [
               [
-                "evidence_conflict",
-                false
+                "low_confidence",
+                true
+              ]
+            ],
+            "cited_numbers": 6,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 81,
+            "best_config": "c64-tfidf-k5-overlap",
+            "best_utility": 0.8905,
+            "best_accuracy": 0.891,
+            "pick": "c128-bm25-k3-none",
+            "pick_test_accuracy": 0.8835,
+            "pick_test_tokens": 498.0,
+            "pick_test_p95_ms": 0.539,
+            "pick_feasible_on_test": true,
+            "pick_rank": 5,
+            "pick_utility": 0.8812,
+            "regret": 0.0094,
+            "experiments": 21,
+            "validations": 2,
+            "cache_hits": 9,
+            "seconds": 4.1,
+            "confidence": 0.59,
+            "escalations": [
+              [
+                "low_confidence",
+                true
               ]
             ],
             "cited_numbers": 6,
@@ -2234,165 +2219,136 @@
         "runs": 5,
         "recommended": 5,
         "feasible_on_test": 81,
-        "best_config": "c128-bm25-k3-overlap",
-        "best_accuracy": 0.881,
-        "mean_regret": 0.011,
-        "max_regret": 0.0176,
-        "median_rank": 5,
-        "top3_rate": 0.4,
+        "best_config": "c64-tfidf-k5-overlap",
+        "best_accuracy": 0.891,
+        "mean_regret": 0.0836,
+        "max_regret": 0.1,
+        "median_rank": 44,
+        "top3_rate": 0.0,
         "pick_feasible_rate": 1.0,
-        "mean_test_accuracy": 0.9089,
+        "mean_test_accuracy": 0.9075,
         "mean_experiments": 9,
-        "mean_seconds": 4.9,
+        "mean_seconds": 2.8,
         "picks": {
-          "c128-bm25-k5-overlap": 2,
-          "c128-bm25-k3-overlap": 1,
-          "c128-tfidf-k5-none": 1,
+          "c128-bge-k3-overlap": 4,
           "c128-bm25-k5-none": 1
         },
-        "escalations": {
-          "evidence_conflict": 5
-        },
+        "escalations": {},
         "low_confidence_rate": 0.0,
         "all_grounded": true,
         "cited_numbers": 15,
         "per_run": [
           {
             "feasible_on_test": 81,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.8238,
-            "best_accuracy": 0.881,
-            "pick": "c128-bm25-k5-overlap",
-            "pick_test_accuracy": 0.918,
-            "pick_test_tokens": 830.1,
-            "pick_test_p95_ms": 1.537,
+            "best_config": "c64-tfidf-k5-overlap",
+            "best_utility": 0.8905,
+            "best_accuracy": 0.891,
+            "pick": "c128-bge-k3-overlap",
+            "pick_test_accuracy": 0.9045,
+            "pick_test_tokens": 497.2,
+            "pick_test_p95_ms": 9.298,
             "pick_feasible_on_test": true,
-            "pick_rank": 7,
-            "pick_utility": 0.8062,
-            "regret": 0.0176,
+            "pick_rank": 44,
+            "pick_utility": 0.7906,
+            "regret": 0.1,
             "experiments": 9,
             "validations": 1,
             "cache_hits": 3,
-            "seconds": 4.7,
+            "seconds": 8.3,
             "confidence": 1.0,
-            "escalations": [
-              [
-                "evidence_conflict",
-                false
-              ]
-            ],
+            "escalations": [],
             "cited_numbers": 3,
             "grounded": true,
             "stopped": "search complete"
           },
           {
             "feasible_on_test": 81,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.8238,
-            "best_accuracy": 0.881,
-            "pick": "c128-bm25-k5-overlap",
-            "pick_test_accuracy": 0.918,
-            "pick_test_tokens": 830.1,
-            "pick_test_p95_ms": 1.537,
+            "best_config": "c64-tfidf-k5-overlap",
+            "best_utility": 0.8905,
+            "best_accuracy": 0.891,
+            "pick": "c128-bge-k3-overlap",
+            "pick_test_accuracy": 0.9045,
+            "pick_test_tokens": 497.2,
+            "pick_test_p95_ms": 9.298,
             "pick_feasible_on_test": true,
-            "pick_rank": 7,
-            "pick_utility": 0.8062,
-            "regret": 0.0176,
+            "pick_rank": 44,
+            "pick_utility": 0.7906,
+            "regret": 0.1,
             "experiments": 9,
             "validations": 1,
             "cache_hits": 3,
-            "seconds": 4.9,
+            "seconds": 1.3,
             "confidence": 1.0,
-            "escalations": [
-              [
-                "evidence_conflict",
-                false
-              ]
-            ],
+            "escalations": [],
             "cited_numbers": 3,
             "grounded": true,
             "stopped": "search complete"
           },
           {
             "feasible_on_test": 81,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.8238,
-            "best_accuracy": 0.881,
-            "pick": "c128-bm25-k3-overlap",
-            "pick_test_accuracy": 0.881,
-            "pick_test_tokens": 498.1,
-            "pick_test_p95_ms": 1.322,
+            "best_config": "c64-tfidf-k5-overlap",
+            "best_utility": 0.8905,
+            "best_accuracy": 0.891,
+            "pick": "c128-bge-k3-overlap",
+            "pick_test_accuracy": 0.9045,
+            "pick_test_tokens": 497.2,
+            "pick_test_p95_ms": 9.298,
             "pick_feasible_on_test": true,
-            "pick_rank": 1,
-            "pick_utility": 0.8238,
-            "regret": 0.0,
+            "pick_rank": 44,
+            "pick_utility": 0.7906,
+            "regret": 0.1,
             "experiments": 9,
             "validations": 1,
             "cache_hits": 3,
-            "seconds": 4.8,
+            "seconds": 1.3,
             "confidence": 1.0,
-            "escalations": [
-              [
-                "evidence_conflict",
-                false
-              ]
-            ],
+            "escalations": [],
             "cited_numbers": 3,
             "grounded": true,
             "stopped": "search complete"
           },
           {
             "feasible_on_test": 81,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.8238,
-            "best_accuracy": 0.881,
-            "pick": "c128-tfidf-k5-none",
-            "pick_test_accuracy": 0.908,
-            "pick_test_tokens": 829.2,
-            "pick_test_p95_ms": 1.316,
-            "pick_feasible_on_test": true,
-            "pick_rank": 5,
-            "pick_utility": 0.8108,
-            "regret": 0.0131,
-            "experiments": 9,
-            "validations": 1,
-            "cache_hits": 3,
-            "seconds": 5.3,
-            "confidence": 1.0,
-            "escalations": [
-              [
-                "evidence_conflict",
-                false
-              ]
-            ],
-            "cited_numbers": 3,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 81,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.8238,
-            "best_accuracy": 0.881,
+            "best_config": "c64-tfidf-k5-overlap",
+            "best_utility": 0.8905,
+            "best_accuracy": 0.891,
             "pick": "c128-bm25-k5-none",
             "pick_test_accuracy": 0.9195,
             "pick_test_tokens": 830.1,
-            "pick_test_p95_ms": 1.323,
+            "pick_test_p95_ms": 0.602,
             "pick_feasible_on_test": true,
-            "pick_rank": 3,
-            "pick_utility": 0.8171,
-            "regret": 0.0067,
+            "pick_rank": 13,
+            "pick_utility": 0.8723,
+            "regret": 0.0182,
             "experiments": 9,
             "validations": 1,
             "cache_hits": 3,
-            "seconds": 4.6,
+            "seconds": 1.8,
             "confidence": 1.0,
-            "escalations": [
-              [
-                "evidence_conflict",
-                false
-              ]
-            ],
+            "escalations": [],
+            "cited_numbers": 3,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 81,
+            "best_config": "c64-tfidf-k5-overlap",
+            "best_utility": 0.8905,
+            "best_accuracy": 0.891,
+            "pick": "c128-bge-k3-overlap",
+            "pick_test_accuracy": 0.9045,
+            "pick_test_tokens": 497.2,
+            "pick_test_p95_ms": 9.298,
+            "pick_feasible_on_test": true,
+            "pick_rank": 44,
+            "pick_utility": 0.7906,
+            "regret": 0.1,
+            "experiments": 9,
+            "validations": 1,
+            "cache_hits": 3,
+            "seconds": 1.2,
+            "confidence": 1.0,
+            "escalations": [],
             "cited_numbers": 3,
             "grounded": true,
             "stopped": "search complete"
@@ -2403,69 +2359,73 @@
         "runs": 5,
         "recommended": 5,
         "feasible_on_test": 81,
-        "best_config": "c128-bm25-k3-overlap",
-        "best_accuracy": 0.881,
-        "mean_regret": 0.0025,
-        "max_regret": 0.0067,
-        "median_rank": 2,
-        "top3_rate": 1.0,
+        "best_config": "c64-tfidf-k5-overlap",
+        "best_accuracy": 0.891,
+        "mean_regret": 0.009,
+        "max_regret": 0.0094,
+        "median_rank": 4,
+        "top3_rate": 0.0,
         "pick_feasible_rate": 1.0,
-        "mean_test_accuracy": 0.8902,
+        "mean_test_accuracy": 0.8841,
         "mean_experiments": 21,
-        "mean_seconds": 9.5,
+        "mean_seconds": 3.7,
         "picks": {
-          "c128-bm25-k3-none": 3,
-          "c128-bm25-k3-overlap": 1,
-          "c128-bm25-k5-none": 1
+          "c128-bm25-k3-none": 2,
+          "c128-tfidf-k3-overlap": 3
         },
         "escalations": {
-          "low_confidence": 2
+          "low_confidence": 3
         },
-        "low_confidence_rate": 0.4,
+        "low_confidence_rate": 0.6,
         "all_grounded": true,
         "cited_numbers": 30,
         "per_run": [
           {
             "feasible_on_test": 81,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.8238,
-            "best_accuracy": 0.881,
+            "best_config": "c64-tfidf-k5-overlap",
+            "best_utility": 0.8905,
+            "best_accuracy": 0.891,
             "pick": "c128-bm25-k3-none",
             "pick_test_accuracy": 0.8835,
             "pick_test_tokens": 498.0,
-            "pick_test_p95_ms": 1.393,
+            "pick_test_p95_ms": 0.539,
             "pick_feasible_on_test": true,
-            "pick_rank": 2,
-            "pick_utility": 0.822,
-            "regret": 0.0019,
+            "pick_rank": 5,
+            "pick_utility": 0.8812,
+            "regret": 0.0094,
             "experiments": 21,
             "validations": 2,
             "cache_hits": 9,
-            "seconds": 9.7,
-            "confidence": 0.907,
-            "escalations": [],
+            "seconds": 3.7,
+            "confidence": 0.59,
+            "escalations": [
+              [
+                "low_confidence",
+                true
+              ]
+            ],
             "cited_numbers": 6,
             "grounded": true,
             "stopped": "search complete"
           },
           {
             "feasible_on_test": 81,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.8238,
-            "best_accuracy": 0.881,
-            "pick": "c128-bm25-k3-overlap",
-            "pick_test_accuracy": 0.881,
+            "best_config": "c64-tfidf-k5-overlap",
+            "best_utility": 0.8905,
+            "best_accuracy": 0.891,
+            "pick": "c128-tfidf-k3-overlap",
+            "pick_test_accuracy": 0.8845,
             "pick_test_tokens": 498.1,
-            "pick_test_p95_ms": 1.322,
+            "pick_test_p95_ms": 0.539,
             "pick_feasible_on_test": true,
-            "pick_rank": 1,
-            "pick_utility": 0.8238,
-            "regret": 0.0,
+            "pick_rank": 4,
+            "pick_utility": 0.8818,
+            "regret": 0.0088,
             "experiments": 21,
             "validations": 2,
             "cache_hits": 9,
-            "seconds": 9.5,
-            "confidence": 0.999,
+            "seconds": 3.7,
+            "confidence": 0.944,
             "escalations": [],
             "cited_numbers": 6,
             "grounded": true,
@@ -2473,22 +2433,22 @@
           },
           {
             "feasible_on_test": 81,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.8238,
-            "best_accuracy": 0.881,
+            "best_config": "c64-tfidf-k5-overlap",
+            "best_utility": 0.8905,
+            "best_accuracy": 0.891,
             "pick": "c128-bm25-k3-none",
             "pick_test_accuracy": 0.8835,
             "pick_test_tokens": 498.0,
-            "pick_test_p95_ms": 1.393,
+            "pick_test_p95_ms": 0.539,
             "pick_feasible_on_test": true,
-            "pick_rank": 2,
-            "pick_utility": 0.822,
-            "regret": 0.0019,
+            "pick_rank": 5,
+            "pick_utility": 0.8812,
+            "regret": 0.0094,
             "experiments": 21,
             "validations": 2,
             "cache_hits": 9,
-            "seconds": 9.5,
-            "confidence": 0.621,
+            "seconds": 3.7,
+            "confidence": 0.59,
             "escalations": [
               [
                 "low_confidence",
@@ -2501,51 +2461,51 @@
           },
           {
             "feasible_on_test": 81,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.8238,
-            "best_accuracy": 0.881,
-            "pick": "c128-bm25-k3-none",
-            "pick_test_accuracy": 0.8835,
-            "pick_test_tokens": 498.0,
-            "pick_test_p95_ms": 1.393,
+            "best_config": "c64-tfidf-k5-overlap",
+            "best_utility": 0.8905,
+            "best_accuracy": 0.891,
+            "pick": "c128-tfidf-k3-overlap",
+            "pick_test_accuracy": 0.8845,
+            "pick_test_tokens": 498.1,
+            "pick_test_p95_ms": 0.539,
             "pick_feasible_on_test": true,
-            "pick_rank": 2,
-            "pick_utility": 0.822,
-            "regret": 0.0019,
+            "pick_rank": 4,
+            "pick_utility": 0.8818,
+            "regret": 0.0088,
             "experiments": 21,
             "validations": 2,
             "cache_hits": 9,
-            "seconds": 9.4,
-            "confidence": 1.0,
-            "escalations": [],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 81,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.8238,
-            "best_accuracy": 0.881,
-            "pick": "c128-bm25-k5-none",
-            "pick_test_accuracy": 0.9195,
-            "pick_test_tokens": 830.1,
-            "pick_test_p95_ms": 1.323,
-            "pick_feasible_on_test": true,
-            "pick_rank": 3,
-            "pick_utility": 0.8171,
-            "regret": 0.0067,
-            "experiments": 21,
-            "validations": 2,
-            "cache_hits": 9,
-            "seconds": 9.3,
-            "confidence": 0.548,
+            "seconds": 3.7,
+            "confidence": 0.762,
             "escalations": [
               [
                 "low_confidence",
                 true
               ]
             ],
+            "cited_numbers": 6,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 81,
+            "best_config": "c64-tfidf-k5-overlap",
+            "best_utility": 0.8905,
+            "best_accuracy": 0.891,
+            "pick": "c128-tfidf-k3-overlap",
+            "pick_test_accuracy": 0.8845,
+            "pick_test_tokens": 498.1,
+            "pick_test_p95_ms": 0.539,
+            "pick_feasible_on_test": true,
+            "pick_rank": 4,
+            "pick_utility": 0.8818,
+            "regret": 0.0088,
+            "experiments": 21,
+            "validations": 2,
+            "cache_hits": 9,
+            "seconds": 3.7,
+            "confidence": 0.909,
+            "escalations": [],
             "cited_numbers": 6,
             "grounded": true,
             "stopped": "search complete"
@@ -2556,53 +2516,46 @@
         "runs": 5,
         "recommended": 5,
         "feasible_on_test": 81,
-        "best_config": "c128-bm25-k3-overlap",
-        "best_accuracy": 0.881,
-        "mean_regret": 0.0103,
-        "max_regret": 0.0278,
-        "median_rank": 2,
-        "top3_rate": 0.6,
+        "best_config": "c64-tfidf-k5-overlap",
+        "best_accuracy": 0.891,
+        "mean_regret": 0.0098,
+        "max_regret": 0.0114,
+        "median_rank": 5,
+        "top3_rate": 0.0,
         "pick_feasible_rate": 1.0,
-        "mean_test_accuracy": 0.8873,
+        "mean_test_accuracy": 0.883,
         "mean_experiments": 21,
-        "mean_seconds": 10.8,
+        "mean_seconds": 4.1,
         "picks": {
-          "c64-bm25-k5-none": 1,
-          "c128-bm25-k3-overlap": 2,
-          "c256-bm25-k3-none": 1,
-          "c128-bm25-k3-none": 1
+          "c128-bm25-k3-none": 4,
+          "c128-bm25-k3-overlap": 1
         },
         "escalations": {
-          "evidence_conflict": 5,
-          "low_confidence": 1
+          "low_confidence": 4
         },
-        "low_confidence_rate": 0.2,
+        "low_confidence_rate": 0.8,
         "all_grounded": true,
         "cited_numbers": 30,
         "per_run": [
           {
             "feasible_on_test": 81,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.8238,
-            "best_accuracy": 0.881,
-            "pick": "c64-bm25-k5-none",
-            "pick_test_accuracy": 0.8825,
-            "pick_test_tokens": 415.1,
-            "pick_test_p95_ms": 1.964,
+            "best_config": "c64-tfidf-k5-overlap",
+            "best_utility": 0.8905,
+            "best_accuracy": 0.891,
+            "pick": "c128-bm25-k3-none",
+            "pick_test_accuracy": 0.8835,
+            "pick_test_tokens": 498.0,
+            "pick_test_p95_ms": 0.539,
             "pick_feasible_on_test": true,
-            "pick_rank": 9,
-            "pick_utility": 0.8018,
-            "regret": 0.022,
+            "pick_rank": 5,
+            "pick_utility": 0.8812,
+            "regret": 0.0094,
             "experiments": 21,
             "validations": 2,
             "cache_hits": 9,
-            "seconds": 11.2,
-            "confidence": 0.625,
+            "seconds": 4.1,
+            "confidence": 0.59,
             "escalations": [
-              [
-                "evidence_conflict",
-                false
-              ],
               [
                 "low_confidence",
                 true
@@ -2614,82 +2567,26 @@
           },
           {
             "feasible_on_test": 81,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.8238,
-            "best_accuracy": 0.881,
-            "pick": "c128-bm25-k3-overlap",
-            "pick_test_accuracy": 0.881,
-            "pick_test_tokens": 498.1,
-            "pick_test_p95_ms": 1.322,
-            "pick_feasible_on_test": true,
-            "pick_rank": 1,
-            "pick_utility": 0.8238,
-            "regret": 0.0,
-            "experiments": 21,
-            "validations": 2,
-            "cache_hits": 9,
-            "seconds": 11.4,
-            "confidence": 0.999,
-            "escalations": [
-              [
-                "evidence_conflict",
-                false
-              ]
-            ],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 81,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.8238,
-            "best_accuracy": 0.881,
-            "pick": "c256-bm25-k3-none",
-            "pick_test_accuracy": 0.9085,
-            "pick_test_tokens": 991.7,
-            "pick_test_p95_ms": 1.332,
-            "pick_feasible_on_test": true,
-            "pick_rank": 16,
-            "pick_utility": 0.796,
-            "regret": 0.0278,
-            "experiments": 21,
-            "validations": 2,
-            "cache_hits": 9,
-            "seconds": 10.2,
-            "confidence": 1.0,
-            "escalations": [
-              [
-                "evidence_conflict",
-                false
-              ]
-            ],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 81,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.8238,
-            "best_accuracy": 0.881,
+            "best_config": "c64-tfidf-k5-overlap",
+            "best_utility": 0.8905,
+            "best_accuracy": 0.891,
             "pick": "c128-bm25-k3-none",
             "pick_test_accuracy": 0.8835,
             "pick_test_tokens": 498.0,
-            "pick_test_p95_ms": 1.393,
+            "pick_test_p95_ms": 0.539,
             "pick_feasible_on_test": true,
-            "pick_rank": 2,
-            "pick_utility": 0.822,
-            "regret": 0.0019,
+            "pick_rank": 5,
+            "pick_utility": 0.8812,
+            "regret": 0.0094,
             "experiments": 21,
             "validations": 2,
             "cache_hits": 9,
-            "seconds": 11.0,
-            "confidence": 0.833,
+            "seconds": 4.1,
+            "confidence": 0.661,
             "escalations": [
               [
-                "evidence_conflict",
-                false
+                "low_confidence",
+                true
               ]
             ],
             "cited_numbers": 6,
@@ -2698,26 +2595,77 @@
           },
           {
             "feasible_on_test": 81,
-            "best_config": "c128-bm25-k3-overlap",
-            "best_utility": 0.8238,
-            "best_accuracy": 0.881,
-            "pick": "c128-bm25-k3-overlap",
-            "pick_test_accuracy": 0.881,
-            "pick_test_tokens": 498.1,
-            "pick_test_p95_ms": 1.322,
+            "best_config": "c64-tfidf-k5-overlap",
+            "best_utility": 0.8905,
+            "best_accuracy": 0.891,
+            "pick": "c128-bm25-k3-none",
+            "pick_test_accuracy": 0.8835,
+            "pick_test_tokens": 498.0,
+            "pick_test_p95_ms": 0.539,
             "pick_feasible_on_test": true,
-            "pick_rank": 1,
-            "pick_utility": 0.8238,
-            "regret": 0.0,
+            "pick_rank": 5,
+            "pick_utility": 0.8812,
+            "regret": 0.0094,
             "experiments": 21,
             "validations": 2,
             "cache_hits": 9,
-            "seconds": 10.2,
-            "confidence": 0.998,
+            "seconds": 4.1,
+            "confidence": 0.59,
             "escalations": [
               [
-                "evidence_conflict",
-                false
+                "low_confidence",
+                true
+              ]
+            ],
+            "cited_numbers": 6,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 81,
+            "best_config": "c64-tfidf-k5-overlap",
+            "best_utility": 0.8905,
+            "best_accuracy": 0.891,
+            "pick": "c128-bm25-k3-overlap",
+            "pick_test_accuracy": 0.881,
+            "pick_test_tokens": 498.1,
+            "pick_test_p95_ms": 0.584,
+            "pick_feasible_on_test": true,
+            "pick_rank": 7,
+            "pick_utility": 0.8792,
+            "regret": 0.0114,
+            "experiments": 21,
+            "validations": 2,
+            "cache_hits": 9,
+            "seconds": 4.0,
+            "confidence": 0.999,
+            "escalations": [],
+            "cited_numbers": 6,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 81,
+            "best_config": "c64-tfidf-k5-overlap",
+            "best_utility": 0.8905,
+            "best_accuracy": 0.891,
+            "pick": "c128-bm25-k3-none",
+            "pick_test_accuracy": 0.8835,
+            "pick_test_tokens": 498.0,
+            "pick_test_p95_ms": 0.539,
+            "pick_feasible_on_test": true,
+            "pick_rank": 5,
+            "pick_utility": 0.8812,
+            "regret": 0.0094,
+            "experiments": 21,
+            "validations": 2,
+            "cache_hits": 9,
+            "seconds": 4.0,
+            "confidence": 0.59,
+            "escalations": [
+              [
+                "low_confidence",
+                true
               ]
             ],
             "cited_numbers": 6,
@@ -2735,135 +2683,46 @@
       "agent": {
         "runs": 5,
         "recommended": 5,
-        "feasible_on_test": 16,
-        "best_config": "c128-glove-k1-overlap",
-        "best_accuracy": 0.592,
-        "mean_regret": 0.0105,
-        "max_regret": 0.0527,
-        "median_rank": 1,
-        "top3_rate": 0.8,
-        "pick_feasible_rate": 1.0,
-        "mean_test_accuracy": 0.6077,
-        "mean_experiments": 21,
-        "mean_seconds": 5.8,
+        "feasible_on_test": 5,
+        "best_config": "c256-tfidf-k1-overlap",
+        "best_accuracy": 0.7845,
+        "mean_regret": 0.0025,
+        "max_regret": 0.0025,
+        "median_rank": null,
+        "top3_rate": 0.0,
+        "pick_feasible_rate": 0.0,
+        "mean_test_accuracy": 0.7835,
+        "mean_experiments": 12,
+        "mean_seconds": 2.2,
         "picks": {
-          "c128-glove-k1-overlap": 4,
-          "c64-glove-k3-overlap": 1
+          "c256-bm25-k1-none": 5
         },
         "escalations": {
-          "replan": 10,
-          "level_collapsed": 9,
-          "low_confidence": 4
+          "replan": 6,
+          "level_collapsed": 6,
+          "evidence_conflict": 7
         },
-        "low_confidence_rate": 0.8,
+        "low_confidence_rate": 0.0,
         "all_grounded": true,
         "cited_numbers": 30,
         "per_run": [
           {
-            "feasible_on_test": 16,
-            "best_config": "c128-glove-k1-overlap",
-            "best_utility": 0.6728,
-            "best_accuracy": 0.592,
-            "pick": "c128-glove-k1-overlap",
-            "pick_test_accuracy": 0.592,
-            "pick_test_tokens": 165.9,
-            "pick_test_p95_ms": 0.123,
-            "pick_feasible_on_test": true,
-            "pick_rank": 1,
-            "pick_utility": 0.6728,
-            "regret": 0.0,
-            "experiments": 21,
+            "feasible_on_test": 5,
+            "best_config": "c256-tfidf-k1-overlap",
+            "best_utility": 0.5815,
+            "best_accuracy": 0.7845,
+            "pick": "c256-bm25-k1-none",
+            "pick_test_accuracy": 0.7835,
+            "pick_test_tokens": 330.3,
+            "pick_test_p95_ms": 0.565,
+            "pick_feasible_on_test": false,
+            "pick_rank": null,
+            "pick_utility": 0.5791,
+            "regret": 0.0025,
+            "experiments": 14,
             "validations": 2,
-            "cache_hits": 6,
-            "seconds": 5.7,
-            "confidence": 0.646,
-            "escalations": [
-              [
-                "replan",
-                false
-              ],
-              [
-                "level_collapsed",
-                false
-              ],
-              [
-                "replan",
-                false
-              ],
-              [
-                "level_collapsed",
-                false
-              ],
-              [
-                "low_confidence",
-                true
-              ]
-            ],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 16,
-            "best_config": "c128-glove-k1-overlap",
-            "best_utility": 0.6728,
-            "best_accuracy": 0.592,
-            "pick": "c128-glove-k1-overlap",
-            "pick_test_accuracy": 0.592,
-            "pick_test_tokens": 165.9,
-            "pick_test_p95_ms": 0.123,
-            "pick_feasible_on_test": true,
-            "pick_rank": 1,
-            "pick_utility": 0.6728,
-            "regret": 0.0,
-            "experiments": 21,
-            "validations": 2,
-            "cache_hits": 6,
-            "seconds": 5.6,
-            "confidence": 0.727,
-            "escalations": [
-              [
-                "replan",
-                false
-              ],
-              [
-                "level_collapsed",
-                false
-              ],
-              [
-                "replan",
-                false
-              ],
-              [
-                "level_collapsed",
-                false
-              ],
-              [
-                "low_confidence",
-                true
-              ]
-            ],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 16,
-            "best_config": "c128-glove-k1-overlap",
-            "best_utility": 0.6728,
-            "best_accuracy": 0.592,
-            "pick": "c64-glove-k3-overlap",
-            "pick_test_accuracy": 0.6705,
-            "pick_test_tokens": 249.1,
-            "pick_test_p95_ms": 0.302,
-            "pick_feasible_on_test": true,
-            "pick_rank": 7,
-            "pick_utility": 0.6201,
-            "regret": 0.0527,
-            "experiments": 20,
-            "validations": 2,
-            "cache_hits": 7,
-            "seconds": 6.4,
+            "cache_hits": 3,
+            "seconds": 2.4,
             "confidence": 1.0,
             "escalations": [
               [
@@ -2881,6 +2740,10 @@
               [
                 "level_collapsed",
                 false
+              ],
+              [
+                "evidence_conflict",
+                false
               ]
             ],
             "cited_numbers": 6,
@@ -2888,23 +2751,23 @@
             "stopped": "search complete"
           },
           {
-            "feasible_on_test": 16,
-            "best_config": "c128-glove-k1-overlap",
-            "best_utility": 0.6728,
-            "best_accuracy": 0.592,
-            "pick": "c128-glove-k1-overlap",
-            "pick_test_accuracy": 0.592,
-            "pick_test_tokens": 165.9,
-            "pick_test_p95_ms": 0.123,
-            "pick_feasible_on_test": true,
-            "pick_rank": 1,
-            "pick_utility": 0.6728,
-            "regret": 0.0,
-            "experiments": 22,
+            "feasible_on_test": 5,
+            "best_config": "c256-tfidf-k1-overlap",
+            "best_utility": 0.5815,
+            "best_accuracy": 0.7845,
+            "pick": "c256-bm25-k1-none",
+            "pick_test_accuracy": 0.7835,
+            "pick_test_tokens": 330.3,
+            "pick_test_p95_ms": 0.565,
+            "pick_feasible_on_test": false,
+            "pick_rank": null,
+            "pick_utility": 0.5791,
+            "regret": 0.0025,
+            "experiments": 12,
             "validations": 2,
-            "cache_hits": 8,
-            "seconds": 6.0,
-            "confidence": 0.529,
+            "cache_hits": 5,
+            "seconds": 2.2,
+            "confidence": 0.999,
             "escalations": [
               [
                 "replan",
@@ -2915,12 +2778,8 @@
                 false
               ],
               [
-                "replan",
+                "evidence_conflict",
                 false
-              ],
-              [
-                "low_confidence",
-                true
               ]
             ],
             "cited_numbers": 6,
@@ -2928,23 +2787,23 @@
             "stopped": "search complete"
           },
           {
-            "feasible_on_test": 16,
-            "best_config": "c128-glove-k1-overlap",
-            "best_utility": 0.6728,
-            "best_accuracy": 0.592,
-            "pick": "c128-glove-k1-overlap",
-            "pick_test_accuracy": 0.592,
-            "pick_test_tokens": 165.9,
-            "pick_test_p95_ms": 0.123,
-            "pick_feasible_on_test": true,
-            "pick_rank": 1,
-            "pick_utility": 0.6728,
-            "regret": 0.0,
-            "experiments": 21,
+            "feasible_on_test": 5,
+            "best_config": "c256-tfidf-k1-overlap",
+            "best_utility": 0.5815,
+            "best_accuracy": 0.7845,
+            "pick": "c256-bm25-k1-none",
+            "pick_test_accuracy": 0.7835,
+            "pick_test_tokens": 330.3,
+            "pick_test_p95_ms": 0.565,
+            "pick_feasible_on_test": false,
+            "pick_rank": null,
+            "pick_utility": 0.5791,
+            "regret": 0.0025,
+            "experiments": 11,
             "validations": 2,
-            "cache_hits": 6,
-            "seconds": 5.2,
-            "confidence": 0.727,
+            "cache_hits": 3,
+            "seconds": 2.1,
+            "confidence": 1.0,
             "escalations": [
               [
                 "replan",
@@ -2955,6 +2814,38 @@
                 false
               ],
               [
+                "evidence_conflict",
+                false
+              ],
+              [
+                "evidence_conflict",
+                false
+              ]
+            ],
+            "cited_numbers": 6,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 5,
+            "best_config": "c256-tfidf-k1-overlap",
+            "best_utility": 0.5815,
+            "best_accuracy": 0.7845,
+            "pick": "c256-bm25-k1-none",
+            "pick_test_accuracy": 0.7835,
+            "pick_test_tokens": 330.3,
+            "pick_test_p95_ms": 0.565,
+            "pick_feasible_on_test": false,
+            "pick_rank": null,
+            "pick_utility": 0.5791,
+            "regret": 0.0025,
+            "experiments": 12,
+            "validations": 2,
+            "cache_hits": 5,
+            "seconds": 2.2,
+            "confidence": 1.0,
+            "escalations": [
+              [
                 "replan",
                 false
               ],
@@ -2963,8 +2854,48 @@
                 false
               ],
               [
-                "low_confidence",
-                true
+                "evidence_conflict",
+                false
+              ]
+            ],
+            "cited_numbers": 6,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 5,
+            "best_config": "c256-tfidf-k1-overlap",
+            "best_utility": 0.5815,
+            "best_accuracy": 0.7845,
+            "pick": "c256-bm25-k1-none",
+            "pick_test_accuracy": 0.7835,
+            "pick_test_tokens": 330.3,
+            "pick_test_p95_ms": 0.565,
+            "pick_feasible_on_test": false,
+            "pick_rank": null,
+            "pick_utility": 0.5791,
+            "regret": 0.0025,
+            "experiments": 11,
+            "validations": 2,
+            "cache_hits": 3,
+            "seconds": 2.1,
+            "confidence": 1.0,
+            "escalations": [
+              [
+                "replan",
+                false
+              ],
+              [
+                "level_collapsed",
+                false
+              ],
+              [
+                "evidence_conflict",
+                false
+              ],
+              [
+                "evidence_conflict",
+                false
               ]
             ],
             "cited_numbers": 6,
@@ -2975,49 +2906,44 @@
       },
       "greedy": {
         "runs": 5,
-        "recommended": 5,
-        "feasible_on_test": 16,
-        "best_config": "c128-glove-k1-overlap",
-        "best_accuracy": 0.592,
-        "mean_regret": 0.0007,
-        "max_regret": 0.0011,
-        "median_rank": 2,
-        "top3_rate": 1.0,
-        "pick_feasible_rate": 1.0,
-        "mean_test_accuracy": 0.6607,
-        "mean_experiments": 19,
-        "mean_seconds": 5.0,
+        "recommended": 3,
+        "feasible_on_test": 5,
+        "best_config": "c256-tfidf-k1-overlap",
+        "best_accuracy": 0.7845,
+        "mean_regret": 0.0017,
+        "max_regret": 0.0025,
+        "median_rank": 1,
+        "top3_rate": 0.2,
+        "pick_feasible_rate": 0.2,
+        "mean_test_accuracy": 0.7838,
+        "mean_experiments": 13.8,
+        "mean_seconds": 2.1,
         "picks": {
-          "c128-glove-k3-overlap": 3,
-          "c128-glove-k1-overlap": 2
+          "null": 2,
+          "c256-bm25-k1-none": 2,
+          "c256-tfidf-k1-overlap": 1
         },
         "escalations": {
-          "replan": 10,
-          "level_collapsed": 7,
-          "evidence_conflict": 2
+          "replan": 9,
+          "level_collapsed": 9,
+          "evidence_conflict": 8,
+          "infeasible": 2
         },
         "low_confidence_rate": 0.0,
         "all_grounded": true,
-        "cited_numbers": 15,
+        "cited_numbers": 9,
         "per_run": [
           {
-            "feasible_on_test": 16,
-            "best_config": "c128-glove-k1-overlap",
-            "best_utility": 0.6728,
-            "best_accuracy": 0.592,
-            "pick": "c128-glove-k3-overlap",
-            "pick_test_accuracy": 0.7065,
-            "pick_test_tokens": 497.9,
-            "pick_test_p95_ms": 0.144,
-            "pick_feasible_on_test": true,
-            "pick_rank": 2,
-            "pick_utility": 0.6717,
-            "regret": 0.0011,
-            "experiments": 19,
+            "feasible_on_test": 5,
+            "best_config": "c256-tfidf-k1-overlap",
+            "best_utility": 0.5815,
+            "best_accuracy": 0.7845,
+            "pick": null,
+            "experiments": 11,
             "validations": 1,
-            "cache_hits": 5,
-            "seconds": 5.0,
-            "confidence": 1.0,
+            "cache_hits": 3,
+            "seconds": 1.8,
+            "confidence": null,
             "escalations": [
               [
                 "replan",
@@ -3028,31 +2954,39 @@
                 false
               ],
               [
-                "replan",
+                "evidence_conflict",
                 false
+              ],
+              [
+                "evidence_conflict",
+                false
+              ],
+              [
+                "infeasible",
+                true
               ]
             ],
-            "cited_numbers": 3,
+            "cited_numbers": 0,
             "grounded": true,
-            "stopped": "search complete"
+            "stopped": "finalists failed validation"
           },
           {
-            "feasible_on_test": 16,
-            "best_config": "c128-glove-k1-overlap",
-            "best_utility": 0.6728,
-            "best_accuracy": 0.592,
-            "pick": "c128-glove-k3-overlap",
-            "pick_test_accuracy": 0.7065,
-            "pick_test_tokens": 497.9,
-            "pick_test_p95_ms": 0.144,
-            "pick_feasible_on_test": true,
-            "pick_rank": 2,
-            "pick_utility": 0.6717,
-            "regret": 0.0011,
-            "experiments": 19,
+            "feasible_on_test": 5,
+            "best_config": "c256-tfidf-k1-overlap",
+            "best_utility": 0.5815,
+            "best_accuracy": 0.7845,
+            "pick": "c256-bm25-k1-none",
+            "pick_test_accuracy": 0.7835,
+            "pick_test_tokens": 330.3,
+            "pick_test_p95_ms": 0.565,
+            "pick_feasible_on_test": false,
+            "pick_rank": null,
+            "pick_utility": 0.5791,
+            "regret": 0.0025,
+            "experiments": 11,
             "validations": 1,
-            "cache_hits": 5,
-            "seconds": 4.8,
+            "cache_hits": 3,
+            "seconds": 1.7,
             "confidence": 1.0,
             "escalations": [
               [
@@ -3064,83 +2998,7 @@
                 false
               ],
               [
-                "replan",
-                false
-              ]
-            ],
-            "cited_numbers": 3,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 16,
-            "best_config": "c128-glove-k1-overlap",
-            "best_utility": 0.6728,
-            "best_accuracy": 0.592,
-            "pick": "c128-glove-k3-overlap",
-            "pick_test_accuracy": 0.7065,
-            "pick_test_tokens": 497.9,
-            "pick_test_p95_ms": 0.144,
-            "pick_feasible_on_test": true,
-            "pick_rank": 2,
-            "pick_utility": 0.6717,
-            "regret": 0.0011,
-            "experiments": 19,
-            "validations": 1,
-            "cache_hits": 5,
-            "seconds": 5.3,
-            "confidence": 1.0,
-            "escalations": [
-              [
-                "replan",
-                false
-              ],
-              [
-                "level_collapsed",
-                false
-              ],
-              [
-                "replan",
-                false
-              ],
-              [
-                "level_collapsed",
-                false
-              ]
-            ],
-            "cited_numbers": 3,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 16,
-            "best_config": "c128-glove-k1-overlap",
-            "best_utility": 0.6728,
-            "best_accuracy": 0.592,
-            "pick": "c128-glove-k1-overlap",
-            "pick_test_accuracy": 0.592,
-            "pick_test_tokens": 165.9,
-            "pick_test_p95_ms": 0.123,
-            "pick_feasible_on_test": true,
-            "pick_rank": 1,
-            "pick_utility": 0.6728,
-            "regret": 0.0,
-            "experiments": 19,
-            "validations": 1,
-            "cache_hits": 5,
-            "seconds": 5.1,
-            "confidence": 1.0,
-            "escalations": [
-              [
-                "replan",
-                false
-              ],
-              [
-                "level_collapsed",
-                false
-              ],
-              [
-                "replan",
+                "evidence_conflict",
                 false
               ],
               [
@@ -3153,22 +3011,59 @@
             "stopped": "search complete"
           },
           {
-            "feasible_on_test": 16,
-            "best_config": "c128-glove-k1-overlap",
-            "best_utility": 0.6728,
-            "best_accuracy": 0.592,
-            "pick": "c128-glove-k1-overlap",
-            "pick_test_accuracy": 0.592,
-            "pick_test_tokens": 165.9,
-            "pick_test_p95_ms": 0.123,
+            "feasible_on_test": 5,
+            "best_config": "c256-tfidf-k1-overlap",
+            "best_utility": 0.5815,
+            "best_accuracy": 0.7845,
+            "pick": null,
+            "experiments": 11,
+            "validations": 1,
+            "cache_hits": 3,
+            "seconds": 1.8,
+            "confidence": null,
+            "escalations": [
+              [
+                "replan",
+                false
+              ],
+              [
+                "level_collapsed",
+                false
+              ],
+              [
+                "evidence_conflict",
+                false
+              ],
+              [
+                "evidence_conflict",
+                false
+              ],
+              [
+                "infeasible",
+                true
+              ]
+            ],
+            "cited_numbers": 0,
+            "grounded": true,
+            "stopped": "finalists failed validation"
+          },
+          {
+            "feasible_on_test": 5,
+            "best_config": "c256-tfidf-k1-overlap",
+            "best_utility": 0.5815,
+            "best_accuracy": 0.7845,
+            "pick": "c256-tfidf-k1-overlap",
+            "pick_test_accuracy": 0.7845,
+            "pick_test_tokens": 330.4,
+            "pick_test_p95_ms": 0.496,
             "pick_feasible_on_test": true,
             "pick_rank": 1,
-            "pick_utility": 0.6728,
+            "pick_utility": 0.5815,
             "regret": 0.0,
-            "experiments": 19,
+            "experiments": 18,
             "validations": 1,
-            "cache_hits": 5,
-            "seconds": 5.0,
+            "cache_hits": 7,
+            "seconds": 2.6,
             "confidence": 1.0,
             "escalations": [
               [
@@ -3185,6 +3080,66 @@
               ],
               [
                 "level_collapsed",
+                false
+              ],
+              [
+                "replan",
+                false
+              ],
+              [
+                "level_collapsed",
+                false
+              ],
+              [
+                "level_collapsed",
+                false
+              ],
+              [
+                "evidence_conflict",
+                false
+              ]
+            ],
+            "cited_numbers": 3,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 5,
+            "best_config": "c256-tfidf-k1-overlap",
+            "best_utility": 0.5815,
+            "best_accuracy": 0.7845,
+            "pick": "c256-bm25-k1-none",
+            "pick_test_accuracy": 0.7835,
+            "pick_test_tokens": 330.3,
+            "pick_test_p95_ms": 0.565,
+            "pick_feasible_on_test": false,
+            "pick_rank": null,
+            "pick_utility": 0.5791,
+            "regret": 0.0025,
+            "experiments": 18,
+            "validations": 1,
+            "cache_hits": 7,
+            "seconds": 2.5,
+            "confidence": 1.0,
+            "escalations": [
+              [
+                "replan",
+                false
+              ],
+              [
+                "level_collapsed",
+                false
+              ],
+              [
+                "replan",
+                false
+              ],
+              [
+                "level_collapsed",
+                false
+              ],
+              [
+                "replan",
                 false
               ],
               [
@@ -3201,49 +3156,46 @@
       "no_kb": {
         "runs": 5,
         "recommended": 5,
-        "feasible_on_test": 16,
-        "best_config": "c128-glove-k1-overlap",
-        "best_accuracy": 0.592,
-        "mean_regret": 0.0126,
-        "max_regret": 0.0527,
-        "median_rank": 2,
-        "top3_rate": 0.6,
-        "pick_feasible_rate": 1.0,
-        "mean_test_accuracy": 0.6746,
-        "mean_experiments": 18.2,
-        "mean_seconds": 5.0,
+        "feasible_on_test": 5,
+        "best_config": "c256-tfidf-k1-overlap",
+        "best_accuracy": 0.7845,
+        "mean_regret": 0.0015,
+        "max_regret": 0.0025,
+        "median_rank": 1.0,
+        "top3_rate": 0.4,
+        "pick_feasible_rate": 0.4,
+        "mean_test_accuracy": 0.7839,
+        "mean_experiments": 13.8,
+        "mean_seconds": 2.0,
         "picks": {
-          "c128-glove-k3-overlap": 2,
-          "c64-glove-k5-overlap": 1,
-          "c64-glove-k3-overlap": 1,
-          "c128-glove-k1-overlap": 1
+          "c256-bm25-k1-none": 3,
+          "c256-tfidf-k1-overlap": 2
         },
         "escalations": {
-          "replan": 10,
-          "level_collapsed": 5,
-          "low_confidence": 1
+          "replan": 12,
+          "level_collapsed": 12
         },
-        "low_confidence_rate": 0.2,
+        "low_confidence_rate": 0.0,
         "all_grounded": true,
-        "cited_numbers": 27,
+        "cited_numbers": 18,
         "per_run": [
           {
-            "feasible_on_test": 16,
-            "best_config": "c128-glove-k1-overlap",
-            "best_utility": 0.6728,
-            "best_accuracy": 0.592,
-            "pick": "c128-glove-k3-overlap",
-            "pick_test_accuracy": 0.7065,
-            "pick_test_tokens": 497.9,
-            "pick_test_p95_ms": 0.144,
-            "pick_feasible_on_test": true,
-            "pick_rank": 2,
-            "pick_utility": 0.6717,
-            "regret": 0.0011,
-            "experiments": 19,
-            "validations": 2,
-            "cache_hits": 8,
-            "seconds": 4.8,
+            "feasible_on_test": 5,
+            "best_config": "c256-tfidf-k1-overlap",
+            "best_utility": 0.5815,
+            "best_accuracy": 0.7845,
+            "pick": "c256-bm25-k1-none",
+            "pick_test_accuracy": 0.7835,
+            "pick_test_tokens": 330.3,
+            "pick_test_p95_ms": 0.565,
+            "pick_feasible_on_test": false,
+            "pick_rank": null,
+            "pick_utility": 0.5791,
+            "regret": 0.0025,
+            "experiments": 17,
+            "validations": 1,
+            "cache_hits": 6,
+            "seconds": 2.2,
             "confidence": 1.0,
             "escalations": [
               [
@@ -3257,6 +3209,142 @@
               [
                 "replan",
                 false
+              ],
+              [
+                "level_collapsed",
+                false
+              ]
+            ],
+            "cited_numbers": 3,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 5,
+            "best_config": "c256-tfidf-k1-overlap",
+            "best_utility": 0.5815,
+            "best_accuracy": 0.7845,
+            "pick": "c256-tfidf-k1-overlap",
+            "pick_test_accuracy": 0.7845,
+            "pick_test_tokens": 330.4,
+            "pick_test_p95_ms": 0.496,
+            "pick_feasible_on_test": true,
+            "pick_rank": 1,
+            "pick_utility": 0.5815,
+            "regret": 0.0,
+            "experiments": 13,
+            "validations": 1,
+            "cache_hits": 6,
+            "seconds": 1.8,
+            "confidence": 1.0,
+            "escalations": [
+              [
+                "replan",
+                false
+              ],
+              [
+                "level_collapsed",
+                false
+              ],
+              [
+                "replan",
+                false
+              ],
+              [
+                "level_collapsed",
+                false
+              ],
+              [
+                "replan",
+                false
+              ],
+              [
+                "level_collapsed",
+                false
+              ],
+              [
+                "level_collapsed",
+                false
+              ]
+            ],
+            "cited_numbers": 3,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 5,
+            "best_config": "c256-tfidf-k1-overlap",
+            "best_utility": 0.5815,
+            "best_accuracy": 0.7845,
+            "pick": "c256-tfidf-k1-overlap",
+            "pick_test_accuracy": 0.7845,
+            "pick_test_tokens": 330.4,
+            "pick_test_p95_ms": 0.496,
+            "pick_feasible_on_test": true,
+            "pick_rank": 1,
+            "pick_utility": 0.5815,
+            "regret": 0.0,
+            "experiments": 13,
+            "validations": 1,
+            "cache_hits": 4,
+            "seconds": 1.9,
+            "confidence": 1.0,
+            "escalations": [
+              [
+                "replan",
+                false
+              ],
+              [
+                "level_collapsed",
+                false
+              ],
+              [
+                "replan",
+                false
+              ],
+              [
+                "level_collapsed",
+                false
+              ]
+            ],
+            "cited_numbers": 3,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 5,
+            "best_config": "c256-tfidf-k1-overlap",
+            "best_utility": 0.5815,
+            "best_accuracy": 0.7845,
+            "pick": "c256-bm25-k1-none",
+            "pick_test_accuracy": 0.7835,
+            "pick_test_tokens": 330.3,
+            "pick_test_p95_ms": 0.565,
+            "pick_feasible_on_test": false,
+            "pick_rank": null,
+            "pick_utility": 0.5791,
+            "regret": 0.0025,
+            "experiments": 13,
+            "validations": 2,
+            "cache_hits": 4,
+            "seconds": 2.2,
+            "confidence": 1.0,
+            "escalations": [
+              [
+                "replan",
+                false
+              ],
+              [
+                "level_collapsed",
+                false
+              ],
+              [
+                "replan",
+                false
+              ],
+              [
+                "level_collapsed",
+                false
               ]
             ],
             "cited_numbers": 6,
@@ -3264,24 +3352,32 @@
             "stopped": "search complete"
           },
           {
-            "feasible_on_test": 16,
-            "best_config": "c128-glove-k1-overlap",
-            "best_utility": 0.6728,
-            "best_accuracy": 0.592,
-            "pick": "c64-glove-k5-overlap",
-            "pick_test_accuracy": 0.6975,
-            "pick_test_tokens": 415.2,
-            "pick_test_p95_ms": 0.179,
-            "pick_feasible_on_test": true,
-            "pick_rank": 4,
-            "pick_utility": 0.6646,
-            "regret": 0.0083,
-            "experiments": 17,
-            "validations": 2,
-            "cache_hits": 7,
-            "seconds": 5.2,
+            "feasible_on_test": 5,
+            "best_config": "c256-tfidf-k1-overlap",
+            "best_utility": 0.5815,
+            "best_accuracy": 0.7845,
+            "pick": "c256-bm25-k1-none",
+            "pick_test_accuracy": 0.7835,
+            "pick_test_tokens": 330.3,
+            "pick_test_p95_ms": 0.565,
+            "pick_feasible_on_test": false,
+            "pick_rank": null,
+            "pick_utility": 0.5791,
+            "regret": 0.0025,
+            "experiments": 13,
+            "validations": 1,
+            "cache_hits": 6,
+            "seconds": 1.8,
             "confidence": 1.0,
             "escalations": [
+              [
+                "replan",
+                false
+              ],
+              [
+                "level_collapsed",
+                false
+              ],
               [
                 "replan",
                 false
@@ -3298,174 +3394,64 @@
             "cited_numbers": 3,
             "grounded": true,
             "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 16,
-            "best_config": "c128-glove-k1-overlap",
-            "best_utility": 0.6728,
-            "best_accuracy": 0.592,
-            "pick": "c64-glove-k3-overlap",
-            "pick_test_accuracy": 0.6705,
-            "pick_test_tokens": 249.1,
-            "pick_test_p95_ms": 0.302,
-            "pick_feasible_on_test": true,
-            "pick_rank": 7,
-            "pick_utility": 0.6201,
-            "regret": 0.0527,
-            "experiments": 17,
-            "validations": 2,
-            "cache_hits": 7,
-            "seconds": 5.4,
-            "confidence": 1.0,
-            "escalations": [
-              [
-                "replan",
-                false
-              ],
-              [
-                "level_collapsed",
-                false
-              ],
-              [
-                "replan",
-                false
-              ]
-            ],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 16,
-            "best_config": "c128-glove-k1-overlap",
-            "best_utility": 0.6728,
-            "best_accuracy": 0.592,
-            "pick": "c128-glove-k3-overlap",
-            "pick_test_accuracy": 0.7065,
-            "pick_test_tokens": 497.9,
-            "pick_test_p95_ms": 0.144,
-            "pick_feasible_on_test": true,
-            "pick_rank": 2,
-            "pick_utility": 0.6717,
-            "regret": 0.0011,
-            "experiments": 19,
-            "validations": 2,
-            "cache_hits": 8,
-            "seconds": 5.0,
-            "confidence": 0.847,
-            "escalations": [
-              [
-                "replan",
-                false
-              ],
-              [
-                "level_collapsed",
-                false
-              ],
-              [
-                "replan",
-                false
-              ]
-            ],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 16,
-            "best_config": "c128-glove-k1-overlap",
-            "best_utility": 0.6728,
-            "best_accuracy": 0.592,
-            "pick": "c128-glove-k1-overlap",
-            "pick_test_accuracy": 0.592,
-            "pick_test_tokens": 165.9,
-            "pick_test_p95_ms": 0.123,
-            "pick_feasible_on_test": true,
-            "pick_rank": 1,
-            "pick_utility": 0.6728,
-            "regret": 0.0,
-            "experiments": 19,
-            "validations": 2,
-            "cache_hits": 8,
-            "seconds": 4.6,
-            "confidence": 0.692,
-            "escalations": [
-              [
-                "replan",
-                false
-              ],
-              [
-                "level_collapsed",
-                false
-              ],
-              [
-                "replan",
-                false
-              ],
-              [
-                "low_confidence",
-                true
-              ]
-            ],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
           }
         ]
       },
       "no_score_floor": {
         "runs": 5,
-        "recommended": 5,
-        "feasible_on_test": 16,
-        "best_config": "c128-glove-k1-overlap",
-        "best_accuracy": 0.592,
-        "mean_regret": 0.0129,
-        "max_regret": 0.0527,
-        "median_rank": 2,
-        "top3_rate": 0.6,
-        "pick_feasible_rate": 1.0,
-        "mean_test_accuracy": 0.6975,
-        "mean_experiments": 23,
-        "mean_seconds": 5.6,
+        "recommended": 4,
+        "feasible_on_test": 5,
+        "best_config": "c256-tfidf-k1-overlap",
+        "best_accuracy": 0.7845,
+        "mean_regret": 0.0025,
+        "max_regret": 0.0051,
+        "median_rank": 1,
+        "top3_rate": 0.2,
+        "pick_feasible_rate": 0.2,
+        "mean_test_accuracy": 0.7826,
+        "mean_experiments": 17,
+        "mean_seconds": 2.9,
         "picks": {
-          "c64-glove-k3-overlap": 1,
-          "c128-glove-k3-overlap": 3,
-          "c64-glove-k5-overlap": 1
+          "c256-bm25-k1-none": 2,
+          "c256-bm25-k1-overlap": 1,
+          "c256-tfidf-k1-overlap": 1,
+          "null": 1
         },
         "escalations": {
           "replan": 5,
-          "low_confidence": 3
+          "evidence_conflict": 4,
+          "infeasible": 1
         },
-        "low_confidence_rate": 0.6,
+        "low_confidence_rate": 0.0,
         "all_grounded": true,
-        "cited_numbers": 30,
+        "cited_numbers": 21,
         "per_run": [
           {
-            "feasible_on_test": 16,
-            "best_config": "c128-glove-k1-overlap",
-            "best_utility": 0.6728,
-            "best_accuracy": 0.592,
-            "pick": "c64-glove-k3-overlap",
-            "pick_test_accuracy": 0.6705,
-            "pick_test_tokens": 249.1,
-            "pick_test_p95_ms": 0.302,
-            "pick_feasible_on_test": true,
-            "pick_rank": 7,
-            "pick_utility": 0.6201,
-            "regret": 0.0527,
-            "experiments": 23,
+            "feasible_on_test": 5,
+            "best_config": "c256-tfidf-k1-overlap",
+            "best_utility": 0.5815,
+            "best_accuracy": 0.7845,
+            "pick": "c256-bm25-k1-none",
+            "pick_test_accuracy": 0.7835,
+            "pick_test_tokens": 330.3,
+            "pick_test_p95_ms": 0.565,
+            "pick_feasible_on_test": false,
+            "pick_rank": null,
+            "pick_utility": 0.5791,
+            "regret": 0.0025,
+            "experiments": 15,
             "validations": 2,
-            "cache_hits": 15,
-            "seconds": 5.8,
-            "confidence": 0.62,
+            "cache_hits": 7,
+            "seconds": 2.6,
+            "confidence": 1.0,
             "escalations": [
               [
                 "replan",
                 false
               ],
               [
-                "low_confidence",
-                true
+                "evidence_conflict",
+                false
               ]
             ],
             "cited_numbers": 6,
@@ -3473,22 +3459,86 @@
             "stopped": "search complete"
           },
           {
-            "feasible_on_test": 16,
-            "best_config": "c128-glove-k1-overlap",
-            "best_utility": 0.6728,
-            "best_accuracy": 0.592,
-            "pick": "c128-glove-k3-overlap",
-            "pick_test_accuracy": 0.7065,
-            "pick_test_tokens": 497.9,
-            "pick_test_p95_ms": 0.144,
-            "pick_feasible_on_test": true,
-            "pick_rank": 2,
-            "pick_utility": 0.6717,
-            "regret": 0.0011,
-            "experiments": 23,
+            "feasible_on_test": 5,
+            "best_config": "c256-tfidf-k1-overlap",
+            "best_utility": 0.5815,
+            "best_accuracy": 0.7845,
+            "pick": "c256-bm25-k1-none",
+            "pick_test_accuracy": 0.7835,
+            "pick_test_tokens": 330.3,
+            "pick_test_p95_ms": 0.565,
+            "pick_feasible_on_test": false,
+            "pick_rank": null,
+            "pick_utility": 0.5791,
+            "regret": 0.0025,
+            "experiments": 15,
             "validations": 2,
-            "cache_hits": 15,
-            "seconds": 5.7,
+            "cache_hits": 7,
+            "seconds": 2.6,
+            "confidence": 1.0,
+            "escalations": [
+              [
+                "replan",
+                false
+              ],
+              [
+                "evidence_conflict",
+                false
+              ]
+            ],
+            "cited_numbers": 6,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 5,
+            "best_config": "c256-tfidf-k1-overlap",
+            "best_utility": 0.5815,
+            "best_accuracy": 0.7845,
+            "pick": "c256-bm25-k1-overlap",
+            "pick_test_accuracy": 0.779,
+            "pick_test_tokens": 330.4,
+            "pick_test_p95_ms": 0.545,
+            "pick_feasible_on_test": false,
+            "pick_rank": null,
+            "pick_utility": 0.5764,
+            "regret": 0.0051,
+            "experiments": 15,
+            "validations": 2,
+            "cache_hits": 7,
+            "seconds": 2.7,
+            "confidence": 1.0,
+            "escalations": [
+              [
+                "replan",
+                false
+              ],
+              [
+                "evidence_conflict",
+                false
+              ]
+            ],
+            "cited_numbers": 3,
+            "grounded": true,
+            "stopped": "search complete"
+          },
+          {
+            "feasible_on_test": 5,
+            "best_config": "c256-tfidf-k1-overlap",
+            "best_utility": 0.5815,
+            "best_accuracy": 0.7845,
+            "pick": "c256-tfidf-k1-overlap",
+            "pick_test_accuracy": 0.7845,
+            "pick_test_tokens": 330.4,
+            "pick_test_p95_ms": 0.496,
+            "pick_feasible_on_test": true,
+            "pick_rank": 1,
+            "pick_utility": 0.5815,
+            "regret": 0.0,
+            "experiments": 25,
+            "validations": 2,
+            "cache_hits": 7,
+            "seconds": 3.8,
             "confidence": 1.0,
             "escalations": [
               [
@@ -3501,96 +3551,33 @@
             "stopped": "search complete"
           },
           {
-            "feasible_on_test": 16,
-            "best_config": "c128-glove-k1-overlap",
-            "best_utility": 0.6728,
-            "best_accuracy": 0.592,
-            "pick": "c128-glove-k3-overlap",
-            "pick_test_accuracy": 0.7065,
-            "pick_test_tokens": 497.9,
-            "pick_test_p95_ms": 0.144,
-            "pick_feasible_on_test": true,
-            "pick_rank": 2,
-            "pick_utility": 0.6717,
-            "regret": 0.0011,
-            "experiments": 23,
+            "feasible_on_test": 5,
+            "best_config": "c256-tfidf-k1-overlap",
+            "best_utility": 0.5815,
+            "best_accuracy": 0.7845,
+            "pick": null,
+            "experiments": 15,
             "validations": 2,
-            "cache_hits": 15,
-            "seconds": 5.5,
-            "confidence": 0.996,
-            "escalations": [
-              [
-                "replan",
-                false
-              ]
-            ],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 16,
-            "best_config": "c128-glove-k1-overlap",
-            "best_utility": 0.6728,
-            "best_accuracy": 0.592,
-            "pick": "c128-glove-k3-overlap",
-            "pick_test_accuracy": 0.7065,
-            "pick_test_tokens": 497.9,
-            "pick_test_p95_ms": 0.144,
-            "pick_feasible_on_test": true,
-            "pick_rank": 2,
-            "pick_utility": 0.6717,
-            "regret": 0.0011,
-            "experiments": 23,
-            "validations": 2,
-            "cache_hits": 15,
-            "seconds": 5.8,
-            "confidence": 0.52,
+            "cache_hits": 7,
+            "seconds": 2.8,
+            "confidence": null,
             "escalations": [
               [
                 "replan",
                 false
               ],
               [
-                "low_confidence",
-                true
-              ]
-            ],
-            "cited_numbers": 6,
-            "grounded": true,
-            "stopped": "search complete"
-          },
-          {
-            "feasible_on_test": 16,
-            "best_config": "c128-glove-k1-overlap",
-            "best_utility": 0.6728,
-            "best_accuracy": 0.592,
-            "pick": "c64-glove-k5-overlap",
-            "pick_test_accuracy": 0.6975,
-            "pick_test_tokens": 415.2,
-            "pick_test_p95_ms": 0.179,
-            "pick_feasible_on_test": true,
-            "pick_rank": 4,
-            "pick_utility": 0.6646,
-            "regret": 0.0083,
-            "experiments": 23,
-            "validations": 2,
-            "cache_hits": 15,
-            "seconds": 5.4,
-            "confidence": 0.796,
-            "escalations": [
-              [
-                "replan",
+                "evidence_conflict",
                 false
               ],
               [
-                "low_confidence",
+                "infeasible",
                 true
               ]
             ],
-            "cited_numbers": 6,
+            "cited_numbers": 0,
             "grounded": true,
-            "stopped": "search complete"
+            "stopped": "finalists failed validation"
           }
         ]
       }
@@ -3624,27 +3611,27 @@
           "matched injection pattern /ignore (all |any )?(previous|prior|above) instructions/"
         ]
       ],
-      "pick": "c64-bm25-k3-overlap",
+      "pick": "c128-bm25-k1-none",
       "injected_target_recommended": false
     },
     "fault_recovery": {
-      "injected_faults": 6,
-      "recovered": 6,
+      "injected_faults": 9,
+      "recovered": 9,
       "unrecovered": 0,
-      "pick": "c64-bm25-k3-none"
+      "pick": "c128-bm25-k1-none"
     },
     "persistent_failures": {
       "failed_runs": 3,
-      "pick": "c128-bm25-k3-overlap",
+      "pick": "c128-bm25-k3-none",
       "escalations": [
-        "repeated_failures",
-        "evidence_conflict"
+        "replan",
+        "repeated_failures"
       ]
     },
     "small_budget": {
       "experiments": 6,
-      "skipped": 15,
-      "pick": "c64-tfidf-k5-rrf"
+      "skipped": 14,
+      "pick": "c64-bm25-k5-none"
     },
     "denied_high_impact_step": {
       "stopped": "human denied the depth-1 step",
@@ -3659,31 +3646,31 @@
   "memory": [
     {
       "scenario": "S2_balanced",
-      "new_experiments": 17,
+      "new_experiments": 18,
       "new_validations": 2,
       "reused_from_memory": 11,
-      "pick": "c128-bm25-k1-none"
+      "pick": "c64-bm25-k3-overlap"
     },
     {
       "scenario": "S3_generous",
-      "new_experiments": 18,
+      "new_experiments": 16,
       "new_validations": 2,
-      "reused_from_memory": 12,
-      "pick": "c64-bm25-k5-none"
+      "reused_from_memory": 17,
+      "pick": "c128-bm25-k3-none"
     },
     {
       "scenario": "S4_accuracy_first",
-      "new_experiments": 5,
+      "new_experiments": 13,
       "new_validations": 1,
-      "reused_from_memory": 26,
+      "reused_from_memory": 18,
       "pick": "c128-bm25-k3-overlap"
     }
   ],
   "calibration": {
-    "configs": 66,
-    "ci95_coverage": 0.985,
-    "mean_abs_error": 0.0152,
-    "max_abs_error": 0.074
+    "configs": 58,
+    "ci95_coverage": 1.0,
+    "mean_abs_error": 0.0151,
+    "max_abs_error": 0.0393
   },
-  "seconds": 815.7
+  "seconds": 340.1
 }

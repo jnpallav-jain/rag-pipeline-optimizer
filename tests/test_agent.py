@@ -10,8 +10,7 @@ from rag_optimizer.memory import ExperimentLog, KnowledgeBase
 from rag_optimizer.pipeline import Config, chunk_documents, estimated_min_tokens, normalize_answer
 
 ROOT = Path(__file__).resolve().parents[1]
-HAS_DATA = (ROOT / "data" / "raw" / "squad-dev-v1.1.json").exists() and \
-           (ROOT / "data" / "raw" / "glove-wiki-gigaword-50.gz").exists()
+HAS_DATA = (ROOT / "data" / "raw" / "squad-dev-v1.1.json").exists()
 
 
 # ---------------------------------------------------------------- guardrails

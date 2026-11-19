@@ -2,7 +2,7 @@
 
 A configuration has four design choices (the agent's search space, 3 x 3 x 3 x 3 = 81):
   chunk_size  words per chunk (25% overlap)       64 | 128 | 256
-  retriever   first-stage retriever              bm25 | tfidf | glove
+  retriever   first-stage retriever              bm25 | tfidf | bge
   top_k       chunks passed to the generator      1 | 3 | 5
   rerank      second stage over top-20            none | rrf | overlap
 
@@ -10,12 +10,13 @@ Measured per configuration:
   accuracy    answer recall: share of questions whose gold answer string appears in the
               retrieved context (SQuAD normalization). Generation is out of scope; this
               is the upper bound on what a reader model could answer from the context.
-  p95_ms      95th-percentile retrieval latency per query on the current machine
+  p95_ms      95th-percentile retrieval latency per query on the current machine (for bge it
+              includes embedding the query on the CPU)
   tokens      mean context tokens sent to the generator (words x 1.3 estimate)
 """
 from __future__ import annotations
 
-import gzip
+import hashlib
 import re
 import string
 import time
@@ -26,17 +27,20 @@ import numpy as np
 from scipy import sparse
 from sklearn.feature_extraction.text import CountVectorizer, TfidfVectorizer
 
-from .data import RAW, Dataset, Question
+from .data import ROOT, Dataset, Question
 
 OPTIONS = {
     "chunk_size": [64, 128, 256],
-    "retriever": ["bm25", "tfidf", "glove"],
+    "retriever": ["bm25", "tfidf", "bge"],
     "top_k": [1, 3, 5],
     "rerank": ["none", "rrf", "overlap"],
 }
 DIMENSIONS = list(OPTIONS)
 TOKENS_PER_WORD = 1.3
 CANDIDATES = 20  # first-stage depth for re-ranking
+EMBED_MODEL = "BAAI/bge-small-en-v1.5"  # 384-d sentence encoder, run on CPU
+QUERY_PREFIX = "Represent this sentence for searching relevant passages: "  # BGE v1.5 query instruction
+INDEX_DIR = ROOT / "data" / "index"
 
 _TOKEN_RE = re.compile(r"[a-z0-9]+")
 STOPWORDS = {
@@ -111,6 +115,9 @@ class BM25:
         q.data[:] = 1.0
         return np.asarray((self.matrix @ q.T).todense()).ravel()
 
+    def top(self, query: str, n: int):
+        return _top_from_scores(self.scores(query), n)
+
 
 class TFIDF:
     def __init__(self, texts: list[str]):
@@ -121,74 +128,89 @@ class TFIDF:
     def scores(self, query: str) -> np.ndarray:
         return np.asarray((self.matrix @ self.vec.transform([query]).T).todense()).ravel()
 
+    def top(self, query: str, n: int):
+        return _top_from_scores(self.scores(query), n)
+
+
+def _top_from_scores(scores: np.ndarray, n: int):
+    """Ids of the n highest scores (best first) and their scores."""
+    n = min(n, len(scores))
+    ids = np.argpartition(-scores, n - 1)[:n]
+    ids = ids[np.argsort(-scores[ids])]
+    return ids, scores[ids]
+
 
 @lru_cache(maxsize=1)
-def _glove_vectors(vocab: frozenset) -> dict[str, np.ndarray]:
-    path = RAW / "glove-wiki-gigaword-50.gz"
-    if not path.exists():
-        raise FileNotFoundError(f"{path} not found. Run: python scripts/download_data.py")
-    vecs = {}
-    with gzip.open(path, "rt", encoding="utf8") as f:
-        next(f)  # header line: "400000 50"
-        for line in f:
-            word, rest = line.split(" ", 1)
-            if word in vocab:
-                vecs[word] = np.asarray(rest.split(), dtype=np.float32)
-    return vecs
+def _encoder():
+    from sentence_transformers import SentenceTransformer  # heavy import, only when bge is used
+    return SentenceTransformer(EMBED_MODEL, device="cpu")
 
 
-class GloVeDense:
-    """Dense retriever: IDF-weighted average of GloVe word vectors, cosine similarity."""
+class BGEDense:
+    """Dense retriever: BGE sentence embeddings in a FAISS exact inner-product index (cosine,
+    since vectors are normalized). Chunk embeddings are computed once and saved to data/index/.
 
-    def __init__(self, texts: list[str], vocab: frozenset):
-        self.wv = _glove_vectors(vocab)
-        tok = [tokenize(t) for t in texts]
-        n = len(tok)
-        df: dict[str, int] = {}
-        for ts in tok:
-            for w in set(ts):
-                df[w] = df.get(w, 0) + 1
-        self.idf = {w: np.log((n + 1) / (c + 1)) + 1 for w, c in df.items()}
-        self.matrix = np.vstack([self._embed(ts) for ts in tok])
+    Query embeddings are cached per question so repeated experiments stay fast, but the time it
+    took to embed the question is still charged to every query's latency (``extra_ms``)."""
 
-    def _embed(self, tokens: list[str]) -> np.ndarray:
-        acc, wsum = np.zeros(50, dtype=np.float32), 0.0
-        for w in tokens:
-            if w in self.wv and w not in STOPWORDS:
-                weight = self.idf.get(w, 1.0)
-                acc += weight * self.wv[w]
-                wsum += weight
-        if wsum:
-            acc /= wsum
-        norm = np.linalg.norm(acc)
-        return acc / norm if norm else acc
+    def __init__(self, texts: list[str], chunk_size: int):
+        import faiss
+        self.model = _encoder()
+        digest = hashlib.sha1("\x1e".join(texts).encode()).hexdigest()[:12]
+        path = INDEX_DIR / f"bge-small-c{chunk_size}-{digest}.faiss"
+        if path.exists():
+            self.index = faiss.read_index(str(path))
+        else:
+            vecs = self.model.encode(texts, batch_size=64, normalize_embeddings=True,
+                                     convert_to_numpy=True, show_progress_bar=False).astype(np.float32)
+            self.index = faiss.IndexFlatIP(vecs.shape[1])
+            self.index.add(vecs)
+            INDEX_DIR.mkdir(parents=True, exist_ok=True)
+            faiss.write_index(self.index, str(path))
+        self._queries: dict[str, tuple[np.ndarray, float]] = {}
+        self.extra_ms = 0.0
 
-    def scores(self, query: str) -> np.ndarray:
-        return self.matrix @ self._embed(tokenize(query))
+    def embed_query(self, query: str) -> tuple[np.ndarray, float]:
+        """Returns (vector, extra_ms). extra_ms is the stored embedding time on a cache hit and
+        0 on a miss, because a miss is already inside the caller's timer."""
+        if query in self._queries:
+            vec, ms = self._queries[query]
+            return vec, ms
+        t0 = time.perf_counter()
+        vec = self.model.encode([QUERY_PREFIX + query], normalize_embeddings=True,
+                                convert_to_numpy=True, show_progress_bar=False).astype(np.float32)
+        self._queries[query] = (vec, (time.perf_counter() - t0) * 1000)
+        return vec, 0.0
+
+    def top(self, query: str, n: int):
+        vec, extra_ms = self.embed_query(query)
+        scores, ids = self.index.search(vec, n)
+        self.extra_ms += extra_ms
+        return ids[0], scores[0]
 
 
 # ---------------------------------------------------------------- index + run
 class Index:
     """All retrievers for one chunk size (built once, cached)."""
 
-    def __init__(self, dataset: Dataset, chunk_size: int, vocab: frozenset):
+    def __init__(self, dataset: Dataset, chunk_size: int):
         self.texts, self.titles = chunk_documents(dataset.documents, chunk_size)
         self.norm_texts = [normalize_answer(t) for t in self.texts]
         self.token_sets = [set(tokenize(t)) for t in self.texts]
         self.word_counts = np.array([len(t.split()) for t in self.texts])
         self.retrievers = {"bm25": BM25(self.texts), "tfidf": TFIDF(self.texts),
-                           "glove": GloVeDense(self.texts, vocab)}
+                           "bge": BGEDense(self.texts, chunk_size)}
 
-    def retrieve(self, query: str, cfg: Config) -> list[int]:
-        primary = self.retrievers[cfg.retriever].scores(query)
-        cand = np.argpartition(-primary, CANDIDATES)[:CANDIDATES]
-        cand = cand[np.argsort(-primary[cand])]
+    def retrieve(self, query: str, cfg: Config) -> tuple[list[int], float]:
+        """Returns (chunk ids, extra_ms): extra_ms is cached query-embedding time to add to the
+        measured latency."""
+        dense = self.retrievers["bge"]
+        dense.extra_ms = 0.0
+        cand, primary = self.retrievers[cfg.retriever].top(query, CANDIDATES)
         if cfg.rerank == "rrf":
             # Reciprocal rank fusion with a complementary retriever (lexical <-> dense)
-            other = "glove" if cfg.retriever != "glove" else "bm25"
-            sec = self.retrievers[other].scores(query)
-            cand2 = np.argpartition(-sec, CANDIDATES)[:CANDIDATES]
-            cand2 = cand2[np.argsort(-sec[cand2])]
+            other = "bge" if cfg.retriever != "bge" else "bm25"
+            cand2, _ = self.retrievers[other].top(query, CANDIDATES)
             fused: dict[int, float] = {}
             for ranking in (cand, cand2):
                 for r, idx in enumerate(ranking):
@@ -197,12 +219,12 @@ class Index:
         elif cfg.rerank == "overlap":
             # Lexical cross-check: share of query content words present in the chunk
             q = {w for w in tokenize(query) if w not in STOPWORDS}
-            order = sorted((int(i) for i in cand),
-                           key=lambda i: (-(len(q & self.token_sets[i]) / max(1, len(q))),
-                                          -primary[i]))
+            score = {int(i): float(p) for i, p in zip(cand, primary)}
+            order = sorted(score, key=lambda i: (-(len(q & self.token_sets[i]) / max(1, len(q))),
+                                                 -score[i]))
         else:
             order = [int(i) for i in cand]
-        return order[:cfg.top_k]
+        return order[:cfg.top_k], dense.extra_ms
 
 
 class Lab:
@@ -210,18 +232,11 @@ class Lab:
 
     def __init__(self, dataset: Dataset):
         self.dataset = dataset
-        vocab = set()
-        for text in dataset.documents.values():
-            vocab.update(tokenize(text))
-        for qs in dataset.splits.values():
-            for q in qs:
-                vocab.update(tokenize(q.text))
-        self.vocab = frozenset(vocab)
         self._indexes: dict[int, Index] = {}
 
     def index(self, chunk_size: int) -> Index:
         if chunk_size not in self._indexes:
-            self._indexes[chunk_size] = Index(self.dataset, chunk_size, self.vocab)
+            self._indexes[chunk_size] = Index(self.dataset, chunk_size)
         return self._indexes[chunk_size]
 
     def run(self, cfg: Config, questions: list[Question]) -> dict:
@@ -229,8 +244,8 @@ class Lab:
         hits, lat, words = [], [], []
         for q in questions:
             t0 = time.perf_counter()
-            ids = idx.retrieve(q.text, cfg)
-            lat.append((time.perf_counter() - t0) * 1000)
+            ids, extra_ms = idx.retrieve(q.text, cfg)
+            lat.append((time.perf_counter() - t0) * 1000 + extra_ms)
             ctx = " ".join(idx.norm_texts[i] for i in ids)
             hits.append(any(normalize_answer(a) in ctx for a in q.answers if normalize_answer(a)))
             words.append(int(idx.word_counts[ids].sum()))

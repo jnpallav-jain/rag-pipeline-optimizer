@@ -1,19 +1,17 @@
-"""Download the public data this project uses into data/raw/.
+"""Download the public data and model this project uses.
 
-- SQuAD v1.1 dev set (Rajpurkar et al., 2016), CC BY-SA 4.0
-- GloVe 50-d Wikipedia + Gigaword vectors (Pennington et al., 2014), via the gensim-data mirror
+- SQuAD v1.1 dev set (Rajpurkar et al., 2016), CC BY-SA 4.0 -> data/raw/
+- BAAI/bge-small-en-v1.5 embedding model (MIT license) -> the Hugging Face cache
 """
 import pathlib
 import sys
 import urllib.request
 
-RAW = pathlib.Path(__file__).resolve().parents[1] / "data" / "raw"
+ROOT = pathlib.Path(__file__).resolve().parents[1]
+RAW = ROOT / "data" / "raw"
 FILES = {
     "squad-dev-v1.1.json":
         "https://raw.githubusercontent.com/rajpurkar/SQuAD-explorer/master/dataset/dev-v1.1.json",
-    "glove-wiki-gigaword-50.gz":
-        "https://github.com/RaRe-Technologies/gensim-data/releases/download/"
-        "glove-wiki-gigaword-50/glove-wiki-gigaword-50.gz",
 }
 
 
@@ -27,6 +25,12 @@ def main() -> int:
         print(f"downloading {name} ...")
         urllib.request.urlretrieve(url, dest)
         print(f"  saved {dest} ({dest.stat().st_size / 1e6:.1f} MB)")
+
+    sys.path.insert(0, str(ROOT))
+    from rag_optimizer.pipeline import EMBED_MODEL, _encoder
+    print(f"loading embedding model {EMBED_MODEL} (downloads once, ~130 MB) ...")
+    _encoder()
+    print("  ready")
     return 0
 
 

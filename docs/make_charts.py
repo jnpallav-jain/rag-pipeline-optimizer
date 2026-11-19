@@ -20,7 +20,7 @@ summary = json.loads((RES / "eval_summary.json").read_text())
 # ---------------- 1. trade-off scatter
 fig, ax = plt.subplots(figsize=(7.2, 3.9), dpi=200)
 for (ret, color, marker, label) in [("bm25", SERIES[0], "o", "BM25"), ("tfidf", SERIES[1], "s", "TF-IDF"),
-                                    ("glove", SERIES[2], "^", "GloVe dense")]:
+                                    ("bge", SERIES[2], "^", "BGE dense (FAISS)")]:
     pts = [r for r in grid if r["retriever"] == ret]
     ax.scatter([float(r["tokens"]) for r in pts], [float(r["accuracy"]) for r in pts], s=26, c=color,
                marker=marker, edgecolors="white", linewidths=0.8, label=label, zorder=3)

@@ -8,7 +8,7 @@ from ..pipeline import OPTIONS
 QUERIES = {
     "chunk_size": "chunk size for splitting documents into passages, precision versus context and token cost",
     "retriever": "which first-stage retriever works best for question answering passage retrieval: "
-                 "BM25 lexical, TF-IDF, or dense embeddings such as averaged GloVe word vectors",
+                 "BM25 lexical, TF-IDF, or dense sentence embeddings such as BGE",
     "top_k": "how many retrieved passages to put in the context, long contexts and more documents",
     "rerank": "re-ranking retrieved candidates and reciprocal rank fusion of lexical and dense rankers",
 }

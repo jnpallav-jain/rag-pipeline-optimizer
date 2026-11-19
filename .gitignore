@@ -3,3 +3,6 @@ __pycache__/
 *.pyc
 .pytest_cache/
 .idea/
+.venv/
+data/index/
+.env

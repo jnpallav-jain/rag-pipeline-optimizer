@@ -1,0 +1,46 @@
+{
+  "model": "claude-haiku-5-5",
+  "config": "c128-bm25-k3-none",
+  "calls": 20,
+  "mean_input_tokens": 894.3,
+  "mean_output_tokens": 7.6,
+  "mean_cost_usd_standard": 9.323e-05,
+  "total_cost_usd": 0.0018646000000000001,
+  "latency_ms_p50": 631.65,
+  "latency_ms_max": 1304.5,
+  "em": 0.85,
+  "f1": 0.85,
+  "examples": [
+    {
+      "question": "When did Gou's calendar become the official calendar of the Yuan?",
+      "gold": "1281",
+      "answer": "1281"
+    },
+    {
+      "question": "What did the Greek root pharmakos imply?",
+      "gold": "sorcery",
+      "answer": "sorcery or even poison"
+    },
+    {
+      "question": "In the process of vaccination, what is introduced in order to develop a specific immunity?",
+      "gold": "an antigen from a pathogen",
+      "answer": "an antigen"
+    },
+    {
+      "question": "Who created ABC's Wide World of Sports?",
+      "gold": "Edgar Scherick",
+      "answer": "Edgar Scherick"
+    },
+    {
+      "question": "How many tons of live plants were found to live in one square kilometer of the Amazon rainforest in 1999?",
+      "gold": "90,790 tonnes",
+      "answer": "90,790 tonnes"
+    }
+  ],
+  "ledger": {
+    "total_usd": 0.0018646,
+    "calls": 20,
+    "input_tokens": 17886,
+    "output_tokens": 152
+  }
+}

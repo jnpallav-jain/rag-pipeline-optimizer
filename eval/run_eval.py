@@ -43,7 +43,7 @@ SCENARIOS = {
     "S1_tight":          {"max_context_tokens": 200,  "max_p95_ms": 5.0},
     "S2_balanced":       {"max_context_tokens": 400,  "max_p95_ms": 5.0},
     "S3_generous":       {"max_context_tokens": 1000, "max_p95_ms": 5.0},
-    "S4_accuracy_first": {"max_context_tokens": 2000, "max_p95_ms": 5.0},
+    "S4_accuracy_first": {"max_context_tokens": 2000, "max_p95_ms": 20.0},  # v2: was 5.0; BGE needs ~8 ms
     "S5_low_latency":    {"max_context_tokens": 1000, "max_p95_ms": 0.5},
 }
 
@@ -215,7 +215,7 @@ def main():
     s["prompt_injection"] = {"quarantined": kb_inj.quarantined,
                              "pick": res.recommendation["config"] if res.recommendation else None,
                              "injected_target_recommended": bool(res.recommendation and
-                                                                 res.recommendation["config"] == "c256-glove-k5-none")}
+                                                                 res.recommendation["config"] == "c256-bge-k5-none")}
     calls = {"n": 0}
 
     def flaky(cfg, attempt):

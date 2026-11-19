@@ -1,0 +1,87 @@
+{
+  "model": "claude-haiku-5-5",
+  "questions": 200,
+  "seed": 7,
+  "split": "test",
+  "metric_note": "recall = gold answer string in retrieved context; EM/F1 = official SQuAD metrics on Haiku's answer; costs from API-reported tokens at list price, Batch API 50%",
+  "configs": [
+    {
+      "config": "c256-bm25-k1-rrf",
+      "why": "top-k sweep (k=1)",
+      "n": 200,
+      "recall": 0.855,
+      "em": 0.705,
+      "f1": 0.788,
+      "em_when_retrieved": 0.825,
+      "not_found_rate": 0.155,
+      "mean_input_tokens": 623.9,
+      "cost_usd": 0.00668
+    },
+    {
+      "config": "c256-bm25-k3-rrf",
+      "why": "top-k sweep (k=3)",
+      "n": 200,
+      "recall": 0.935,
+      "em": 0.75,
+      "f1": 0.844,
+      "em_when_retrieved": 0.802,
+      "not_found_rate": 0.07,
+      "mean_input_tokens": 1684.7,
+      "cost_usd": 0.01731
+    },
+    {
+      "config": "c256-bm25-k5-rrf",
+      "why": "top-k sweep (k=5)",
+      "n": 200,
+      "recall": 0.95,
+      "em": 0.775,
+      "f1": 0.847,
+      "em_when_retrieved": 0.816,
+      "not_found_rate": 0.07,
+      "mean_input_tokens": 2739.2,
+      "cost_usd": 0.02786
+    },
+    {
+      "config": "c128-bm25-k1-none",
+      "why": "agent pick, S1_tight",
+      "n": 200,
+      "recall": 0.815,
+      "em": 0.69,
+      "f1": 0.742,
+      "em_when_retrieved": 0.847,
+      "not_found_rate": 0.195,
+      "mean_input_tokens": 361.4,
+      "cost_usd": 0.00403
+    },
+    {
+      "config": "c64-tfidf-k3-overlap",
+      "why": "agent pick, S3_generous",
+      "n": 200,
+      "recall": 0.845,
+      "em": 0.705,
+      "f1": 0.769,
+      "em_when_retrieved": 0.834,
+      "not_found_rate": 0.16,
+      "mean_input_tokens": 497.8,
+      "cost_usd": 0.0054
+    },
+    {
+      "config": "c128-bm25-k3-none",
+      "why": "agent pick, S4_accuracy_first",
+      "n": 200,
+      "recall": 0.885,
+      "em": 0.73,
+      "f1": 0.817,
+      "em_when_retrieved": 0.825,
+      "not_found_rate": 0.105,
+      "mean_input_tokens": 893.8,
+      "cost_usd": 0.00938
+    }
+  ],
+  "ledger": {
+    "total_usd": 0.0725215,
+    "calls": 1220,
+    "input_tokens": 1378059,
+    "output_tokens": 10745
+  }
+}
